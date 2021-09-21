@@ -106,3 +106,13 @@ button {
         position: absolute;
     }
 }
+
+@media (min-width: 1000px){
+    .logo{
+       display: flex;
+       align-items: left;
+       justify-content: left;
+        margin-left: -180%;
+        margin-top: 80px;
+    }
+}
