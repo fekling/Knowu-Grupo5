@@ -113,3 +113,10 @@ h3{
     }
 }
 
+@media (max-width: 1500px){
+ 
+     h3{
+         display: none;
+      }
+}
+
