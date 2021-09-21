@@ -7,95 +7,102 @@ body {
     text-align: center;
     background-color: #E9EAF4;
     font-family: 'Poppins', sans-serif;
-    background-image: url(../../../Imagens/Esqueceu\ sua\ senha\ pt1/bg-color.png);
     background-repeat: no-repeat;
     background-size: 100%;
+    overflow-x: hidden;
 }
 
-.showcase {
+.bg-color {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    left: -50%;
+    top: -50%;
+    z-index: -1;
+}
+
+.container {
     max-width: 980px;
     width: 100%;
 }
 
-#colorida {
-    height: 0px;
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
 }
 
-#input {
-    width: 30%;
-    height: 38px;
-    margin-right: 10px;
-    border: 2px solid #2138CB;
-    background: transparent;
-    border-radius: 7px;
-    margin-top: 12px;
-    margin-left: 13px;
-    font-family: Poppins;
-    font-size: 11px;
+.esquerda {
+    align-items: center;
 }
 
-#textesqueceusenha {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 20px;
-    text-align: initial;
-    margin-left: 359px;
-    margin-top: 38%;
-}
-
-#imgseta {
-    position: absolute;
-    width: 26px;
-    height: 26px;
-    left: 252px;
-    top: 51px;
+.voltar {
+    display: inline-block;
+    padding-left: 20px;
 }
 
 #seta {
-    position: absolute;
-    width: 220px;
-    left: 245px;
-    top: 35px;
-    font-weight: bolder;
-    font-family: 'Poppins', sans-serif;
+    margin-top: 30px;
 }
 
-#imglogo {
-    position: absolute;
-    width: 11%;
-    left: 575px;
-    top: 75px;
+h2 {
+    font-size: 20px;
 }
 
-#imgsino1 {
-    position: absolute;
-    width: 16%;
-    left: 569px;
-    top: 172px;
+.direito {
+    justify-content: center;
 }
 
-#txtesqueceu {
-    position: absolute;
-    width: 25%;
-    height: 222.83px;
-    font-size: 19px;
-    font-family: 'Poppins', sans-serif;
-    left: 476px;
-    top: 318px;
-    font-size: 19px;
+.sino {
+    margin-left: 50px;
 }
 
-.buttonenv {
-    position: absolute;
-    width: 303px;
-    left: 496px;
-    top: 521px;
-    height: 53px;
-    color: whitesmoke;
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    width: 360px;
+    text-align: start;
+    margin-bottom: 42px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    color: #171616;
+    text-align: center;
+    width: 456px;
+    height: 50px;
+    border: 2px solid #2138CB;
+    background-color: transparent;
+    font-size: 16px;
+}
+
+button {
+    width: 456px;
+    height: 70px;
+    margin-top: 30px;
     font-size: 22px;
     border-radius: 10px;
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
     border: 10px;
+    background: linear-gradient(90deg, #2138CB 0%, #4C2797 117.93%);
+}
+
+@media (max-width:600px) {
+    .bg-color {
+        position: absolute;
+    }
 }
