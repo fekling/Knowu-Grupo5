@@ -13,8 +13,7 @@ a{
 
 
 body{
-    width: 1128px;
-    height: auto;
+    width: 100%;
     background-color: E9EAF4;
 }
 
@@ -30,6 +29,7 @@ header{
     align-items: center;
     justify-content: center;
     margin-top: 30px;
+    margin-left: 140px;
 }
 
 .seta{
@@ -42,18 +42,13 @@ h3{
 }
 
 .container{
-    width: 1128px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.logo{
- display: flex;
- align-items: center;
- justify-content: center;
- text-align: center;
- margin-left: 200px;
 
-}
 
 .bg{
     position: absolute;
@@ -67,7 +62,7 @@ h3{
     flex-direction: column;
     align-items: center;
     margin-top: 80px;
-    margin-left: 50px;
+   
     
 }
 
@@ -77,9 +72,9 @@ h3{
 }
 
 .input-senha{
-    width: 400px;
+    width: 440px;
     height: 50px;
-    margin-left: 130px;
+   
     margin-top: 30px;
     border: 1px solid #2138CB;
     background-color: transparent;
@@ -92,8 +87,7 @@ h3{
 
 
 .btn{
-  margin-left: 130px;
-  width: 429px;
+  width: 456px;
   height: 55px;
   margin-top: 30px;
   background: linear-gradient(90deg, #2138CB 0%, #4C2797 117.93%);
@@ -107,5 +101,15 @@ h3{
 .input-senha:focus{
  box-shadow: 0 0 0 0;
  outline: 0;
+}
+
+@media (max-width: 1000px){
+    .esquerda{
+        margin-left: -140px;
+    }
+
+    .bg{
+       left: -50%;
+    }
 }
 
