@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #E9EAF4;
+    font-family: 'Poppins', sans-serif;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow-x: hidden;
+}
+
+.bg-color {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    left: -50%;
+    top: -50%;
+    z-index: -1;
+}
+
+.container {
+    max-width: 980px;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+#esquerda {
+    align-items: center;
+}
+
+.voltar {
+    display: inline-block;
+    padding-left: 20px;
+}
+
+#seta {
+    margin-top: 30px;
+}
+
+#voltar{
+    margin-top: 100px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.direito {
+    justify-content: center;
+}
+
+.sino {
+    margin-left: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    width: 360px;
+    text-align: start;
+    margin-bottom: 42px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    color: #171616;
+    text-align: center;
+    width: 456px;
+    height: 50px;
+    border: 2px solid #2138CB;
+    background-color: transparent;
+    font-size: 16px;
+}
+
+button {
+    width: 456px;
+    height: 70px;
+    margin-top: 30px;
+    font-size: 22px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    border: 10px;
+    background: linear-gradient(90deg, #2138CB 0%, #4C2797 117.93%);
+}
+
+@media (max-width:600px) {
+    .bg-color {
+        position: absolute;
+    }
+}
+
+@media (min-width: 1000px){
+    .logo{
+       display: flex;
+       align-items: left;
+       justify-content: left;
+        margin-left: -180%;
+        margin-top: 80px;
+    }
+}
