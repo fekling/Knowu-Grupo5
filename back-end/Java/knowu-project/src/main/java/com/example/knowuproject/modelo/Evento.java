@@ -1,7 +1,8 @@
-package com.example.knowuproject;
+package com.example.knowuproject.modelo;
 
-import com.example.knowuproject.login.Result;
-import com.example.knowuproject.login.LocalidadeGoogle;
+import com.example.knowuproject.Localizavel;
+import com.example.knowuproject.resultados.api.google.Result;
+import com.example.knowuproject.resultados.api.google.LocalidadeGoogle;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.client.RestTemplate;
@@ -9,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Evento implements Localizavel{
+public class Evento implements Localizavel {
     private Integer idEvento;
     private String nome;
     private String descricao;

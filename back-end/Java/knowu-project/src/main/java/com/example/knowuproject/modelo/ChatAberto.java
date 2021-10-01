@@ -1,4 +1,4 @@
-package com.example.knowuproject;
+package com.example.knowuproject.modelo;
 
 import org.springframework.format.annotation.DateTimeFormat;
 

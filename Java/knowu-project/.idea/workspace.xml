@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1cb2b123-32fc-489e-b654-eb1ef32ae83d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../back-end/Java/knowu-project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../back-end/Java/knowu-project/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/model/Chat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/ChatAberto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/model/ChatAberto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/ChatEvento.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/model/ChatEvento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/Evento.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/model/Evento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/KnowuProjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/control/KnowuProjectApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/LocalizacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/control/LocalizacaoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/login/AutenticacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/control/AutenticacaoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/login/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/dto/Usuariodto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../back-end/Java/knowu-project/src/main/resources/templates/index.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1ypijZmW2lF7lRQvGKz7ePuSrSl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../back-end/Java/knowu-project/pom.xml" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1cb2b123-32fc-489e-b654-eb1ef32ae83d" name="Default Changelist" comment="" />
+      <created>1632955068402</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1632955068402</updated>
+      <workItem from="1632955069538" duration="733000" />
+      <workItem from="1633033267747" duration="218000" />
+      <workItem from="1633035866703" duration="22000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

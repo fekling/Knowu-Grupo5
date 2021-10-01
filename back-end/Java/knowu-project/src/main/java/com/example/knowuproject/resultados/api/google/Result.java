@@ -1,9 +1,4 @@
-package com.example.knowuproject.login;
-
-import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.web.client.RestTemplate;
-
-import java.util.List;
+package com.example.knowuproject.resultados.api.google;
 
 public class Result {
 

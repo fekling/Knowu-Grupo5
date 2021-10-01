@@ -1,8 +1,8 @@
-package com.example.knowuproject;
+package com.example.knowuproject.modelo;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-public class ChatEvento extends Chat{
+public class ChatEvento extends Chat {
     private String mensagem;
     private String usuarioRemetente;
 

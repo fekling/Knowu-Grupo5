@@ -1,9 +1,6 @@
-package com.example.knowuproject;
+package com.example.knowuproject.modelo;
 
 import org.springframework.format.annotation.DateTimeFormat;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public abstract class Chat {
     private Integer idChat;

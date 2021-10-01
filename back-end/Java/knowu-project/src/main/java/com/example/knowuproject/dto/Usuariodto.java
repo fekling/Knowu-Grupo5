@@ -1,13 +1,14 @@
-package com.example.knowuproject.login;
+package com.example.knowuproject.dto;
 
 import com.example.knowuproject.Localizavel;
+import com.example.knowuproject.resultados.api.google.LocalidadeGoogle;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.web.client.RestTemplate;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class Usuario implements Localizavel {
+public class Usuariodto implements Localizavel {
 
     // Atributos
 
@@ -20,7 +21,7 @@ public class Usuario implements Localizavel {
 
     // Construtor
 
-    public Usuario(String usuario, String nome, String senha) {
+    public Usuariodto(String usuario, String nome, String senha) {
         this.usuario = usuario;
         this.nome = nome;
         this.senha = senha;
