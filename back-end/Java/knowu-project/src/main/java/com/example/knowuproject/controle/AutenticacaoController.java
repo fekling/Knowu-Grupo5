@@ -2,8 +2,10 @@ package com.example.knowuproject.controle;
 
 import com.example.knowuproject.dto.Usuariodto;
 import com.example.knowuproject.modelo.Usuario;
+import com.example.knowuproject.repositorio.LocalidadeRepository;
 import com.example.knowuproject.repositorio.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -20,32 +22,34 @@ public class AutenticacaoController {
     @Autowired
     UsuarioRepository usuarioRepository;
 
+    @Autowired
+    LocalidadeRepository localidadeRepository;
+
     public AutenticacaoController() {
         this.usuariodtos = new ArrayList<>();
     }
 
 
     @PostMapping("/adicionar")
-    public String adicionarUsuario(@RequestBody Usuario usuario) {
+    public ResponseEntity adicionarUsuario(@RequestBody Usuario usuario) {
         usuarioRepository.save(usuario);
-        return String.format("Usuario %s adicionado com sucesso!!", usuario.getNome());
+        return ResponseEntity.status(201).build();
     }
 
     @PostMapping("/login")
-    public List<Usuario> autenticarUsuario(@RequestBody Usuario usuario) {
+    public ResponseEntity autenticarUsuario(@RequestBody Usuario usuario) {
 
-        List<Usuario> usuarios = usuarioRepository.findByUsuario(usuario.getUsuario());
+        Optional<Usuario> usuarioLogin = Optional.ofNullable(usuarioRepository.findByUsuario(usuario.getUsuario()));
 
-        if (usuarios.stream().filter(usuario1 -> usuario1.getUsuario().equals(usuario.getUsuario()) && usuario1.senha().equals(usuario.senha())).count() > 0) {
+        if (usuario.getUsuario().equals(usuarioLogin.get().getUsuario()) && usuario.senha().equals(usuarioLogin.get().senha())) {
             usuario.login();
-            for (Usuario usuario1 : usuarios) {
-                usuario.setIdUsuario(usuario1.getIdUsuario());
-                break;
-            }
+            usuario.setIdUsuario(usuarioLogin.get().getIdUsuario());
+            localidadeRepository.save(usuario.getLocalidade());
             usuarioRepository.save(usuario);
+            return ResponseEntity.status(200).build();
         }
 
-        return usuarioRepository.findByUsuario(usuario.getUsuario());
+        return ResponseEntity.status(204).build();
     }
 
 //    @DeleteMapping("/excluir")
@@ -64,13 +68,13 @@ public class AutenticacaoController {
 //    }
 
     @GetMapping("/todos")
-    public List<Usuario> exibirUsuarios() {
+    public ResponseEntity exibirUsuarios() {
 
-        return usuarioRepository.findAll();
+        return ResponseEntity.status(200).body(usuarioRepository.findAll());
     }
 
     @PutMapping("/logoff/{id}")
-    public String deslogarUsuario(@PathVariable Integer id) {
+    public ResponseEntity deslogarUsuario(@PathVariable Integer id) {
 
         Optional<Usuario> usuarios = usuarioRepository.findById(id);
         if (!usuarios.isEmpty()) {
@@ -78,14 +82,14 @@ public class AutenticacaoController {
             usuario = usuarios.get();
             usuario.logoff();
             usuarioRepository.save(usuario);
-            return String.format("Usuário %s fez o logoff da aplicação", usuario.getUsuario());
+            return ResponseEntity.status(200).build();
         }
 
-        return null;
+        return ResponseEntity.status(204).build();
     }
 
     @PutMapping("/enviarCodigo/{id}")
-    public Integer enviarCodigoRecuperacaoSenha(@PathVariable Integer id) {
+    public ResponseEntity enviarCodigoRecuperacaoSenha(@PathVariable Integer id) {
 
         Optional<Usuario> usuarios = usuarioRepository.findById(id);
 
@@ -95,48 +99,48 @@ public class AutenticacaoController {
             usuario.setCodigoRecuperaSenha(ThreadLocalRandom.current().nextInt(10000, 99999));
             System.out.println(usuario.getCodigoRecuperaSenha());
             usuarioRepository.save(usuario);
-            return usuario.getCodigoRecuperaSenha();
+            return ResponseEntity.status(200).build();
         }
 
         return null;
     }
 
-    @PutMapping("/atualizarDadosConta/{id}")
-    public String atualizarDadosConta(@PathVariable Integer id,
-                                      @RequestBody Usuario usuario) {
+    @PatchMapping("/atualizarDadosConta/{id}")
+    public ResponseEntity atualizarDadosConta(@PathVariable Integer id,
+                                              @RequestBody Usuario usuario) {
 
         Usuario dadosUsuario = usuario;
         Optional<Usuario> dados = usuarioRepository.findById(id);
         Usuario dadosOriginais = dados.get();
 
 //        Dados da conta
-        if (!usuario.getDataNascimento().isEmpty()) {
+        if (usuario.getDataNascimento() != null) {
             dadosOriginais.setDataNascimento(dadosUsuario.getDataNascimento());
         }
 
-        if (!usuario.getGenero().isEmpty()) {
+        if (usuario.getGenero() != null) {
             dadosOriginais.setGenero(dadosUsuario.getGenero());
         }
 
-        if (!usuario.getEmail().isEmpty()) {
+        if (usuario.getEmail() != null) {
             dadosOriginais.setEmail(dadosUsuario.getEmail());
         }
 
-        if (!usuario.senha().isEmpty()) {
+        if (usuario.senha() != null) {
             dadosOriginais.setSenha(dadosUsuario.senha());
         }
 //        Fim dados da conta
 
 //        Dados do perfil
-        if (!usuario.getNome().isEmpty()) {
+        if (usuario.getNome() != null) {
             dadosOriginais.setNome(dadosUsuario.getNome());
         }
 
-        if (!usuario.getUsuario().isEmpty()) {
+        if (usuario.getUsuario() != null) {
             dadosOriginais.setUsuario(dadosUsuario.getUsuario());
         }
 
-        if (!usuario.getDescricao().isEmpty()) {
+        if (usuario.getDescricao() != null) {
             dadosOriginais.setDescricao(dadosUsuario.getDescricao());
         }
 //        Fim dados do perfil
@@ -144,7 +148,7 @@ public class AutenticacaoController {
         dadosOriginais.setIdUsuario(id);
         usuarioRepository.save(dadosOriginais);
 
-        return String.format("Os dados do usuário %s foram alterados com sucesso!!", dados.get().getNome());
+        return ResponseEntity.status(200).build();
     }
 
 

@@ -4,10 +4,12 @@ import com.example.knowuproject.modelo.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 
-    public List<Usuario> findByUsuario(String Usuario);
+    public Usuario findByUsuario(String usuario);
+
 
 
 }
