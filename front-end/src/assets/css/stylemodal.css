@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "Lato", sans-serif;
+    line-height: 1;
+  }
+  
+  body {
+    background-color:#EFF0F8;
+    overflow: hidden;
+  }
+
+  p {
+    line-height: 19px;
+    font-style: normal;
+    position: relative;
+    top: 11px;
+    margin-left: 22%;
+}
+  
+  .sidebar-navigation {
+    display: inline-block;
+    min-height: 100vh;
+    width: 80px;
+    background-color:#E9EAF4;
+    float: left;
+    position: fixed;
+  }
+
+  .icones-abaixo{
+    margin-top: 155%;
+    margin-left: 29%;
+
+  }
+
+  #retangulo{
+    width: 5px;
+    position: absolute;
+    left: 0px;
+    top: 270px;
+  }
+
+  #home{
+    font-size: 188%;
+    cursor: pointer;
+  }
+
+
+  #chat{
+    margin-top: 76%;
+    width: 28px;
+    cursor: pointer;
+  }
+
+  #calendario{
+    margin-top: 76%;
+    width: 27px;
+    cursor: pointer;
+  }
+
+  #usuario{
+    margin-top: 76%;
+    width: 28px;
+    cursor: pointer;
+  }
+
+  #logout{
+    margin-top: 186%;
+    width: 31px;
+    margin-left: -11%;
+    cursor: pointer;
+  }
+
+  #eventos-letra{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: initial;
+    position: relative;
+    top: 5%;
+    margin-left: 14px;
+  }
+
+  #usuarios-letra {
+    margin-left: 15px;
+    size: 8px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: initial;
+    position: relative;
+    top: 8%;
+}
+
+#nickname{
+  position: relative;
+  top: 3px;
+}
+
+span{
+  position: relative;
+  right: -19%;
+  left: 50px;
+  top: 6px;
+  font-size: 87%;
+}
+
+  #fut-primeiro{
+    margin-left: 13px;
+    top: 2px;
+    width: 33px;
+    position: relative;
+    top: 37px;
+  }
+
+  .foto-usuario{
+    display: inline-block;
+    border-radius: 50%;
+    width: 72%;
+    margin-left: 11%;
+    margin-top: 14%;
+  }
+
+  .logo-sorriso{
+    width: 46%;
+    margin-left: 24%;
+    margin-top: 28%;
+  }
+
+  .sidebar-navigation ul li .tooltip {
+    display: inline-block;
+    position: absolute;
+    background-color: #313443;
+    padding: 8px 15px;
+    border-radius: 3px;
+    margin-top: -26px;
+    left: 90px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+
+  /* Style the header with a grey background and some padding */
+.header {
+    overflow: hidden;
+    padding: 18px 127px;
+  }
+  
+  /* Style the header links */
+  .header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 0px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  
+  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+  .header a .pesquisar-evento {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  #input-evento {
+    margin-left: 14%;
+    border-radius: 17px;
+    width: 134%;
+    line-height: 199%;
+    background: url(img/bx_bx-search.png) no-repeat scroll 0px 0px;
+    padding-left: 45px;
+    background-size: 6%;
+    background-position-x: 5%;
+    background-position: 19px;
+    border-color: #D15FC0;
+  }
+  .tip {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    background: transparent;
+    border: 10px solid #ccc;
+  }
+  
+  .tip-up {
+    top: -25px; /* Same as body margin top + border */
+    left: 10px;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+  }
+  
+  .tip-down {
+    bottom: -25px;
+    left: 10px;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+  }
+  
+  .tip-left {
+    top: 10px;
+    left: -25px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+  }
+  
+  .tip-right {
+    top: 10px;
+    right: -25px;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+  }
+  
+  .dialogbox .body {
+    position: relative;
+    max-width: 300px;
+    height: auto;
+    margin: 20px 172px;
+    padding: 5px;
+    border-radius: 3px;
+  }
+    
+
+  #foto-comentarios{
+    width: 55px;
+    position: relative;
+    right: 5px;
+    bottom: 7px;
+    float: left;
+}
+
+  #bolinha{
+    width: 55px;
+    position: relative;
+    right: 65px;
+    bottom: 7px;
+    float: unset;
+  }
+
+  #nome-user{
+    margin-right: -1px;
+    position: absolute;
+    left: 18%;
+    bottom: 35%;
+  }
+
+  #nick-user {
+    margin-right: -1px;
+    position: absolute;
+    left: 18%;
+    bottom: 32%;
+    font-size: 15px;
+    color: gray;
+  }
+
+  #nome-do-evento{
+    margin-right: -1px;
+    position: absolute;
+    left: 32%;
+    bottom: 35%;
+  }
+
+  
+
+
+#nome-usuario{
+  position: relative;
+  bottom: 0;
+  right: 13%;
+  top: -77%;
+}
+
+::placeholder {
+  text-align: center;
+} 
+  
+  /* Style the active/current link*/
+  .header a.active {
+    background: linear-gradient(180deg, #D15FC0 0%, #8C9CFF 100%);
+    color: white;
+    width: 133%;
+    line-height: 210%;
+    border-radius: 50px;
+  }
+
+  #myBtn{
+    background: linear-gradient(180deg, #D15FC0 0%, #8C9CFF 100%);
+    color: white;
+    width: 133%;
+    line-height: 210%;
+    border-radius: 50px;
+  }
+  
+  /* Float the link section to the right */
+  .header-right {
+    float: right;
+    margin-right: 28%;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Poppins;
+  }
+  
+  /* Float four columns side by side */
+  .column {
+    float: right;
+    width: 22%;
+    padding: 0 24px;
+    margin-top: -398px;
+    margin-right: 4%;
+  }
+
+  .column2 {
+    width: 237px;
+    position: relative;
+    top: -39px;
+    left: 76%;
+    float: left;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+    /* Style the counter cards */
+    .card {
+      background-color: #E9EAF4;
+      height: 271px;
+      height: 323px;
+      border-radius: 22px;
+    }
+  
+    #mapa {
+        margin-left: 13%;
+        margin-top: 2px;
+        width: 58%;
+        height: -moz-available;
+        line-height: -19%;
+        height: 294px;
+        border-radius: 21px;
+    }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .header-right {
+      float: none;
+    }
+  }
+
+
+
+
