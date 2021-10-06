@@ -1,22 +1,23 @@
 package com.example.knowuproject.modelo;
 
-import com.example.knowuproject.Localizavel;
-import com.example.knowuproject.resultados.api.google.Result;
-import com.example.knowuproject.resultados.api.google.LocalidadeGoogle;
-import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
-import java.util.List;
+import javax.persistence.*;
+import java.util.Optional;
 
-public class Evento implements Localizavel {
+@Entity
+public class Evento {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idEvento;
     private String nome;
     private String descricao;
     private DateTimeFormat dataInicio;
     private DateTimeFormat dataFim;
-    private List<Usuario> participantes;
+    @OneToOne
+    private Optional<Usuario> usuario;
+
 
     public Evento(Integer idEvento, String nome, String descricao, DateTimeFormat dataInicio, DateTimeFormat dataFim) {
         this.idEvento = idEvento;
@@ -24,19 +25,6 @@ public class Evento implements Localizavel {
         this.descricao = descricao;
         this.dataInicio = dataInicio;
         this.dataFim = dataFim;
-        this.participantes = new ArrayList<>();
-    }
-
-    @Override
-    public String getLocalizacao() {
-        RestTemplate restTemplate = new RestTemplate();
-        RestTemplateBuilder restTemplateBuilder = new RestTemplateBuilder();
-        restTemplate = restTemplateBuilder.build();
-
-        LocalidadeGoogle teste = restTemplate.getForObject("https://maps.google.com/maps/api/geocode/json?address=Rua+Haddock+Lobo+595,+Cerqueira+Cesar,SP&components=country:BR&key=AIzaSyBvroKF-1rTRd9K-L9P3ILzSCjcFLU1LkQ", LocalidadeGoogle.class);
-        Result resultado = new Result();
-
-        return resultado.getFormatted_address();
     }
 
     public Integer getIdEvento() {
@@ -79,21 +67,29 @@ public class Evento implements Localizavel {
         this.dataFim = dataFim;
     }
 
-    public void adicionarParticipante(Usuario p){
-        participantes.add(p);
+    public Optional<Usuario> getUsuario() {
+        return usuario;
     }
-    public void exibirParticipantes(){
-        for(Usuario p: participantes){
-            System.out.println(p);
-        }
+
+    public void setUsuario(Optional<Usuario> usuario) {
+        this.usuario = usuario;
     }
-    public void removerParticipante(Integer id){
-        for (Usuario p: participantes){
-            if (p.getIdUsuario().equals(id)){
-                participantes.remove(id);
-            }
-        }
-    }
+
+    //    public void adicionarParticipante(Usuario p){
+//        participantes.add(p);
+//    }
+//    public void exibirParticipantes(){
+//        for(Usuario p: participantes){
+//            System.out.println(p);
+//        }
+//    }
+//    public void removerParticipante(Integer id){
+//        for (Usuario p: participantes){
+//            if (p.getIdUsuario().equals(id)){
+//                participantes.remove(id);
+//            }
+//        }
+   // }
 
     @Override
     public String toString() {
@@ -103,7 +99,6 @@ public class Evento implements Localizavel {
                 ", descricao='" + descricao + '\'' +
                 ", dataInicio=" + dataInicio +
                 ", dataFim=" + dataFim +
-                ", participantes=" + participantes +
                 '}';
     }
 }

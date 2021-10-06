@@ -1,6 +1,5 @@
 package com.example.knowuproject.dto;
 
-import com.example.knowuproject.Localizavel;
 import com.example.knowuproject.resultados.api.google.LocalidadeGoogle;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.web.client.RestTemplate;
