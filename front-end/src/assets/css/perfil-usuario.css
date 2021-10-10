@@ -1,0 +1,596 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "Lato", sans-serif;
+    line-height: 1;
+  }
+  
+  body {
+    background-color:#EFF0F8;
+    overflow: hidden;
+  }
+
+  p {
+    line-height: 19px;
+    font-style: normal;
+    position: relative;
+    top: 11px;
+    margin-left: 22%;
+}
+  
+  .sidebar-navigation {
+    display: inline-block;
+    min-height: 100vh;
+    width: 80px;
+    background-color:#E9EAF4;
+    float: left;
+    position: fixed;
+  }
+
+  .icones-abaixo{
+    margin-top: 155%;
+    margin-left: 29%;
+
+  }
+
+  #retangulo{
+    width: 5px;
+    position: absolute;
+    left: 0px;
+    top: 497px;
+  }
+
+  #home{
+    font-size: 188%;
+    cursor: pointer;
+  }
+
+
+  #chat{
+    margin-top: 76%;
+    width: 28px;
+    cursor: pointer;
+  }
+
+  #calendario{
+    margin-top: 76%;
+    width: 27px;
+    cursor: pointer;
+  }
+
+  #usuario{
+    margin-top: 76%;
+    width: 28px;
+    cursor: pointer;
+  }
+
+  #usuario-titulo {
+    margin-top: 65px;
+}
+
+  #logout{
+    margin-top: 164%;
+    width: 31px;
+    margin-left: -11%;
+    cursor: pointer;
+  }
+
+  #usuario-frase{
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    right: 53px;  
+    width: 93%;
+    display: -webkit-box;
+    top: 58px;
+  }
+
+  #fotos {
+    position: relative;
+    font-size: 18px;
+    top: -1%;
+    left: -32%;
+}
+
+  #fotos-do-usuario {
+    width: 55%;
+    margin-right: 30%;
+}
+
+
+  #link-info {
+    font-family: 'Poppins', sans-serif;
+    width: 11%;
+    margin-right: 70%;
+    margin-top: 52%;
+}
+
+  #link-do-usuario {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    width: 93%;
+    left: 16px;
+    bottom: 24px;
+}
+
+  #eventos-letra{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: initial;
+    position: relative;
+    top: 5%;
+    margin-left: 14px;
+  }
+
+ .meio{
+   width: 1117px;
+
+ }
+
+ .post{
+   display: flex;
+   flex-direction: column;
+ }
+
+.comentario{
+  width: 50%;
+  height: 105px;
+  border-radius: 16px;
+  padding: 1%;
+  background-color: #EFF0F8;
+  border-color: #2138CB;
+  margin-left: -17%;
+  margin-top: 6%;
+}
+
+.comentario-caixa{
+  width: 40%;
+  height: 114px;
+  border-radius: 16px;
+  padding: 1%;
+  background-color: #EFF0F8;
+  border-color: #2138CB;
+  margin-left: 8%;
+  margin-top: -40%;
+}
+
+.tres-pontos{
+  position: absolute;
+}
+
+.ponto{
+ width: 2%;
+ left: 66%;
+ margin-top: 10px;
+ position: absolute;
+ cursor: pointer;
+}
+
+  #usuarios-letra {
+    margin-left: 15px;
+    size: 8px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: initial;
+    position: relative;
+    top: 8%;
+}
+
+#nickname{
+  position: relative;
+  top: 3px;
+}
+
+span{
+  position: relative;
+  right: -19%;
+  left: 50px;
+  top: 6px;
+  font-size: 87%;
+}
+
+  #fut-primeiro{
+    margin-left: 13px;
+    top: 2px;
+    width: 33px;
+    position: relative;
+    top: 37px;
+  }
+
+  .foto-usuario{
+    display: inline-block;
+    border-radius: 50%;
+    width: 72%;
+    margin-left: 11%;
+    margin-top: 14%;
+  }
+
+  .logo-sorriso{
+    width: 46%;
+    margin-left: 24%;
+    margin-top: 28%;
+  }
+
+  .sidebar-navigation ul li .tooltip {
+    display: inline-block;
+    position: absolute;
+    background-color: #313443;
+    padding: 8px 15px;
+    border-radius: 3px;
+    margin-top: -26px;
+    left: 90px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+
+  /* Style the header with a grey background and some padding */
+.header {
+    overflow: hidden;
+    padding: 18px 127px;
+  }
+  
+  /* Style the header links */
+  .header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 0px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  
+  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+  .header a .pesquisar-pessoas {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  #input-pessoas {
+    margin-left: 126%;
+    border-radius: 17px;
+    width: 205%;
+    line-height: 199%;
+    border-radius: 17px;
+    background: url(../images/sistema/bx_bx-search.png) no-repeat scroll 0px 0px;
+    padding-left: 72px;
+    background-size: 6%;
+    background-position-x: 5%;
+    background-position: 19px;
+    border-color: #D15FC0;
+  }
+  
+  #bolinha {
+    width: 55px;
+    position: relative;
+    bottom: 7px;
+    float: unset;
+    left: 29px;
+}
+
+  .tip {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    background: transparent;
+    border: 10px solid #ccc;
+  }
+  
+  .tip-up {
+    top: -25px; /* Same as body margin top + border */
+    left: 10px;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+  }
+  
+  .tip-down {
+    bottom: -25px;
+    left: 10px;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+  }
+  
+  .tip-left {
+    top: 10px;
+    left: -25px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+  }
+  
+  .tip-right {
+    top: 10px;
+    right: -25px;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+  }
+  
+  .dialogbox .body {
+    position: relative;
+    max-width: 300px;
+    height: auto;
+    margin: 20px 172px;
+    padding: 5px;
+    border-radius: 3px;
+  }
+    
+
+  #foto-comentarios{
+    width: 66px;
+    position: relative;
+    right: 154px;
+    float: left;
+}
+
+#foto-comentarios2{
+  width: 66px;
+  position: relative;
+  float: left;
+  left: 22px;
+  margin-top: -47%;
+}
+
+  #bolinha{
+    width: 55px;
+    position: relative;
+    left: 32px;
+    bottom: 7px;
+    float: unset;
+  }
+
+  .foto-usuario2 {
+    width: 37%;
+    position: absolute;
+    bottom: 90%;
+    left: 32%;
+}
+
+  #nome-user{
+    position: absolute;
+    left: 18%;
+  }
+
+  #nome-user2{
+    position: absolute;
+    left: 18%;
+    bottom: 148%;
+  }
+
+  #nick-user {
+    position: absolute;
+    left: 18%;
+    font-size: 14px;
+    color: gray;
+    top: 12%;
+  }
+
+  #nick-user2 {
+    position: absolute;
+    left: 18%;
+    font-size: 14px;
+    color: gray;
+    bottom: 145%;
+  }
+
+  #nome-do-evento{
+    position: absolute;
+    left: 43%;
+  }
+
+  #nome-do-evento2{
+    position: absolute;
+    left: 43%;
+    bottom: 855px;
+  }
+
+  #comentario1 {
+    position: absolute;
+    left: 19%;
+    font-size: 14px;
+    color: gray;
+    top: 19%;
+  }
+
+  #comentario2 {
+    position: absolute;
+    left: -17px;
+    font-size: 19px;
+    color: gray;
+    top: 25%;
+  }
+
+  #comentario-dentro2{
+      position: absolute;
+      left: -17px;
+      font-size: 19px;
+      color: gray;
+      top: -34%;
+  }
+
+  #comentario-segundo {
+    position: absolute;
+    left: 98px;
+    font-size: 14px;
+    color: gray;
+    bottom: 138%;
+  }
+
+
+#nome-usuario{
+  position: relative;
+  bottom: 0;
+  right: 13%;
+  top: -77%;
+}
+
+::placeholder {
+  text-align: center;
+} 
+
+.buttons {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  left: 25%;
+  top: 32%;
+}
+
+.buttons2 {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  left: 25%;
+  bottom: 119%;
+}
+
+.button {
+  border-radius: 50px;
+  width: 125px;
+  height: 40px;
+  background-color: #EFF0F8;
+  border-color: #2138CB;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button2 {
+  border-radius: 50px;
+  width: 125px;
+  height: 40px;
+  background-color: #EFF0F8;
+  border-color: #2138CB;
+  cursor: pointer;
+  font-size: 16px;
+}
+  
+  /* Style the active/current link*/
+  .header a.active {
+    background: linear-gradient(180deg, #D15FC0 0%, #8C9CFF 100%);
+    color: white;
+    width: 133%;
+    line-height: 210%;
+    border-radius: 50px;
+  }
+  
+  /* Float the link section to the right */
+  .header-right {
+    float: right;
+    margin-right: 28%;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Poppins;
+  }
+  
+  /* Float four columns side by side */
+  .column {
+    float: right;
+    width: 22%;
+    padding: 0 24px;
+    margin-top: -624px;
+    margin-right: 0%;
+  }
+
+  /* Remove extra left and right margins, due to padding */
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+    /* Style the counter cards */
+    .card {
+      background-color: #E9EAF4;
+      height: 271px;
+      height: 323px;
+    }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+  @media screen and (max-width: 500px) {
+  .container{
+    width: 100%;
+  }
+    
+    .sidebar-navigation{
+       display: none;
+    }
+
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      margin: 0;
+    }
+
+    #input-pessoas{
+      width:200%;
+      height: 30%;
+      margin-left: -40%;
+    }
+
+    .column{
+      width: 80%;
+      margin-top: 1px  ;
+    }
+    .column2{
+      display: none;
+    }
+
+  }
+  .square{
+    width: 48%;
+    height: 0; /* A mágica está aqui */
+    padding-bottom: 48%; /* ... e está aqui */
+    margin: 1%;
+    float: left;
+    position: relative;
+}
+
+.block{
+    position: absolute;
+    text-align: center;
+    background: #E9EAF4;
+    width: 46%;
+    height: 93%;
+    left: 21%;
+    bottom: 41px;
+    border-radius: 10px;
+  }
+
+
+.block-meio{
+    position: absolute;
+    text-align: center;
+    width: 88%;
+    height: 93%;
+    bottom: 41px;
+    border-radius: 10px;
+    right: 44%;
+    top: 55%;
+  }
