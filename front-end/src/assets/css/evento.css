@@ -343,9 +343,10 @@ body {
   font-size: 30px;
   margin-top: 200%;
   margin-left: -40%;
+  cursor: pointer;
 }
 
-@media (max-width: 1750px) {
+@media (max-width: 2100px) {
   .usuarios {
     width: 45%;
   }
@@ -379,37 +380,142 @@ body {
     width: 700px;
     margin-left: -240px;
   }
-  .btn-interacao{
+  .btn-interacao {
     left: 38%;
   }
 
-  .meio{
-    margin-left:115%;
+  .meio {
+    margin-left: 115%;
   }
 
-  #input-evento{
+  #input-evento {
     width: 400px;
   }
 
-  .header-right{
+  .header-right {
     padding-left: 30px;
   }
 
-  #myBtn{
+  #myBtn {
     width: 200px;
   }
 
-  .direita{
-    margin-left: 200%;
+  .direita {
+    margin-left: 220%;
     margin-top: -110%;
   }
 
-
-  @media (max-width: 1700px) {
-    .sidebar{
+  @media (max-width: 1990px) {
+    .sidebar {
       display: none;
     }
 
-    
+    .content-meio {
+      left: 23%;
+      height: 80%;
+    }
+
+    .postagens-evento {
+      margin-top: 50px;
+    }
+
+    .postagens {
+      margin-top: -80px;
+    }
+
+    .postar-btn {
+      top: 45%;
+    }
+
+    .btn-interacao {
+      top: 81%;
+    }
+
+    .direita {
+      margin-left: 210%;
+    }
+  }
+
+  @media (max-width: 1600px) {
+    .direita {
+      margin-left: 195%;
+    }
+
+    .sair-evento {
+      width: 250px;
+    }
+  }
+
+  @media (max-width: 1500px) {
+    body {
+      overflow-y: auto;
+    }
+
+    .direita {
+      display: none;
+    }
+
+    .content-meio {
+      display: none;
+    }
+
+    #myBtn {
+      display: none;
+    }
+
+    .content {
+      margin-top: 100px;
+      width: 57%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .header-pesquisa {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pesquisar-evento,
+    #input-evento {
+      height: 60px;
+      margin-left: 0;
+      left: 0;
+    }
+
+    .usuarios {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 10%;
+    }
+
+    .conversa {
+      width: 100%;
+      margin-left: 70%;
+    }
+
+    .nome-evento {
+      font-size: 30px;
+    }
+
+    .hashtag {
+      font-size: 20px;
+    }
+
+    .botao {
+      width:10%;
+      position: absolute;
+      left: 85%;
+      top: 85%;
+    }
+
+    .btn {
+      position: fixed;
+    }
   }
 }
