@@ -1,102 +1,415 @@
-body{
-    overflow: hidden;
-    display: flex;
+body {
+  overflow: hidden;
+  display: flex;
+  background-color: #eff0f8;
 }
 
-.sidebar{
-    width: 128px;
-    height: 1156px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #E9EAF4;
-    z-index: -1;
+.sidebar {
+  width: 128px;
+  height: 1156px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e9eaf4;
+  z-index: -1;
 }
 
-.logo{
-    width: 35%;
-    padding-top: 25%;
+.logo {
+  width: 35%;
+  padding-top: 25%;
 }
 
-.foto-perfil{
-    width: 55%;
-    padding-top: 20%;
+.foto-perfil {
+  width: 55%;
+  padding-top: 20%;
 }
 
-.menu{
-    vertical-align: middle; 
-    padding-top: 100%;
+.menu {
+  vertical-align: middle;
+  padding-top: 100%;
 }
 
-.menu-icon{
-
-    padding: 120% 0 50% 0;
+.menu-icon {
+  padding: 120% 0 50% 0;
 }
 
-.barra{
-    width: 7px;
-    height: 39px;
-    background: linear-gradient(180deg, #D15FC0 0%, #8C9CFF 100%);
-    position: absolute;
-    display: flex;
-    float: left;
-    left: 0;
-    top: 46%;
+.barra {
+  width: 7px;
+  height: 39px;
+  background: linear-gradient(180deg, #d15fc0 0%, #8c9cff 100%);
+  position: absolute;
+  display: flex;
+  float: left;
+  left: 0;
+  top: 46%;
 }
 
-.sair{
-    margin-top: 300%;
+.sair {
+  margin-top: 300%;
 }
 
 /* Conversas */
-.usuarios{
-    margin-top: 20%;
-    width: 500px;   
+.usuarios {
+  margin-top: -5%;
+  width: 500px;
 }
 
-.foto-evento{
-    width: 13%;
+.foto-evento {
+  width: 13%;
 }
 
-.conversa{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100;
-   margin-left: 10%;
-   margin-top: 15%;
-   display: flex;
-   
+.conversa {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  margin-left: 10%;
+  margin-top: 15%;
+  display: flex;
 }
-.nome-evento{
-    font-size: 28px;
-    color: #303031;
- 
+.nome-evento {
+  font-size: 28px;
+  color: #303031;
 }
 
-.hashtag{
-    font-size: 24px;
-    color: #837979;
+.hashtag {
+  font-size: 24px;
+  color: #837979;
 }
 
-.descricao{
-    flex-direction:column;
-    padding-left: 5%;
+.descricao {
+  flex-direction: column;
+  padding-left: 5%;
 }
 
-.botao{
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin-right: 20%;
-    margin-top: 10%;
+.botao {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20%;
+  margin-top: 10%;
 }
 
-.btn{
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    font-size: 40px;
-    color: #fff;
-    background: linear-gradient(180deg, #D15FC0 0%, #8C9CFF 100%);
-    cursor: pointer;
+.btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 40px;
+  color: #fff;
+  background: linear-gradient(180deg, #d15fc0 0%, #8c9cff 100%);
+  cursor: pointer;
+}
+
+/* meio */
+
+.meio {
+  margin-left: 107%;
+  margin-top: 5%;
+}
+
+.header-pesquisa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#input-evento {
+  width: 500px;
+  height: 50px;
+  border-color: #2138cb;
+  border-width: 3px;
+  border-radius: 50px;
+  padding-left: 20px;
+  font-size: 25px;
+  background-color: transparent;
+}
+
+.header-right {
+  float: right;
+  margin-right: 28%;
+  padding-left: 190px;
+}
+
+#myBtn {
+  width: 250px;
+  height: 60px;
+  background: linear-gradient(87.19deg, #d15fc0 0%, #8c9cff 100%);
+  border-radius: 50px;
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  font-family: "Exo", sans-serif;
+  font-weight: 400;
+}
+
+.content-meio {
+  width: 946px;
+  height: 85%;
+  position: absolute;
+  left: 30%;
+  top: 12%;
+  border: 1px solid purple;
+  border-radius: 16px;
+}
+
+.header-meio {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-meio-esquerda {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.titulo-evento-meio {
+  padding-left: 40px;
+  font-size: 30px;
+  font-family: "Exo", sans-serif;
+}
+
+.header-meio-direita {
+  padding-top: 20px;
+  padding-right: 40px;
+}
+
+.pessoas-meio,
+.adicionar-pessoas {
+  margin-left: -10px;
+}
+
+.postagens-evento {
+  margin-top: 157px;
+  padding-left: 20px;
+}
+
+.header-postagem {
+  display: flex;
+  flex-direction: row;
+}
+
+.info-perfil-meio {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.nome-perfil-meio {
+  font-size: 30px;
+  font-family: "Exo", sans-serif;
+}
+
+.usuario {
+  padding-top: 10px;
+  font-size: 20px;
+  font-family: "Exo", sans-serif;
+  color: #837979;
+}
+
+.input-postagem {
+  margin-top: 120px;
+  margin-left: -280px;
+}
+
+.postar {
+  width: 215%;
+  height: 50%;
+  border-radius: 16px;
+  border-color: #2138cb;
+  padding-left: 20px;
+  padding-top: 20px;
+  font-size: 20px;
+  font-family: "Exo", sans-serif;
+  background-color: transparent;
+}
+
+.postar-btn {
+  width: 192px;
+  height: 50px;
+  position: absolute;
+  border-radius: 50px;
+  font-size: 25px;
+  font-family: "Exo", sans-serif;
+  left: 75%;
+  top: 52%;
+  background-color: #2138cb;
+  color: #fff;
+  cursor: pointer;
+}
+
+.postagens {
+  margin-top: -60px;
+  padding-left: 20px;
+}
+
+.post {
+  margin-top: 130px;
+  margin-left: -240px;
+  width: 870px;
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid #2138cb;
+}
+
+.header-post {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pontinhos {
+  padding-right: 20px;
+  padding-top: 20px;
+  width: 5%;
+  height: 5%;
+  cursor: pointer;
+}
+
+.horario {
+  padding-top: 20px;
+  padding-left: 20px;
+  color: #837979;
+  font-size: 20px;
+  font-family: "Exo", sans-serif;
+}
+
+.mensagem {
+  padding-left: 20px;
+  margin-top: 20px;
+  font-size: 25px;
+  font-family: "Exo", sans-serif;
+  padding-bottom: 20px;
+}
+
+.hashtag-post {
+  color: #2138cb;
+}
+
+.btn-interacao {
+  position: absolute;
+  top: 89%;
+  left: 48%;
+}
+
+.btn-interacao-usuario {
+  background: #fff;
+  border-color: #2138cb;
+  border-radius: 50px;
+  font-size: 20px;
+  padding: 5px 30px 5px 30px;
+  cursor: pointer;
+}
+
+.btn-interacao-usuario:hover {
+  background-color: #2138cb;
+  color: #fff;
+}
+
+/* direita */
+
+.direita {
+  width: 243px;
+  margin-left: 185%;
+  margin-top: -100%;
+}
+
+.foto-evento-perfil {
+  width: 40%;
+}
+
+.titulo-evento {
+  font-size: 30px;
+  font-family: "Exo", sans-serif;
+  margin-left: -25%;
+  padding-top: 10%;
+}
+
+.midia-evento {
+  padding-top: 80px;
+}
+
+.subtitulo {
+  font-size: 30px;
+  font-family: "Exo", sans-serif;
+  margin-left: -40%;
+}
+
+.sair-evento {
+  width: 317px;
+  height: 72px;
+  background: linear-gradient(87.19deg, #fa4848 1.27%, #f34fc5 133.63%);
+  border-radius: 50px;
+  color: #fff;
+  font-size: 30px;
+  margin-top: 200%;
+  margin-left: -40%;
+}
+
+@media (max-width: 1750px) {
+  .usuarios {
+    width: 45%;
+  }
+
+  .foto-evento {
+    width: 20%;
+    height: 20%;
+  }
+
+  .nome-evento {
+    font-size: 20px;
+  }
+
+  .hashtag {
+    font-size: 18px;
+  }
+
+  .content-meio {
+    width: 746px;
+  }
+
+  .postar {
+    width: 170%;
+  }
+
+  .postar-btn {
+    left: 72%;
+  }
+
+  .post {
+    width: 700px;
+    margin-left: -240px;
+  }
+  .btn-interacao{
+    left: 38%;
+  }
+
+  .meio{
+    margin-left:115%;
+  }
+
+  #input-evento{
+    width: 400px;
+  }
+
+  .header-right{
+    padding-left: 30px;
+  }
+
+  #myBtn{
+    width: 200px;
+  }
+
+  .direita{
+    margin-left: 200%;
+    margin-top: -110%;
+  }
+
+
+  @media (max-width: 1700px) {
+    .sidebar{
+      display: none;
+    }
+
+    
+  }
 }
