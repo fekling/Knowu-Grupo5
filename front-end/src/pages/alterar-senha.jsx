@@ -7,10 +7,10 @@ function Index() {
   return (
     <section>
        <img src={bg} alt="background colorido" class="bg"/>
-      <div class="esquerda">
+    
         <img src={seta} alt="seta para voltar" class="seta" />
         <h3>Voltar</h3>
-      </div>
+    
       <AlterarSenha/>
     </section>
   );
