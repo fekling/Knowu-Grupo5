@@ -17,7 +17,7 @@ function Index() {
         <img src={Logo} alt="" className="logo" />
         <img src={Wifi} alt="" className="wifi" />
         <h1 className="texto">Insira o código que te enviamos</h1>
-        <input type="text" placeholder="Código" className="input-codigo" />
+        <input type="text" placeholder="Código" className="input" />
         <button className="confirmar">Confirmar</button>
         <div className="reenviar">
         Não recebeu o código? <u>Reenviar</u>
