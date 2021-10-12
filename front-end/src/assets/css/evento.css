@@ -1,9 +1,13 @@
 body {
-  overflow: hidden;
-  display: flex;
+
   background-color: #eff0f8;
 }
 
+a{
+  text-decoration: none;
+  color: #000;
+}
+/*
 .sidebar {
   width: 128px;
   height: 1156px;
@@ -49,7 +53,7 @@ body {
 }
 
 /* Conversas */
-.usuarios {
+/* .usuarios {
   margin-top: -5%;
   width: 500px;
 }
@@ -99,7 +103,6 @@ body {
   cursor: pointer;
 }
 
-/* meio */
 
 .meio {
   margin-left: 107%;
@@ -305,8 +308,6 @@ body {
   color: #fff;
 }
 
-/* direita */
-
 .direita {
   width: 243px;
   margin-left: 185%;
@@ -446,7 +447,7 @@ body {
     }
   }
 
-  @media (max-width: 1500px) {
+  @media (max-width: 700px) {
     body {
       overflow-y: auto;
     }
@@ -518,4 +519,76 @@ body {
       position: fixed;
     }
   }
+}  */
+
+.header-mobile {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.logo-mobile {
+  width: 80%;
+}
+
+.content-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.pesquisa-mobile {
+  background-color: transparent;
+  width: 306px;
+  height: 56px;
+  border-radius: 50px;
+  padding-left: 20px;
+  font-size: 20px;
+  border-color:#8C9CFF;
+}
+
+
+.eventos-mobile{
+  margin-top: 50px;
+}
+
+.evento-mobile{
+  display: flex;
+  padding-right: 20px;
+  padding-bottom:50px ;
+}
+
+.logo-evento{
+  width: 120%;
+}
+
+.direita-evento-mobile{
+  padding-left: 30px;
+  align-items: center;
+}
+
+.titulo-evento{
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.direita-evento-mobile h2{
+  font-size: 20px;
+  font-family: 'Exo', sans-serif;
+  color: #837979;
+}
+
+.barra{
+  width: 5px;
+  height: 62px;
+  background: linear-gradient(187deg, #D15FC0 0%, #8C9CFF 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.espacamento{
+  margin-left: 40px;
+  width: 70%;
 }
