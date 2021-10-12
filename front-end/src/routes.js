@@ -8,7 +8,11 @@ function Routes(){
     return(
         <Router>
             <Switch>
-                <Route exact path="/" component={AlterarSenha}/>
+                <Route exact path="/login" component={AlterarSenha}/>
+                <Route exact path="/cadastro" component={AlterarSenha}/>
+                <Route exact path="/recuperar-senha" component={AlterarSenha}/>
+                <Route exact path="/notificacao-senha" component={AlterarSenha}/>
+                <Route exact path="/alterar-senha" component={AlterarSenha}/>
             </Switch>
         </Router>
     );

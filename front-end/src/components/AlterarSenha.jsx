@@ -16,6 +16,7 @@ export class AlterarSenha extends Component {
                 <h1 class ="titulo">Altere sua senha: </h1>
                 <input type ="text" class ="input-senha" placeholder="senha"/>
                 <input type ="text" class ="input-senha" placeholder="Confirme sua senha"/>
+                
                 <button class ="btn"><a href="">Altere sua senha</a></button>
                 </div> 
 
