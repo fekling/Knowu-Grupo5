@@ -1,7 +1,7 @@
 import "../assets/css/react.css";
 import Seta from "../assets/images/seta.png";
 import Logo from "../assets/images/logo.png";
-import Wifi from "../assets/images/wifi.png";
+import Sino from "../assets/images/sino.png";
 import Bg from "../assets/images/bg-color.png"
 
 function Index() {
@@ -15,13 +15,13 @@ function Index() {
         </div>
 
         <img src={Logo} alt="" className="logo" />
-        <img src={Wifi} alt="" className="wifi" />
-        <h1 className="texto">Insira o código que te enviamos</h1>
-        <input type="text" placeholder="Código" className="input" />
-        <button className="confirmar">Confirmar</button>
-        <div className="reenviar">
-        Não recebeu o código? <u>Reenviar</u>
-        </div>
+        <img src={Sino} alt="" className="wifi" />
+        <h1 className="texto">Esqueceu a senha?</h1>
+        <h2 className="sub-titulo">
+        Vamos te enviar um link para seu email cadastrado para que possamos alterar sua senha.
+        </h2>
+        <input type="text" placeholder="Email cadastrado" className="input" />
+        <button className="confirmar">Enviar link</button>
       </div>
     </div>
   );

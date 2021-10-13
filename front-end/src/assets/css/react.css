@@ -126,3 +126,11 @@ u{
     height: 150vh;
 }
 
+.sub-titulo{
+    font-size: 25px;
+    text-align: center;
+    color: #343333;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 100;
+}
+
