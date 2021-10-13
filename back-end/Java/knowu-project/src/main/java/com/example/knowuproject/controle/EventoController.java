@@ -77,10 +77,14 @@ public class EventoController {
     }
 
     @PostMapping("/downloadEvento/{id}")
-    public ResponseEntity downloadDeEvento(@PathVariable int id){
-        ListaObj <Evento> listaEvento = new ListaObj<>(10);
-        Optional<Evento> evento = eventoRepository.findById(id);
-        listaEvento = eventoRepository.findById(id);
+    public ResponseEntity downloadDeEvento(@PathVariable Integer id) {
+
+        ListaObj<Evento> eventos = new ListaObj<Evento>((int) eventoRepository.count());
+        Optional<Evento> eventosAuxiliar = eventoRepository.findById(id);
+        eventos.adicionar(eventosAuxiliar.get());
+
+        gravaArquivoCsv(eventos, "eventos");
+        return ResponseEntity.status(200).build();
     }
 
     //    Método gravar Arquivo .csv
