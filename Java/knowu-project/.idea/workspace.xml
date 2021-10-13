@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cb2b123-32fc-489e-b654-eb1ef32ae83d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/controle/AutenticacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/controle/AutenticacaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/repositorio/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/repositorio/UsuarioRepository.java" afterDir="false" />
-    </list>
+    <list default="true" id="1cb2b123-32fc-489e-b654-eb1ef32ae83d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +47,7 @@
       <workItem from="1633033267747" duration="218000" />
       <workItem from="1633035866703" duration="22000" />
       <workItem from="1633278317456" duration="13000" />
+      <workItem from="1633556937372" duration="11000" />
     </task>
     <servers />
   </component>

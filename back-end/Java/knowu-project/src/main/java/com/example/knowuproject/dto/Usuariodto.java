@@ -7,7 +7,7 @@ import org.springframework.web.client.RestTemplate;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class Usuariodto implements Localizavel {
+public class Usuariodto {
 
     // Atributos
 
@@ -70,17 +70,6 @@ public class Usuariodto implements Localizavel {
         this.autenticadoEm = data;
     }
 
-    @Override
-    public String getLocalizacao() {
-
-        return localizacao;
-    }
-
-    public void setLocalizacao(String localizacao) {
-
-        this.localizacao = localizacao;
-    }
-
     public void login() {
 
         this.setAutenticado(true);
@@ -95,9 +84,4 @@ public class Usuariodto implements Localizavel {
 
     }
 
-    public void logoff() {
-        this.setAutenticadoEm(null);
-        this.setAutenticado(false);
-        this.setLocalizacao(null);
-    }
 }

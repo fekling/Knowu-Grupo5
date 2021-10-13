@@ -13,12 +13,12 @@ public class Evento {
     private Integer idEvento;
     private String nome;
     private String descricao;
-    private DateTimeFormat dataInicio;
-    private DateTimeFormat dataFim;
+    private String dataInicio;
+    private String dataFim;
     @OneToOne
-    private Optional<Usuario> usuario;
+    private Usuario usuario;
 
-
+    /*
     public Evento(Integer idEvento, String nome, String descricao, DateTimeFormat dataInicio, DateTimeFormat dataFim) {
         this.idEvento = idEvento;
         this.nome = nome;
@@ -26,6 +26,7 @@ public class Evento {
         this.dataInicio = dataInicio;
         this.dataFim = dataFim;
     }
+    */
 
     public Integer getIdEvento() {
         return idEvento;
@@ -51,29 +52,32 @@ public class Evento {
         this.descricao = descricao;
     }
 
-    public DateTimeFormat getDataInicio() {
+    public String getDataInicio() {
         return dataInicio;
     }
 
-    public void setDataInicio(DateTimeFormat dataInicio) {
+    public void setDataInicio(String dataInicio) {
         this.dataInicio = dataInicio;
     }
 
-    public DateTimeFormat getDataFim() {
+    public String getDataFim() {
         return dataFim;
     }
 
-    public void setDataFim(DateTimeFormat dataFim) {
+    public void setDataFim(String dataFim) {
         this.dataFim = dataFim;
     }
 
-    public Optional<Usuario> getUsuario() {
-        return usuario;
+    public Optional getUsuario() {
+        Optional<Usuario> usuario;
+        return usuario = Optional.ofNullable(this.usuario);
     }
 
     public void setUsuario(Optional<Usuario> usuario) {
-        this.usuario = usuario;
+        Usuario usuario1 = usuario.get();
+        this.usuario = usuario1;
     }
+
 
     //    public void adicionarParticipante(Usuario p){
 //        participantes.add(p);
@@ -89,7 +93,7 @@ public class Evento {
 //                participantes.remove(id);
 //            }
 //        }
-   // }
+    // }
 
     @Override
     public String toString() {
@@ -101,4 +105,5 @@ public class Evento {
                 ", dataFim=" + dataFim +
                 '}';
     }
+
 }
