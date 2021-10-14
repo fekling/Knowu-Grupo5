@@ -1,102 +1,468 @@
-body{
-    overflow: hidden;
-    display: flex;
+body {
+  background-color: #eff0f8;
+  overflow-y: hidden;
 }
 
-.sidebar{
-    width: 128px;
-    height: 1156px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #E9EAF4;
-    z-index: -1;
+a {
+  text-decoration: none;
+  color: #000;
 }
 
-.logo{
-    width: 35%;
-    padding-top: 25%;
-}
+@media (min-width: 1268px){
+  .header-meio{
+    margin-left: 11.5%;
+  }
 
-.foto-perfil{
-    width: 55%;
-    padding-top: 20%;
-}
-
-.menu{
-    vertical-align: middle; 
-    padding-top: 100%;
-}
-
-.menu-icon{
-
-    padding: 120% 0 50% 0;
-}
-
-.barra{
-    width: 7px;
-    height: 39px;
-    background: linear-gradient(180deg, #D15FC0 0%, #8C9CFF 100%);
+  .feed-eventos-desktop{
     position: absolute;
+    left: 25%;
+  }
+
+
+  .direita{
+    width: 28%;
     display: flex;
-    float: left;
-    left: 0;
-    top: 46%;
+    justify-content: center;
+    margin-top: 100px;
+  }
+
+  .header-card-evento{
+    text-align: center;
+  }
+
+  .logo-evento-card{
+    width: 35%;
+  }
+
+  .titulo-evento-card{
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    margin-top: 10px;
+  }
+
+  .content-card{
+    margin-top: 70px;
+  }
+
+  .content-card h1{
+    font-size: 20px;
+    font-family: "exo", sans-serif;
+  }
+
+  .footer-card{
+      margin-top: 140%;
+  }
+
+  .sair-evento{
+    background: linear-gradient(87.19deg, #FA4848 1.27%, #F34FC5 133.63%);
+    border-radius: 50px;
+    color: #fff;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    height: 52px;
+  }
+
 }
 
-.sair{
-    margin-top: 300%;
+@media (min-width:801px) and (max-width: 1267px){
+  .feed-eventos-desktop{
+    position: absolute;
+    left: 33.3%;
+  }
+
+  .direita{
+    display: none;
+  }
 }
 
-/* Conversas */
-.usuarios{
-    margin-top: 20%;
-    width: 500px;   
-}
+@media (min-width: 801px) {
+  .mobile {
+    display: none;
+  }
 
-.foto-evento{
-    width: 13%;
-}
+  .content-desktop {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.conversa{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100;
-   margin-left: 10%;
-   margin-top: 15%;
-   display: flex;
-   
-}
-.nome-evento{
-    font-size: 28px;
-    color: #303031;
- 
-}
+  /* sidebar  */
 
-.hashtag{
-    font-size: 24px;
-    color: #837979;
-}
+  .esquerda {
+    display: flex;
+  }
 
-.descricao{
-    flex-direction:column;
-    padding-left: 5%;
-}
-
-.botao{
+  .sidebar {
+    width: auto;
+    height: 100vw;
+    background-color: #e9eaf4;
+    padding: 0 10px 10px 10px;
     display: flex;
     text-align: center;
+    flex-direction: column;
+  }
+
+  .logo-desktop {
+    width: 60%;
+    margin-top: 30px;
+  }
+
+  .img-perfil {
+    width: 80%;
+    margin-top: 30px;
+  }
+
+  .icon-menu {
+    padding-top: 50px;
+  }
+
+  .barra {
+    width: 7px;
+    height: 40px;
+    background: linear-gradient(187deg, #d15fc0 0%, #8c9cff 100%);
+  }
+
+  .evento {
+    display: flex;
     align-items: center;
+  }
+
+  .evento-icon {
+    padding-left: 10px;
+    width: auto;
+    height: 100%;
+  }
+
+  .footer-sidebar {
+    margin-top: 90%;
+  }
+
+  .eventos-desktop {
+    margin-top: 130px;
+    padding-left: 20px;
+  }
+
+  .header-eventos-desktop {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+  }
+
+  .direita-eventos-desktop {
+    padding-left: 10px;
+  }
+
+  .titulo-evento {
+    font-size: 110%;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .direita-eventos-desktop h2 {
+    font-family: "Exo", sans-serif;
+    font-size: 90%;
+    color: #837979;
+  }
+
+  .adiciona-evento-desktop {
+    display: flex;
     justify-content: center;
-    margin-right: 20%;
-    margin-top: 10%;
+
+    margin-top: 20px;
+  }
+
+  .adiciona-evento {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 30px;
+    background: linear-gradient(187deg, #d15fc0 0%, #8c9cff 100%);
+    border: none;
+    cursor: pointer;
+  }
+
+  .barra-evento-desktop {
+    width: 5px;
+    height: 72px;
+    background: linear-gradient(187deg, #d15fc0 0%, #8c9cff 100%);
+    margin-right: 10px;
+  }
+
+  /* meio da aplicação */
+
+  .meio {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-meio {
+    position: absolute;
+    left: 20%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+
+  .pesquisa-desktop {
+    width: 20rem;
+    height: 36px;
+    border-radius: 50px;
+    border-color: #d15fc0;
+    padding-left: 20px;
+    font-size: 20px;
+    background-color: transparent;
+  }
+
+  .criar-evento {
+    margin-left: 20%;
+    width: 10rem;
+    height: 46px;
+    border-radius: 50px;
+    background: linear-gradient(187deg, #d15fc0 0%, #8c9cff 100%);
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .feed-eventos-desktop {
+    margin-top: 100px;
+    border: 1px solid #d15fc0;
+    height: 80%;
+    margin-left: 80px;
+    border-radius: 16px;
+  }
+
+  .header-feed {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .direita-feed {
+    display: flex;
+    align-items: center;
+  }
+
+  .foto-evento-feed {
+    width: 20%;
+  }
+
+  .titulo-evento-feed {
+    font-size: 16px;
+    padding-left: 10px;
+    font-family: "Exo", sans-serif;
+  }
+
+  .foto-perfis-feed {
+    width: 12%;
+  }
+
+  .post-evento-desktop {
+    margin-top: 30px;
+  }
+
+  .header-post-evento {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+  }
+
+  .foto-perfil-usuario-evento {
+    width: 12%;
+  }
+
+  .info-post {
+    text-align: left;
+    padding-left: 10px;
+  }
+
+  .nome-usuario-evento {
+    font-size: 20px;
+    font-family: "exo", sans-serif;
+  }
+
+  .info-post h2 {
+    font-size: 16px;
+    font-family: "exo", sans-serif;
+    color: #837979;
+  }
+
+  .mensagem-evento-desktop {
+    margin-top: 20px;
+  }
+
+  .input-mensagem {
+    width: 90%;
+    height: 105px;
+    border-radius: 16px;
+    background-color: transparent;
+    border-color: #2138cb;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+
+  .postar-mensagem {
+    background: linear-gradient(90deg, #2138cb 0%, #4c2797 117.93%);
+    color: #fff;
+    border-radius: 50px;
+    position: absolute;
+    margin-top: 25%;
+    left: 0;
+    margin-left: 70%;
+    border: none;
+    font-family: "poppins", sans-serif;
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  .posts {
+    margin-top: 20px;
+  }
+
+  .postagens-evento-desktop {
+    margin-top: 5px;
+    width: 95%;
+    margin-left: 10px;
+    background-color: transparent;
+    border: 1px solid #2138cb;
+    border-radius: 16px;
+  }
+
+  .header-postagem {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+  }
+
+  .infos-postagens {
+    color: #837979;
+    font-family: "exo", sans-serif;
+    font-size: 14px;
+  }
+
+  .mensagem-postada {
+    font-size: 15px;
+    padding-bottom: 20px;
+    text-align: left;
+    padding-left: 30px;
+    font-family: "exo", sans-serif;
+  }
+
+  .hashtag {
+    color: #2138cb;
+  }
+
+  .btn-interacao-usuario {
+    position: absolute;
+    text-align: center;
+    margin-left: 33%;
+  }
+
+  .btn-interacao {
+    background-color: #eff0f8;
+    border: 1px solid #2138cb;
+    font-family: "exo", sans-serif;
+    border-radius: 50px;
+    width: 92px;
+    cursor: pointer;
+  }
+
+  .btn-interacao:hover{
+    background-color: #2138cb;
+    color: #fff;
+  }
 }
 
-.btn{
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    font-size: 40px;
-    color: #fff;
-    background: linear-gradient(180deg, #D15FC0 0%, #8C9CFF 100%);
-    cursor: pointer;
+
+/* Mobile  */
+
+@media (max-width: 800px) {
+  body {
+    overflow: visible;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .header-mobile {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+  }
+
+  .logo-mobile {
+    width: 80%;
+  }
+
+  .content-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .pesquisa-mobile {
+    background-color: transparent;
+    width: 306px;
+    height: 56px;
+    border-radius: 50px;
+    padding-left: 20px;
+    font-size: 20px;
+    border-color: #8c9cff;
+  }
+
+  .eventos-mobile {
+    margin-top: 50px;
+  }
+
+  .evento-mobile {
+    display: flex;
+    padding-right: 20px;
+    padding-bottom: 50px;
+  }
+
+  .logo-evento {
+    width: 120%;
+  }
+
+  .direita-evento-mobile {
+    padding-left: 30px;
+    align-items: center;
+  }
+
+  .titulo-evento {
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .direita-evento-mobile h2 {
+    font-size: 20px;
+    font-family: "Exo", sans-serif;
+    color: #837979;
+  }
+
+  .barra {
+    width: 5px;
+    height: 62px;
+    background: linear-gradient(187deg, #d15fc0 0%, #8c9cff 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .espacamento {
+    margin-left: 40px;
+    width: 70%;
+  }
 }

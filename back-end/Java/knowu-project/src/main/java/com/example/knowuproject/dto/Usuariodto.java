@@ -1,6 +1,5 @@
 package com.example.knowuproject.dto;
 
-import com.example.knowuproject.Localizavel;
 import com.example.knowuproject.resultados.api.google.LocalidadeGoogle;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.web.client.RestTemplate;
@@ -8,7 +7,7 @@ import org.springframework.web.client.RestTemplate;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class Usuariodto implements Localizavel {
+public class Usuariodto {
 
     // Atributos
 
@@ -71,17 +70,6 @@ public class Usuariodto implements Localizavel {
         this.autenticadoEm = data;
     }
 
-    @Override
-    public String getLocalizacao() {
-
-        return localizacao;
-    }
-
-    public void setLocalizacao(String localizacao) {
-
-        this.localizacao = localizacao;
-    }
-
     public void login() {
 
         this.setAutenticado(true);
@@ -92,13 +80,8 @@ public class Usuariodto implements Localizavel {
 
         LocalidadeGoogle localidadeGoogle = restTemplate.getForObject("https://maps.google.com/maps/api/geocode/json?address=Rua+Haddock+Lobo+595,+Cerqueira+Cesar,SP&components=country:BR&key=AIzaSyBvroKF-1rTRd9K-L9P3ILzSCjcFLU1LkQ", LocalidadeGoogle.class);
 
-        this.localizacao = localidadeGoogle.getResults().get(0).toString();
+//        this.localizacao = localidadeGoogle.getResults().get(0).toString();
 
     }
 
-    public void logoff() {
-        this.setAutenticadoEm(null);
-        this.setAutenticado(false);
-        this.setLocalizacao(null);
-    }
 }

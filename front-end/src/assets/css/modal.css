@@ -1,0 +1,198 @@
+h2{
+  font-size: 18px;
+}
+ /* The Modal (background) */
+ .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    left: 1%;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  } 
+
+   /* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: #E9EAF4;
+    color: white;
+    font-family: Poppins;
+  }
+
+  #crie-evento{
+  text-align: center;
+  font-size: 165%;
+  font-weight: bold;
+  color: black;
+  margin-left: 1%;
+  }
+
+  #text {
+    float: right;
+    margin-right: 39%;
+    margin-top: 2px;
+}
+
+  #numero-pessoas {
+    position: relative;
+    left: 7%;
+}
+
+textarea {
+  width: 502px;
+  position: relative;
+  bottom: 7px;
+  border-radius: 10px;
+  border-color: #2138CB;
+  line-height: 157%;
+  height: 95px;
+}
+.required1 {
+  position: relative;
+  left: 41px;
+  font-size: 17px;
+  top: -11px;
+}
+
+.required2 {
+  position: relative;
+  left: 89px;
+  font-size: 17px;
+  top: -11px;
+}
+
+  #retangulo2{
+    width: 279px;
+    left: 24%;
+    bottom: 73%;
+    margin-left: 24%;
+    float: inline-start;
+    margin-top: -2%;
+  }
+
+  #foto{
+    border-radius: 50%;
+    width: 22%;
+    margin-top: 8px;
+    margin-left: 38%;
+  }
+
+  #foto2{
+    border-radius: 50%;
+    width: 9%;
+    position: relative;
+    right: 87px;
+  }
+
+  #desc-evento{
+    position: relative;
+    left: 2px;
+  }
+
+  #imglink {
+    width: 5%;
+    margin-left: 6%;
+    margin-bottom: 5%;
+    margin-top: -6px;
+}
+
+#link-texto {
+  margin-top: 0px;
+  position: relative;
+  font-size: 17px;
+  float: inline-end;
+  right: 43%;
+  top: 0%;
+}
+
+#copy{
+  float: inline-end;
+  position: relative;
+  left: 45%;
+  background: linear-gradient(180deg, #D15FC0 0%, #8C9CFF 100%);
+  color: white;
+  border-radius: 50px;
+  width: 19%;
+  line-height: 192%;
+  margin-top: -9px;
+  font-size: 108%;
+  cursor: pointer;
+
+}
+
+  #input-qtd{
+    position: relative;
+    left: 7%;
+    border-radius: 50px;
+    width: 83%;
+    height: 32px;
+    bottom: 4px;
+    border-color: #2138CB;
+  }
+  
+  /* Modal Body */
+  .modal-body {padding: 2px 16px;
+    margin-top: 2%;
+    margin-left: 24px;}
+  
+  /* Modal Footer */
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: #E9EAF4;
+    color: white;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #E9EAF4;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 47%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+
+  /* Input */
+  input {
+    height:26px;
+    border: none;
+    border:#83bbd9 1px solid;
+    } 
+  
+  /* Add Animation */
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  } 
