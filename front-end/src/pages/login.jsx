@@ -29,9 +29,11 @@ function Index() {
                     <img src={Localizacao} alt="" className="map" />
                 </div>
                 <div className="direita">
+                    <form action="">
                 <input type="text" className="input-login" placeholder="usuário ou email"/>
                 <input type="text" className="input-login" placeholder="Senha"/>
                 <button className="button-login-desktop">Login</button>
+                </form>
                 <h2>Ou continue com</h2>
             <div className="opcoes">
                 <div className="apple">

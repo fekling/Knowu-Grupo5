@@ -9,19 +9,26 @@ function Index() {
             <div class="container">
                 <h1 class="titulo">Cadastre-se e conheça pessoas incriveis!</h1>
                 <div class="content">
+              
                     <div class="campo-direita">
+                    <form action="">
                         <input type="text" class="input-senha" placeholder="Nome de usuário" />
                         <input type="text" class="input-senha" placeholder="Email" />
                         <input type="text" class="input-senha" placeholder="senha" />
                         <input type="text" class="input-senha" placeholder="Confirme sua senha" />
+                    </form>                  
                     </div>
                     <div class="campo-esquerda">
+                        <form action="">
                         <input type="text" class="input-senha" placeholder="Nome completo" />
                         <input type="text" class="input-senha" placeholder="CPF" />
                         <input type="text" class="input-senha" placeholder="Data de nascimento" />
                         <input type="text" class="input-senha" placeholder="Gênero" />
+                        </form>
                     </div>
+                   
                 </div>
+              
                 <button class="btn"><a href="">Cadastrar</a></button>
             </div>
         </>
