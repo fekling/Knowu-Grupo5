@@ -92,6 +92,7 @@ header .botao .botao-cadastro{
     padding-top: 30px;
 }
 
+
 .campo-esquerda{
     display: flex;
     flex-direction: column;
@@ -107,8 +108,7 @@ header .botao .botao-cadastro{
 }
 
 .titulo{
-    font-weight: 100;
-    font-size: 30px;
+    font-size: 42px;
 }
 
 .input-senha{
