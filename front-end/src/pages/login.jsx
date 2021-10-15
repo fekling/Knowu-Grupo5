@@ -3,12 +3,14 @@ import "../assets/css/login-react.css";
 import Logo from "../assets/images/logo.png";
 import Apple from "../assets/images/apple.png";
 import Facebook from "../assets/images/face.png";
-import Google from "../assets/images/google.png";
+import Google from "../assets/images/Google.png";
 import Localizacao from "../assets/images/localizacao.png";
 import Bg from "../assets/images/bg-color.png"
+import SidebarNavigation from "../components/SidebarNavigation/SidebarNavigation";
 
 function Index() {
   return (
+      
     <div className="content-login">
         <div className="desktop">
       
