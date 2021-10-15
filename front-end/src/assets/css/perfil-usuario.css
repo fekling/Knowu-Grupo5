@@ -346,7 +346,7 @@ span{
   #nome-user2{
     position: absolute;
     left: 8%;
-    bottom: 46%;
+    bottom: 54%;
     font-size: 21px;
   }
 
@@ -363,20 +363,19 @@ span{
     left: 8%;
     font-size: 14px;
     color: gray;
-    bottom: 43%;
-  }
+    bottom: 51%;  }
 
   #nome-do-evento{
     position: absolute;
-    left: 20%;
-    top: 38px;
+    left: 19%;
+    top: 47px;
     font-size: 21px;
   }
 
   #nome-do-evento2{
     position: absolute;
-    left: 20%;
-    bottom: 46%;
+    left: 18%;
+    bottom: 54%;
     font-size: 21px;
   }
 
@@ -385,24 +384,24 @@ span{
     left: 118px;
     font-size: 14px;
     color: gray;
-    top: 17%;
+    top: 15%;
   }
 
   #comentario2 {
     position: absolute;
     font-size: 19px;
     color: gray;
-    top: 22%;
+    top: 19%;
     width: 18%;
-    right: 1090px;
+    right: 1345px;
   }
 
   #comentario-dentro2{
     position: absolute;
     font-size: 19px;
     color: gray;
-    top: 68%;
-    right: 76%;
+    top: 57%;
+    right: 78%;
     width: 19%;
   }
 
@@ -411,8 +410,7 @@ span{
     left: 118px;
     font-size: 14px;
     color: gray;
-    bottom: 35%;
-  }
+    bottom: 45%;  }
 
 
 #nome-usuario{
@@ -431,7 +429,7 @@ span{
   display: flex;
   flex-direction: row;
   left: 18%;
-  top: 27%;
+  top: 22%;
 }
 
 .buttons2 {
@@ -439,7 +437,7 @@ span{
   display: flex;
   flex-direction: row;
   left: 18%;
-  bottom: 22%;
+  bottom: 34%;
 }
 
 .button-post {
