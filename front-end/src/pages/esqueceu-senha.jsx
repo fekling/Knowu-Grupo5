@@ -3,6 +3,7 @@ import Seta from "../assets/images/seta.png";
 import Logo from "../assets/images/logo.png";
 import Sino from "../assets/images/sino.png";
 import Bg from "../assets/images/bg-color.png"
+import Btn from "../components/BtnEsqueceuSenha";
 
 function Index() {
   return (
@@ -21,7 +22,7 @@ function Index() {
         Vamos te enviar um link para seu email cadastrado para que possamos alterar sua senha.
         </h2>
         <input type="text" placeholder="Email cadastrado" className="input" />
-        <button className="confirmar">Enviar link</button>
+        <Btn className="confirmar" texto="Enviar link" destino="/recuperar-senha/"></Btn>
       </div>
     </div>
   );

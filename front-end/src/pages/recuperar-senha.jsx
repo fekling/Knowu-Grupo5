@@ -3,6 +3,7 @@ import Seta from "../assets/images/seta.png";
 import Logo from "../assets/images/logo.png";
 import Wifi from "../assets/images/wifi.png";
 import Bg from "../assets/images/bg-color.png"
+import Btn from "../components/BtnEsqueceuSenha";
 
 function Index() {
   return (
@@ -18,7 +19,7 @@ function Index() {
         <img src={Wifi} alt="" className="wifi" />
         <h1 className="texto">Insira o código que te enviamos</h1>
         <input type="text" placeholder="Código" className="input" />
-        <button className="confirmar">Confirmar</button>
+        <Btn className="confirmar" texto="Confirmar" destino="/alterar-senha/">Confirmar</Btn>
         <div className="reenviar">
         Não recebeu o código? <u>Reenviar</u>
         </div>
