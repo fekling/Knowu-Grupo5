@@ -8,24 +8,24 @@ export const SidebarNavigationData = [
         title: 'Home',
         path: '/home',
         icon: <AiIcons.AiFillHome />,
-        cName: 'nav-text'
+        cName: 'navsidebar-text'
     },
     {
         title: 'Chat',
         path: '/chat',
         icon: <BsIcons.BsChatDots />,
-        cName: 'nav-text'
+        cName: 'navsidebar-text'
     },
     {
         title: 'Eventos',
         path: '/eventos',
         icon: <BsIcons.BsCalendarCheck />,
-        cName: 'nav-text'
+        cName: 'navsidebar-text'
     },
     {
         title: 'Perfil',
         path: '/perfil',
         icon: <AiIcons.AiOutlineUser />,
-        cName: 'nav-text'
+        cName: 'navsidebar-text'
     }
 ]
