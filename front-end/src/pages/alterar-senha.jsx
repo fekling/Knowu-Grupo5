@@ -2,6 +2,7 @@ import seta from "../assets/images/seta.png";
 import bg from "../assets/images/bg-color.png";
 import Logo from "../assets/images/logo.png";
 import "../assets/css/react.css";
+import Btn from "../components/BtnEsqueceuSenha";
 
 function Index() {
   return (
@@ -16,7 +17,7 @@ function Index() {
         <h1 className="texto">Altere sua senha:</h1>
         <input type="text" placeholder="Senha" className="input" />
         <input type="text" placeholder="Confirme sua senha" className="input" />
-        <button className="confirmar">Alterar</button>
+        <Btn className="confirmar" texto="Alterar" destino="/index/">Confirmar</Btn>
       </div>
     </div>
   );

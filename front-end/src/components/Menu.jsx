@@ -6,7 +6,7 @@ function Menu(){
         <>
         <header>
 
-            <div class="logo">
+            <div class="logoCadastro">
                 <img class="img" src={logo} alt="logo" />
             </div>
 
