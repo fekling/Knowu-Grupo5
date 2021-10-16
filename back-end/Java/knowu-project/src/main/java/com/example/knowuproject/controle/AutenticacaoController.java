@@ -8,9 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Properties;
 import java.util.concurrent.ThreadLocalRandom;
 
 @RestController
@@ -91,18 +95,66 @@ public class AutenticacaoController {
     @PutMapping("/enviarCodigo/{id}")
     public ResponseEntity enviarCodigoRecuperacaoSenha(@PathVariable Integer id) {
 
+
         Optional<Usuario> usuarios = usuarioRepository.findById(id);
 
         if (!usuarios.isEmpty()) {
-            Usuario usuario = new Usuario();
-            usuario = usuarios.get();
-            usuario.setCodigoRecuperaSenha(ThreadLocalRandom.current().nextInt(10000, 99999));
-            System.out.println(usuario.getCodigoRecuperaSenha());
-            usuarioRepository.save(usuario);
-            return ResponseEntity.status(200).build();
+
+            Properties props = new Properties();
+            /** Parâmetros de conexão com servidor Hotmail */
+            props.put("mail.transport.protocol", "smtp");
+            props.put("mail.smtp.host", "smtp.live.com");
+            props.put("mail.smtp.socketFactory.port", "587");
+            props.put("mail.smtp.socketFactory.fallback", "false");
+            props.put("mail.smtp.starttls.enable", "true");
+            props.put("mail.smtp.auth", "true");
+            props.put("mail.smtp.port", "587");
+
+            Session session = Session.getDefaultInstance(props,
+                    new javax.mail.Authenticator() {
+                        protected PasswordAuthentication getPasswordAuthentication() {
+                            return new PasswordAuthentication("knowu@outlook.com.br", "#Gfgrupo5");
+                        }
+                    });
+
+            /** Ativa Debug para sessão */
+            session.setDebug(true);
+
+
+            try {
+
+
+                Message message = new MimeMessage(session);
+                message.setFrom(new InternetAddress("knowu@outlook.com.br")); //Remetente
+
+                Usuario usuario = new Usuario();
+                usuario = usuarios.get();
+                usuario.setCodigoRecuperaSenha(ThreadLocalRandom.current().nextInt(10000, 99999));
+                System.out.println(usuario.getCodigoRecuperaSenha());
+                usuarioRepository.save(usuario);
+
+                message.setRecipients(Message.RecipientType.TO,
+                        InternetAddress.parse(usuario.getEmail())); //Destinatário(s)
+                message.setSubject("Código de recuperação de senha");//Assunto
+                message.setText(String.format("Prezado(a) %s, espero que esteja tendo um ótimo dia! ☺\n\n" +
+                                "Para recuperar sua senha, digite o código abaixo no site\n" +
+                                "%d\n\n" +
+                                "KnowU, revolucionando o jeito de fazer novas amizades",
+                        usuario.getNome(), usuario.getCodigoRecuperaSenha()));
+
+                /**Método para enviar a mensagem criada*/
+                Transport.send(message);
+
+                return ResponseEntity.status(200).build();
+
+            } catch (MessagingException e) {
+                throw new RuntimeException(e);
+            }
         }
 
+
         return null;
+
     }
 
     @PatchMapping("/atualizarDadosConta/{id}")
