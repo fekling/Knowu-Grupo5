@@ -19,6 +19,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 @RestController
 @RequestMapping("/usuarios")
+@CrossOrigin("http://localhost:3000")
 public class AutenticacaoController {
 
     List<Usuariodto> usuariodtos;
