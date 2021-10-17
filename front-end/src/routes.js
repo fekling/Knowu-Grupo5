@@ -6,6 +6,7 @@ import EsqueceuSenha from './pages/esqueceu-senha';
 import Cadastro from './pages/Cadastro';
 import Login from './pages/login';
 import PerfilUsuario from './pages/perfil-usuario';
+import NotFound from './pages/PaginaNaoEncontrada';
 
 
 function Routes(){
@@ -18,6 +19,7 @@ function Routes(){
                 <Route exact path="/recuperar-senha" component={RecuperarSenha}/>
                 <Route exact path="/esqueceu-senha" component={EsqueceuSenha}/>
                 <Route exact path="/alterar-senha" component={AlterarSenha}/>
+                <Route exact path="*" component={NotFound}/>
             </Switch>
         </Router>
     );
