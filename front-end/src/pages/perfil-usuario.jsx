@@ -1,6 +1,6 @@
 import "../assets/css/perfil-usuario.css";
 import LogoSorriso from "../assets/images/criareventos/img/logosorriso.png";
-import FotoPerfilUsuario from "../assets/images/Perfil-Dylan.png";
+import FotoPerfilUsuario from "../assets/images/andre.png";
 import HomePerfilUsuario from "../assets/images/sistema/home.png";
 import ChatPerfilUsuario from "../assets/images/sistema/chat.png";
 import CalendarPerfilUsuario from "../assets/images/sistema/calendar.png";
@@ -24,9 +24,9 @@ function PerfilUsuario() {
           {/* Logo sorriso */}
           <img src={LogoSorriso} className="logo-sorriso" />
           {/* Foto do usuário */}
-          <li className="circulo-imagem">
+          <l className="circulo-imagem">
             <img src={FotoPerfilUsuario}className="foto-usuario" />
-          </li>
+          </l>
           <div className="icones-abaixo">
             {/* Home (Casinha) */}
             <div className="home-colorido">

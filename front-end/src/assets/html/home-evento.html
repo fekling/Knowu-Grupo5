@@ -1,110 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/stylemodal.css">
-    <link rel="stylesheet" href="../css/modal.css">
-    <title>KnowU</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/style-do-evento.css">
+  <link rel="stylesheet" href="../css/modal.css">
+  <title>KnowU</title>
 </head>
+
 <body>
-    <nav class="sidebar-navigation">
+  <div class="desktop">
+  <nav class="sidebar-navigation">
 
-        <!-- Logo sorriso -->
-        <img src="../images/criareventos/img/logosorriso.png" alt="" class="logo-sorriso">
+    <!-- Logo sorriso -->
+    <img src="../images/criareventos/img/logosorriso.png" alt="" class="logo-sorriso">
 
-        <!-- Foto do usuário -->
-        <li class="circulo-imagem">
-			<img src="../images/criareventos/img/Ellipse 29.png" class="foto-usuario"></i>
-		</li>
+    <!-- Foto do usuário -->
+    <li class="circulo-imagem">
+      <img src="../images/criareventos/img/Ellipse 29.png" class="foto-usuario"></i>
+    </li>
 
-        <div class="icones-abaixo">
-        <!-- Home (Casinha) -->
-        <div class="home-colorido">
-          <img src="./img/Rectangle 265.png" alt="" id="retangulo">
-              <li><img src="../images/criareventos/img/home.png" alt=""id="home" href="./home-evento.html" ></li></link>
-        </div>
+    <div class="icones-abaixo">
+      <!-- Home (Casinha) -->
+      <div class="home-colorido">
+        <img src="../images/criareventos/img/Rectangle 265.png" alt="" id="retangulo">
+        <li><img src="../images/criareventos/img/home.png" alt="" id="home"></li>
+      </div>
 
-        <!-- Chat -->
-        <div class="chat-colorido">
-        <li><img src="../images/criareventos/img/chat.png" alt=""id="chat"></li>
-        </div>
+      <!-- Chat -->
+      <div class="chat-colorido">
+        <li><img src="../images/criareventos/img/chat.png" alt="" id="chat"></li>
+      </div>
 
-        <!-- Calendario -->
-        <div class="calendario-colorido">
-          <li><img src="./img/calendar.png" alt=""id="calendario"></li>
-        </div>
+      <!-- Calendario -->
+      <div class="calendario-colorido">
+        <li><img src="../images/criareventos/img/calendar.png" alt="" id="calendario"><a href="./sistema-eventos.html"></a></li>
+      </div>
 
-        <!-- Usuario -->
-        <div class="usuario-colorido">
-          <li><img src="../images/criareventos/img/user.png" alt=""id="usuario"></li>
-            </li>
-        </div>
+      <!-- Usuario -->
+      <div class="usuario-colorido">
+        <li><img src="../images/criareventos/img/user.png" alt="" id="usuario"><a href="./index.html"></a></li>
+        </li>
+      </div>
 
-            <!-- Logout -->
-            <div class="logout-colorido">
-              <a href="index.html">
-                <li><img src="../images/criareventos/img/logout.png" alt=""id="logout"></li>
-              </a>
-                </li>
-            </div>
+      <!-- Logout -->
+      <div class="logout-colorido">
+        <li><img src="../images/criareventos/img/logout.png" alt="" id="logout"><a href="./index.html"></a></li>
+        </li>
+      </div>
     </div>
-    </nav>
-
-    <div class="header">
-        <a href="#default" class="pesquisar-evento"><input id="input-evento" type="text" placeholder="Pesquisar eventos..."></a>
-        <div class="header-right">
-          <button id="myBtn">+ Criar evento</button>
-        </div>
-
-
-      <div id="mapa"></div>
-
-      <div class="dialogbox">
-        <div class="body">
-          <div class="message">
-            <img src="../images/criareventos/img/Ellipse 60.png" alt="" id="bolinha">
-            <img src="../images/criareventos/img/usuario3.png" alt="" id="foto-comentarios">
-          </div>
-        </div>
-      </div>
-
-            <h4 id="nome-user">Guilherme Paulino - <h4 id="nome-do-evento">Futebol dos cria</h4></h4>
-            <h4 id="nick-user">@Gui</h4>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <h3 id="eventos-letra">Eventos!</h3>
-          <li><img src="../images/criareventos/img/fut1.png" alt=""id="fut-primeiro"><p>Futebol dos cria</p></li>
-          <li><img src="../images/criareventos/img/fut2.png" alt=""id="fut-primeiro"><p>Futebolzinho</p></li>
-          <li><img src="../images/criareventos/img/fut3.png" alt=""id="fut-primeiro"><p>Bandfut</p></li>
-          <li><img src="../images/criareventos/img/conserto.png" alt=""id="fut-primeiro"><p>Conserto Legal</p></li>
-          <li><img src="../images/criareventos/img/so-alegria.png" alt=""id="fut-primeiro"><p>So alegria</p></li>
-        </div>
-      </div>
-
-      <div class="column2">
-        <div class="card">
-          <h3 id="usuarios-letra">Usuários perto de você!</h3>
-          <li><img src="../images/criareventos/img/usuario3.png" alt=""id="fut-primeiro"><p id="nickname">Guilherme Pau.</p></li>
-          <span>@Gui</span>
-          <li><img src="../images/criareventos/img/usuario2.png" alt=""id="fut-primeiro"><p id="nickname">Felipe Colonhesi</p></li>
-          <span>@Fecolo</span>
-          <li><img src="../images/criareventos/img/usuario1.png" alt=""id="fut-primeiro"><p id="nickname">André Mallasen</p></li>
-          <span>@Andsen</span>
-        </div>
-      </div>
-
+  </nav>
+<div class="container">
+  <div class="header">
+    <a href="#default" class="pesquisar-evento"><input id="input-evento" type="text"
+        placeholder="Pesquisar eventos..."></a>
+    <div class="header-right">
+      <button id="myBtn">+ Criar evento</button>
+     
     </div>
+  </div>
 
-    <!-- The Modal -->
-<div id="myModal" class="modal">
+  <div class="btn-mobile">+</div>
 
-  <div class="modal-content">
+  <div id="mapa"></div>
+
+  <div class="dialogbox">
+    <div class="body">
+      <div class="message">
+        <img src="../images/criareventos/img/Ellipse 60.png" alt="" id="bolinha">
+        <img src="../images/criareventos/img/usuario3.png" alt="" id="foto-comentarios">
+      </div>
+    </div>
+  </div>
+  <div class="meio">
+    <h4 id="nome-user">Guilherme Paulino - <h4 id="nome-do-evento">Futebol dos cria</h4>
+    </h4>
+    <h4 id="nick-user">@Gui</h4>
+    <div class="post">
+      <textarea name="" id="" class="comentario" cols="30" rows="8"></textarea>
+      <img src="../images/sistema/tres-pontinhos.png" alt="" class="ponto">
+      <div class="buttons">
+        <button class="button">Curtir</button>
+        <button class="button">Comentar</button>
+        <button class="button">Compartilhar</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="column">
+    <div class="card">
+      <h3 id="eventos-letra">Eventos!</h3>
+      <li><img src="../images/criareventos/img/fut1.png" alt="" id="fut-primeiro">
+        <p>Futebol dos cria</p>
+      </li>
+      <li><img src="../images/criareventos/img/fut2.png" alt="" id="fut-primeiro">
+        <p>Futebolzinho</p>
+      </li>
+      <li><img src="../images/criareventos/img/fut3.png" alt="" id="fut-primeiro">
+        <p>Bandfut</p>
+      </li>
+      <li><img src="../images/criareventos/img/conserto.png" alt="" id="fut-primeiro">
+        <p>Conserto Legal</p>
+      </li>
+      <li><img src="../images/criareventos/img/so-alegria.png" alt="" id="fut-primeiro">
+        <p>So alegria</p>
+      </li>
+    </div>
+  </div>
+
+  <div class="column2">
+    <div class="card">
+      <h3 id="usuarios-letra">Usuários perto de você!</h3>
+      <li><img src="../images/criareventos/img/usuario3.png" alt="" id="fut-primeiro">
+        <p id="nickname">Guilherme Pau.</p>
+      </li>
+      <span>@Gui</span>
+      <li><img src="../images/criareventos/img/usuario2.png" alt="" id="fut-primeiro">
+        <p id="nickname">Felipe Colonhesi</p>
+      </li>
+      <span>@Fecolo</span>
+      <li><img src="../images/criareventos/img/usuario1.png" alt="" id="fut-primeiro">
+        <p id="nickname">André Mallasen</p>
+      </li>
+      <span>@Andsen</span>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <div class="modal-content">
       <div class="modal-header">
         <span class="close">&times;</span>
         <h2 id="crie-evento">Criar um novo evento</h2>
@@ -112,82 +145,158 @@
         <img src="../images/criareventos/img/Ellipse 148.png" alt="" id="foto"><img src="../images/criareventos/img/Vector.png" alt="" id="foto2">
       </div>
       <div class="modal-body">
-          <h2 id="desc-evento">Descrição do evento:</h2>
-          <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
+        <h2 id="desc-evento">Descrição do evento:</h2>
+        <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
       </div>
 
       <div class="scores">
-          <h2 id="numero-pessoas">Número máximo de convidados?</h2>
-          <label for="score_1" class="required1">
-            <input type="radio" id="score_1" name="score" required="required" value="2">Sim</label>
-          <label for="score_2" class="required2">
-            <input type="radio" id="score_2" name="score" required="required" value="3">Não</label>
-        </div>
-        <div id="qtd-pessoas">
-            <h2 id="numero-pessoas">Quantas pessoas participarão?</h2>
-          <input type="text" name="" id="input-qtd">
-        </div>
-        
-        <div id="link-convite">
-          <h2 id="numero-pessoas">Link de convite:</h2>
-          <img src="../images/criareventos/img/link.png/" alt="" id="imglink">
-          <p id="link-texto">knowu.com.br/invite/abcd-1234</p><button id="copy">Copiar</button>
-      <div class="modal-footer">
-        
+        <h2 id="numero-pessoas">Número máximo de convidados?</h2>
+        <label for="score_1" class="required1">
+          <input type="radio" id="score_1" name="score" required="required" value="2">Sim</label>
+        <label for="score_2" class="required2">
+          <input type="radio" id="score_2" name="score" required="required" value="3">Não</label>
       </div>
+      <div id="qtd-pessoas">
+        <h2 id="numero-pessoas">Quantas pessoas participarão?</h2>
+        <input type="text" name="" id="input-qtd">
+      </div>
+
+      <div id="link-convite">
+        <h2 id="numero-pessoas">Link de convite:</h2>
+        <img src="../images/criareventos/img/link.png/" alt="" id="imglink">
+        <p id="link-texto">knowu.com.br/invite/abcd-1234</p><button id="copy">Copiar</button>
+        <div class="modal-footer">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+    <div class="mobile">
+      <div class="btn-adicionar-post-mobile">
+        <button class="button-adicionar-post-mobile">+</button>
+      </div>
+     
+      <div class="header-mobile">
+        <div class="direita-header-mobile">
+          <img src="img/logosorriso.png" alt="" class="logo-mobile">
+        </div>
+        <div class="esquerda-header-mobile">
+          Menu
+        </div>
+      </div>
+
+      <div class="content-mobile">
+        <div class="pesquisa-mobile">
+          <input type="text" class="input-mobile" placeholder="Pesquise eventos...">
+        </div>
+
+        <div class="eventos-carrosel">
+          <h1>Eventos!</h1>
+          <div class="descricao-evento-mobile">
+            <img src="img/fut1.png" alt="" class="img-evento-mobile">
+            <h2 class="titulo-evento-mobile">Futebol dos cria</h2>
+          </div>
+          <div class="descricao-evento-mobile">
+            <img src="img/fut2.png" alt=""class="img-evento-mobile">
+            <h2 class="titulo-evento-mobile">Futebolzinho</h2>
+          </div>
+        </div>
+
+        <div class="posts-mobile">
+          <div class="post-mobile">
+
+            <div class="header-mobile-post">
+            <div class="header-post-mobile">
+              <img src="img/usuario3.png" alt="" class="img-usuario-mobile">
+              <div class="descricao-header-mobile">
+                <h1>
+                  Guilherme Paulino
+                </h1>
+                <h2 class="usuario-header-descricao-mobile">
+                  @GuiPau
+                </h2>
+              </div>
+            </div>
+       
+              <h2 class="titulo-evento-mobile-post">Futebol dos cria</h2>
+             
+            
+
+            <div class="mensagem">
+                <h1 class="mensagem-post-moobile">Evento muito massa! dei uma caneta no Renatão, mó perna.<span class="hashtag-mobile">#Ruimdemais</span></h1>
+
+                 <div class="btn-interacao-usuario-mobile">
+                   <button class="btn-interacao">Curtir</button>
+                   <button class="btn-interacao">Comentar</button>
+                   <button class="btn-interacao">Compartilhar</button>
+
+                 </div>
+            </div>
+            <br><br><br><br>
+          </div>
+        </div>
+
+
+
+      </div>
+
     </div>
 
 
 
 </body>
+
 </html>
 
 <script>
   // Get the modal
   var modal = document.getElementById("myModal");
-  
+
   // Get the button that opens the modal
   var btn = document.getElementById("myBtn");
-  
+
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close")[0];
-  
+
   // When the user clicks on the button, open the modal
-  btn.onclick = function() {
+  btn.onclick = function () {
     modal.style.display = "block";
   }
-  
+
   // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
+  span.onclick = function () {
     modal.style.display = "none";
   }
-  
+
   // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
+  window.onclick = function (event) {
     if (event.target == modal) {
       modal.style.display = "none";
     }
   }
-  </script>
+</script>
 
 <script>
 
-    function inicializar() {
-      var coordenadas = {lat: -22.912869, lng: -43.228963};
+  function inicializar() {
+    var coordenadas = { lat: -22.912869, lng: -43.228963 };
 
-      var mapa = new google.maps.Map(document.getElementById('mapa'), {
-        zoom: 15,
-        center: coordenadas 
-      });
+    var mapa = new google.maps.Map(document.getElementById('mapa'), {
+      zoom: 15,
+      center: coordenadas
+    });
 
-      var marker = new google.maps.Marker({
-        position: coordenadas,
-        map: mapa,
-        title: 'Meu marcador'
-      });
-    }
-  </script>
+    var marker = new google.maps.Marker({
+      position: coordenadas,
+      map: mapa,
+      title: 'Meu marcador'
+    });
+  }
+</script>
 
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_API_DO_GOOGLE&callback=inicializar">
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_API_DO_GOOGLE&callback=inicializar">
 </script>

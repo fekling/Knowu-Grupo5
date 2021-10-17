@@ -4,9 +4,6 @@ import Menu from '../components/Menu';
 import Api from '../components/Axios';
 import { useHistory } from "react-router-dom"
 
-
-
-
 function Index() {
     const history = useHistory()
 
