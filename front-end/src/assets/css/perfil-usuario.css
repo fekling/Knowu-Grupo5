@@ -1,4 +1,4 @@
-#nome-dos-eventos-usuario {
+/* #nome-dos-eventos-usuario {
   line-height: 19px;
   font-style: normal;
   position: relative;
@@ -221,13 +221,13 @@ span{
     letter-spacing: 0.5px;
   }
 
-  /* Style the header with a grey background and some padding */
+  /* Style the header with a grey background and some padding 
 .header {
     overflow: hidden;
     padding: 18px 127px;
   }
   
-  /* Style the header links */
+  /* Style the header links 
   .header a {
     float: left;
     color: black;
@@ -239,7 +239,7 @@ span{
     border-radius: 4px;
   }
   
-  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger
   .header a .pesquisar-pessoas {
     font-size: 25px;
     font-weight: bold;
@@ -275,7 +275,7 @@ span{
   }
   
   .tip-up {
-    top: -25px; /* Same as body margin top + border */
+    top: -25px; /* Same as body margin top + border 
     left: 10px;
     border-right-color: transparent;
     border-left-color: transparent;
@@ -459,7 +459,7 @@ span{
   font-size: 16px;
 }
   
-  /* Style the active/current link*/
+  /* Style the active/current link
   .header a.active {
     background: linear-gradient(180deg, #D15FC0 0%, #8C9CFF 100%);
     color: white;
@@ -468,7 +468,7 @@ span{
     border-radius: 50px;
   }
   
-  /* Float the link section to the right */
+  /* Float the link section to the right 
   .header-right {
     float: right;
     margin-right: 28%;
@@ -482,7 +482,7 @@ span{
     font-family: Poppins;
   }
   
-  /* Float four columns side by side */
+  /* Float four columns side by side 
   .column-perfil-usuario {
     float: right;
     width: 21%;
@@ -491,22 +491,22 @@ span{
     margin-right: 1%;
   }
 
-  /* Remove extra left and right margins, due to padding */
+  /* Remove extra left and right margins, due to padding 
   
-  /* Clear floats after the columns */
+  /* Clear floats after the columns 
   .row:after {
     content: "";
     display: table;
     clear: both;
   }
 
-    /* Style the counter cards */
+    /* Style the counter cards 
     .card-do-perfil-usuario {
       background-color: #E3E4EE;
       height: 382px;
     }
   
-  /* Responsive columns */
+  /* Responsive columns 
   @media screen and (max-width: 600px) {
     .column-perfil-usuario {
       width: 100%;
@@ -516,7 +516,7 @@ span{
   }
   
   
-  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other 
   @media screen and (max-width: 500px) {
   .container-pesquisar-pessoas{
     width: 100%;
@@ -578,4 +578,164 @@ span{
   bottom: 41px;
   border-radius: 10px;
   left: 35%;
+
+  */
+
+
+*{
+  overflow: visible;
+}
+
+  .header-menu-perfil{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 60px 40px 70px;
+  }
+
+  .logo{
+    width: 10%;
+  }
+
+ 
+
+  .header-content-perfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .foto-perfil-usuario{
+    width: 30%;
+  }
+
+  .usuario-pagina-perfil{
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+
+  .botoes-avaliacao{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  .btn-avaliacao{
+    background: linear-gradient(180deg, #D15FC0 0%, #8C9CFF 100%);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+
+  .descricao-pagina-perfil{
+    margin-top: 50px;
+    font-size: 30px;
+  }
+
+  .site-perfil{
+    display: flex;
+    font-size: 10px;
+    margin-top: 30px;
+    align-items: center;
+  }
+
+  .site-perfil h1{
+    margin-left: 20px;
+  }
+
+  .fotos{
+    margin-top: 70px;
+    padding-left: 20px;
+  }
+
+  .fotos-perfil{
+    margin-top: 40px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .postagens-pagina-perfil{
+    margin-top: 80px;
+  }
+
+  .foto-perfil-pagina-perfil{
+    width: 15%;
+  }
+
+  .header-pagina-postagem{
+    display: flex;
+   align-items: center;
+  }
+
+  .info-perfil-postagens{
+    padding-left: 20px;
+  }
+
+  .nome-usuario-perfil-postagens{
+    font-size: 20px;
+  }
+
+  .usuario-perfil-postagens{
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .post-pagina-perfil{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid blue;
+    border-radius: 16px;
+    width: 95%;
+    margin-left: 10px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+  }
+
+  .mensagem-pagina-perfil{
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .botoes-pagina-perfil-post{
+    margin-top: 180px;
+    position: absolute;
+  }
+
+  .interacao-usuario{
+    cursor: pointer;
+    padding: 5px 20px 5px 20px;
+    border-radius: 50px;
+    background-color: #EFF0F8;
+    border-color: blue;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+
+  #interacao-usuario{
+    margin-right: 20px;
+  }
+
+
+  .interacao-usuario:hover{
+    background-color: blue;
+    color: #fff;
   }

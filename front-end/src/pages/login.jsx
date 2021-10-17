@@ -3,19 +3,19 @@ import "../assets/css/login-react.css";
 import Logo from "../assets/images/logo.png";
 import Apple from "../assets/images/apple.png";
 import Facebook from "../assets/images/face.png";
-import Google from "../assets/images/Google.png";
+import Google from "../assets/images/google.png";
 import Localizacao from "../assets/images/localizacao.png";
 import Bg from "../assets/images/bg-color.png";
 import Axios from "../components/Axios";
-import api from '../../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/controle';
+// import api from '../../../back-end/Java/knowu-project/src/main/java/com/example/knowuproject/controle';
 
 
 
 function Index() {
 
-    const [login, setLogin] = useState("david.mariano@bandtec.com.br");
-    const [password, setPassword] = useState("CharlieBrownJr");
-    const [erroAutentication, setErrorAutenticatin] = useState(false);
+    // const [login, setLogin] = useState("david.mariano@bandtec.com.br");
+    // const [password, setPassword] = useState("CharlieBrownJr");
+    // const [erroAutentication, setErrorAutenticatin] = useState(false);
 
     
     return (
@@ -92,21 +92,21 @@ function Index() {
     </div>
     );
 
-    async function handleLogin() {
-        try {
+    // async function handleLogin() {
+    //     try {
 
-            const { data } = await api.get('/usuarios/login/${usuarioLogin}/${senha}');
-            console.log(data);
-            localStorage.setItem("@dataUser", JSON.stringify(data));
-            history.push("/Home");
+    //         const { data } = await api.get('/usuarios/login/${usuarioLogin}/${senha}');
+    //         console.log(data);
+    //         localStorage.setItem("@dataUser", JSON.stringify(data));
+    //         history.push("/Home");
 
-        } catch (err) {
-            setErrorAutenticatin(true);
-            console.log("usuario o usenha incorreto");
-        }
+    //     } catch (err) {
+    //         setErrorAutenticatin(true);
+    //         console.log("usuario o usenha incorreto");
+    //     }
 
 
-    }
+    // }
 }
 
 
