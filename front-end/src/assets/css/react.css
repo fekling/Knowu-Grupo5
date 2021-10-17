@@ -3,7 +3,6 @@
     padding: 0;
     background-color: #E9EAF4;
     font-family: 'Poppins', sans-serif;
-  
 
 }
  @media (min-width: 700px){
@@ -41,6 +40,7 @@
 
 *{
     overflow-x: hidden;
+    text-decoration: none;
 }
 
  .content{
@@ -98,7 +98,6 @@
 
 .confirmar{
     margin-top: 40px;
-    width: 65%;
     height: 60px;
     border: none;
     background-color: #2138CB;
