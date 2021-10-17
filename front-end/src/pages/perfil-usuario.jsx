@@ -84,7 +84,7 @@ function PerfilUsuario() {
                     </div>
                   </div>
                   {/* Comentario 1 */}
-                  <h4 id="nome-user">André Santos </h4><h4 id="nome-do-evento">Assistir TV Cultura e Ouvir MPB</h4>
+                  <h4 id="nome-user">André Santos - </h4><h4 id="nome-do-evento">Assistir TV Cultura e Ouvir MPB</h4>
                   <h4 id="nick-user">@Andrezito</h4>
                   <div className="post-do-perfil-usuario">
                     <h4 id="comentario1">1 dia - Público</h4>
