@@ -13,7 +13,7 @@ function PaginaNaoEncontrada() {
                     <p className="zoom-area">A página que você procura não foi encontrada.</p>
                 </section>
                 <div className="link-container">
-                    <a id="a-notfound" href="./index.html" className="more-link">Voltar</a>
+                    <a id="a-notfound" href="http://localhost:3000/login" className="more-link">Voltar</a>
                 </div>
             </div>
 
