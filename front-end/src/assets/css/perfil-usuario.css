@@ -1,4 +1,4 @@
-p {
+#nome-dos-eventos-usuario {
   line-height: 19px;
   font-style: normal;
   position: relative;
@@ -50,7 +50,7 @@ p {
     width: 57%;
   }
 
-  #usuario{
+  #usuario-perfil{
     margin-top: 76%;
     width: 28px;
     cursor: pointer;
@@ -71,7 +71,6 @@ p {
   #usuario-frase{
     font-family: 'Poppins', sans-serif;
     position: relative;
-    right: 39px;
     top: 58px;
     font-size: 20px;
   }
@@ -263,7 +262,7 @@ span{
   #bolinha-do-perfil-usuario {
     width: 68px;
     position: relative;
-    left: 24px;
+    left: 57px;
     float: unset;
 }
 

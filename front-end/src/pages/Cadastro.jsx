@@ -55,30 +55,30 @@ function Index() {
         <>
             <BackgroundColor />
             <Menu />
-            <div class="container">
-            <form onSubmit={handleCadastro}>
-                <h1 class="titulo">Cadastre-se e conheça pessoas incriveis!</h1>
-                <div class="content">
+            <div class="container-cadastro">
+            <form id="formulario-cadastro" onSubmit={handleCadastro}>
+                <h1 class="titulo-cadastro">Cadastre-se e conheça pessoas incriveis!</h1>
+                <div class="content-cadastro">
 
                     <div class="campo-direita">
                         
-                            <input type="text" class="input-senha" placeholder="Nome de usuário" id="usuario" onChange={dados => setUsuario(dados.target.value)} />
-                            <input type="text" class="input-senha" placeholder="Email" id="email" onChange={dados => setEmail(dados.target.value)} />
-                            <input type="text" class="input-senha" placeholder="senha" id="senha" onChange={dados => setSenha(dados.target.value)} />
-                            <input type="text" class="input-senha" placeholder="Confirme sua senha" />
+                            <input type="text" class="input-senha-cadastro" placeholder="Nome de usuário" id="usuario" onChange={dados => setUsuario(dados.target.value)} />
+                            <input type="text" class="input-senha-cadastro" placeholder="Email" id="email" onChange={dados => setEmail(dados.target.value)} />
+                            <input type="text" class="input-senha-cadastro" placeholder="senha" id="senha" onChange={dados => setSenha(dados.target.value)} />
+                            <input type="text" class="input-senha-cadastro" placeholder="Confirme sua senha" />
                         
                     </div>
                     <div class="campo-esquerda">
-                            <input type="text" class="input-senha" placeholder="Nome completo" id="nome" onChange={dados => setNome(dados.target.value)} />
-                            <input type="text" class="input-senha" placeholder="CPF" id="cpf" onChange={dados => setCpf(dados.target.value)} />
-                            <input type="text" class="input-senha" placeholder="Data de nascimento" id="dataNascimento" onChange={dados => setDataNascimento(dados.target.value)} />
-                            <input type="text" class="input-senha" placeholder="Gênero" id="genero" onChange={dados => setGenero(dados.target.value)} />
+                            <input type="text" class="input-senha-cadastro" placeholder="Nome completo" id="nome" onChange={dados => setNome(dados.target.value)} />
+                            <input type="text" class="input-senha-cadastro" placeholder="CPF" id="cpf" onChange={dados => setCpf(dados.target.value)} />
+                            <input type="text" class="input-senha-cadastro" placeholder="Data de nascimento" id="dataNascimento" onChange={dados => setDataNascimento(dados.target.value)} />
+                            <input type="text" class="input-senha-cadastro" placeholder="Gênero" id="genero" onChange={dados => setGenero(dados.target.value)} />
 
                     </div>
 
                 </div>
 
-                <button class="btn" type="submit">Cadastrar</button>
+                <button class="btn-cadastro" type="submit">Cadastrar</button>
                 </form>
             </div>
         </>

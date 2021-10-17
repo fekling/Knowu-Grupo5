@@ -6,16 +6,9 @@
     overflow: hidden;
 }
 
-a{
+#menu-cadastro{
     text-decoration: none;
-    color: #ffffff;
-}
-
-
-
-body{
-    width: 100%;
-    background-color: E9EAF4;
+    color: black;
 }
 
 header{
@@ -72,7 +65,7 @@ header .botao .botao-cadastro{
 }
 
 
-.container{
+.container-cadastro{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,7 +80,7 @@ header .botao .botao-cadastro{
     z-index: -1;
 }
 
-.content{
+.content-cadastro{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -107,15 +100,15 @@ header .botao .botao-cadastro{
     flex-direction: column;
     width: 100%;
     margin: 30px;
-    margin-left: 20%;
 }
 
-.titulo{
+.titulo-cadastro{
     font-weight: 100;
     font-size: 30px;
+    margin-left: 15%;
 }
 
-.input-senha{
+.input-senha-cadastro{
     width: 400px;
     height: 60px;
     margin-top: 30px;
@@ -128,7 +121,7 @@ header .botao .botao-cadastro{
 }
  
 
-.btn{
+.btn-cadastro{
   width: 456px;
   height: 55px;
   margin-top: 30px;
@@ -138,6 +131,7 @@ header .botao .botao-cadastro{
     font-size:25px;
     border: 0px;
     cursor: pointer;
+    margin-left: 23%;
 }
 
 .input-senha:focus{

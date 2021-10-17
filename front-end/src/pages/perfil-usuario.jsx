@@ -43,7 +43,7 @@ function PerfilUsuario() {
             {/* Usuario */}
             <div className="usuario-colorido">
               <img src={BarraPerfilUsuario}alt="" id="retangulo" />
-              <li><img src={ContaPerfilUsuario}alt="" id="usuario" /></li>
+              <li><img src={ContaPerfilUsuario}alt="" id="usuario-perfil" /></li>
             </div>
             {/* Logout */}
             <div className="logout-colorido">
@@ -128,15 +128,15 @@ function PerfilUsuario() {
             <div className="card-do-perfil-usuario">
               <h3 id="eventos-letra-do-perfil-usuario">Eventos em comum:</h3>
               <img src={Fut1} alt="" id="evento-perfil" />
-                <p>Futebol dos cria</p>
+                <p id="nome-dos-eventos-usuario">Futebol dos cria</p>
               <img src={Fut2} alt="" id="evento-perfil" />
-                <p>Futebolzinho</p>
+                <p id="nome-dos-eventos-usuario">Futebolzinho</p>
               <img src={Fut3} alt="" id="evento-perfil" />
-                <p>Bandfut</p>
+                <p id="nome-dos-eventos-usuario" >Bandfut</p>
               <img src={Conserto} alt="" id="evento-perfil" />
-                <p>Conserto Legal</p>
+                <p id="nome-dos-eventos-usuario" >Conserto Legal</p>
               <img src={SoAlegria} alt="" id="evento-perfil" />
-                <p>So alegria</p>
+                <p id="nome-dos-eventos-usuario">So alegria</p>
             </div>
           </div>
         </div></div>
