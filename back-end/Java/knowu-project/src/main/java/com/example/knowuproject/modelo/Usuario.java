@@ -190,20 +190,32 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario{" +
-                "idUsuario=" + idUsuario +
-                ", nome='" + nome + '\'' +
-                ", celular='" + celular + '\'' +
-                ", email='" + email + '\'' +
-                ", usuario='" + usuario + '\'' +
-                ", descricao='" + descricao + '\'' +
-                ", cpf='" + cpf + '\'' +
-                ", dataNascimento='" + dataNascimento + '\'' +
-                ", genero='" + genero + '\'' +
-                ", senha='" + senha + '\'' +
-                ", codigoRecuperaSenha='" + codigoRecuperaSenha + '\'' +
-                ", autenticado=" + autenticado +
-                ", autenticadoEm='" + autenticadoEm + '\'' +
-                '}';
+        return String.format("Usuário\n" +
+                             "ID usuário: %d\n" +
+                             "Nome usuário: %s\n" +
+                             "Celular: %s\n" +
+                             "Email: %s\n" +
+                             "Usuário: %s\n" +
+                             "Descrição: %s\n" +
+                             "CPF: %s\n" +
+                             "Data Nascimento: %s\n" +
+                             "Gênero: %s\n" +
+                             "Senha: %s\n" +
+                             "Código recuperação de senha: %d\n" +
+                             "Usuário autenticado: %b\n" +
+                             "Autenticado em: %s",
+                             this.idUsuario,
+                             this.nome,
+                             this.celular,
+                             this.email,
+                             this.usuario,
+                             this.descricao,
+                             this.cpf,
+                             this.dataNascimento,
+                             this.genero,
+                             this.senha,
+                             this.codigoRecuperaSenha,
+                             this.autenticado,
+                             this.autenticadoEm);
     }
 }
