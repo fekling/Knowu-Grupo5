@@ -97,13 +97,16 @@ public class Evento {
 
     @Override
     public String toString() {
-        return "Evento{" +
-                "idEvento=" + idEvento +
-                ", nome='" + nome + '\'' +
-                ", descricao='" + descricao + '\'' +
-                ", dataInicio=" + dataInicio +
-                ", dataFim=" + dataFim +
-                '}';
+        return String.format("Evento\n" +
+                             "ID Evento: %d\n" +
+                             "Nome Evento: %s\n" +
+                             "Descrição do evento: %s\n" +
+                             "Data início do evento: %s\n" +
+                             "Data fim do evento: %s",
+                             this.idEvento,
+                             this.nome,
+                             this.descricao,
+                             this.dataInicio,
+                             this.dataFim);
     }
-
 }

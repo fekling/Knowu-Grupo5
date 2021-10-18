@@ -45,10 +45,12 @@ public class ChatAberto extends Chat {
 
     @Override
     public String toString() {
-        return "ChatAberto{" +
-                "usuarioRemetente='" + usuarioRemetente + '\'' +
-                ", usuarioDestinatario='" + usuarioDestinatario + '\'' +
-                ", mensagem='" + mensagem + '\'' +
-                "} " + super.toString();
+        return String.format("Chat aberto\n" +
+                             "Usuário remetente: %s\n" +
+                             "Usuário Destinatário: %s\n" +
+                             "Mensagem: %s",
+                             this.usuarioRemetente,
+                             this.usuarioDestinatario,
+                             this.mensagem);
     }
 }
