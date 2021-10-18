@@ -129,7 +129,6 @@ public class EventoController {
         if (deuRuim) {
             System.exit(1);
         }
-
     }
 
     public static void lerExibeArquivoCsv(String nomeArquivo) {
@@ -177,6 +176,5 @@ public class EventoController {
             }
         }
     }
-
 //    Fim método
 }

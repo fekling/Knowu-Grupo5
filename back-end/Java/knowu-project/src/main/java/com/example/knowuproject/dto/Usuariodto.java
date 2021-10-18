@@ -81,7 +81,5 @@ public class Usuariodto {
         LocalidadeGoogle localidadeGoogle = restTemplate.getForObject("https://maps.google.com/maps/api/geocode/json?address=Rua+Haddock+Lobo+595,+Cerqueira+Cesar,SP&components=country:BR&key=AIzaSyBvroKF-1rTRd9K-L9P3ILzSCjcFLU1LkQ", LocalidadeGoogle.class);
 
 //        this.localizacao = localidadeGoogle.getResults().get(0).toString();
-
     }
-
 }
