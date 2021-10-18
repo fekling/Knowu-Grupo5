@@ -97,10 +97,13 @@ function Index() {
 
         try {
 
-            const { data } = await Api.get('/usuarios/login/${usuario}/${senha}');
+            const { data } = await Api.get('/usuarios/login/',{
+                usuario: login,
+                senha: password
+            });
             console.log(data);
             localStorage.setItem("@dataUser", JSON.stringify(data));
-            history.push("/perfil-usuario");
+            history.push("/perfil");
 
         } catch (err) {
             setErrorAutenticatin(true);
