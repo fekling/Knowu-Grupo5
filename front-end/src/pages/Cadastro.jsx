@@ -35,10 +35,6 @@ function Index() {
                     }
                     const response = await Api.post("/usuarios/adicionar", params)
                     if (response.status === 201) {
-                        // const usuarioString = JSON.stringify(response.data)
-                        // localStorage.setItem("usuario", usuarioString)
-                        // const objetoEmFormatoDeString = localStorage.getItem('usuario');
-                        // const objetoMesmo = JSON.parse(objetoEmFormatoDeString)
                         history.push("/login")
                     }
                 } catch (erro) {
