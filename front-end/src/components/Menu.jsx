@@ -17,7 +17,7 @@ function Menu(){
             </div>
 
             <div class="botao">
-
+                <h1 className="menu-provisorio">Menu</h1>
                 <button class="botao-cadastro"><b>Entrar</b></button>
             </div>
 

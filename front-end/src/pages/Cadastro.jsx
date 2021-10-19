@@ -35,10 +35,6 @@ function Index() {
                     }
                     const response = await Api.post("/usuarios/adicionar", params)
                     if (response.status === 201) {
-                        // const usuarioString = JSON.stringify(response.data)
-                        // localStorage.setItem("usuario", usuarioString)
-                        // const objetoEmFormatoDeString = localStorage.getItem('usuario');
-                        // const objetoMesmo = JSON.parse(objetoEmFormatoDeString)
                         history.push("/login")
                     }
                 } catch (erro) {
@@ -73,8 +69,10 @@ function Index() {
 
                     </div>
 
+
                 </div>
 
+           
                 <button class="btn-cadastro" type="submit">Cadastrar</button>
                 </form>
             </div>

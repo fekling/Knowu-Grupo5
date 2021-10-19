@@ -1,135 +1,161 @@
- body {
-    margin: 0;
-    padding: 0;
-    background-color: #E9EAF4;
-    font-family: 'Poppins', sans-serif;
-
-}
- @media (min-width: 700px){
-     .header{
-         padding-right: 500px;
-         width:200px;
-         text-align: center;
-         align-items: center;
-     }
-
-     .seta{
-         width: 30%;
-         height: 30%;
-     }
-
-     .text-voltar{
-      
-     }
-    
- }
-@media (max-width: 699px){
-    .header{
-    
-        padding-right: 300px;
-    }
-
-    .text-voltar{
-        display: none;     
-    }
-
-    .seta{
-        width: 50px;
-    }
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e9eaf4;
+  font-family: "Poppins", sans-serif;
 }
 
-*{
-    overflow-x: hidden;
-    text-decoration: none;
+.bg-color {
+  position: absolute;
+  z-index: -1;
+  width: 150%;
+  height: 150vh;
 }
 
- .content{
-     display: flex;
-     flex-direction: row;
-     justify-content: center;
-     align-items: flex-start;
-     margin-top: 0;
- }
+/* @media (min-width: 2000px) {
+   *{
+    overflow: hidden;
+   }
+} */
 
- .header{
-     display: flex;
- }
+.content-esqueceu-senha {
+  width: 100%;
+}
 
+.header-esqueceu-sua-senha {
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+  margin-top: 50px;
+}
 
-.meio{
-    width: 713px;
+.seta-esqueceu-sua-senha {
+  width: 3%;
+}
+
+.meio-esqueceu-sua-senha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-esqueceu-sua-senha {
+  width: 15%;
+}
+
+.icons-esqueceu-sua-senha {
+  margin-left: 100px;
+  margin-top: 60px;
+  width: 30%;
+}
+
+.form-esqueceu-sua-senha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.texto-esqueceu-sua-senha{
+    text-align: center;
+    font-size: 4vh;
+    margin-bottom: 20px;
+}
+
+.sub-titulo-esqueceu-sua-senha{
+    text-align: justify;
+    width: 30%;
+    color: #171616;
+    font-size: 2vh;
+}
+
+.input-esqueceu-sua-senha {
+  width: 30%;
+  height: 90px;
+  padding-left: 20px;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  border-color: blue;
+  border-radius: 16px;
+  background-color: transparent;
+}
+
+.botao-esqueceu-sua-senha {
+  width: 32%;
+  height: 90px;
+  margin-top: 60px;
+  color: #fff;
+  border: none;
+  font-size: 40px;
+  border-radius: 16px;
+  background-color: blue;
+  cursor: pointer;
+}
+
+.reenviar {
+  margin-top: 50px;
+  font-size: 2vh;
+}
+
+@media (max-width: 1200px) {
+  .logo-esqueceu-sua-senha {
+    width: 40%;
+    margin-top: 30px;
+  }
+
+  .texto-esqueceu-sua-senha{
+      text-align: center;
+      font-size: 5vh;
+  }
+
+  .sub-titulo-esqueceu-sua-senha{
+      text-align: center;
+      width: 100%;
+  }
+
+  .seta-esqueceu-sua-senha {
+    width: 9%;
+  }
+
+  .text-voltar {
+    display: none;
+  }
+
+  .icons-esqueceu-sua-senha {
+    margin-left: 80px;
+    margin-top: 60px;
+    width: 75%;
+  }
+
+  .form-esqueceu-sua-senha {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 50px;
-}
 
-.logo{
+    width: 100%;
+  }
 
-    margin-top: 30px;
-}
-
-.wifi{
-    margin-top: 40px;
-    margin-left: 60px;
-}
-
-.texto{
-    padding-top: 20px;
-    font-size: 30px;
-    font-family: "exo", sans-serif;
-}
-
-.input{
-    width: 60%;
-    border-radius: 10px;
-    height: 60px;
-    border-color: #2138CB;
+  .input-esqueceu-sua-senha {
+    width: 78%;
+    height: 90px;
     padding-left: 20px;
-    background-color: transparent;
-    font-size: 18px;
-    font-family: "poppins", sans-serif;
-    margin-top: 15px;
-}
-
-
-
-.confirmar{
+    font-size: 20px;
     margin-top: 40px;
-    height: 60px;
-    border: none;
-    background-color: #2138CB;
+    border-color: blue;
+    border-radius: 16px;
+    background-color: transparent;
+  }
+
+  .botao-esqueceu-sua-senha {
+    width: 80%;
+    height: 90px;
+    margin-top: 60px;
     color: #fff;
-    font-size: 25px;
-    border-radius: 10px;
-    padding: 10px;
+    border: none;
+    font-size: 40px;
+    border-radius: 16px;
+    background-color: blue;
     cursor: pointer;
-    margin-bottom: 10px;
-    text-align: center;
+  }
 }
-
-.reenviar{
-    margin-bottom: 40px;
-}
-
-u{
-    color: #2138CB;
-}
-
-.bg-color{
-    position: absolute;
-    z-index: -1;
-    width: 150%;
-    height: 150vh;
-}
-
-.sub-titulo{
-    font-size: 25px;
-    text-align: center;
-    color: #343333;
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 100;
-}
-

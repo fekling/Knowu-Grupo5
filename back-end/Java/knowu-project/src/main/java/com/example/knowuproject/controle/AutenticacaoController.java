@@ -93,12 +93,12 @@ public class AutenticacaoController {
         return ResponseEntity.status(204).build();
     }
 
-    @PutMapping("/enviarCodigo/{id}")
-    public ResponseEntity enviarCodigoRecuperacaoSenha(@PathVariable Integer id) {
+    @PutMapping("/enviarCodigo")
+    public ResponseEntity enviarCodigoRecuperacaoSenha(@RequestBody Usuario usuario) {
 
 
-        Optional<Usuario> usuarios = usuarioRepository.findById(id);
-
+        Optional<Usuario> usuarios = Optional.ofNullable(usuarioRepository.findByEmail(usuario.getEmail()));
+        System.out.println(usuarios.get());
         if (!usuarios.isEmpty()) {
 
             Properties props = new Properties();
@@ -124,24 +124,23 @@ public class AutenticacaoController {
 
             try {
 
-
                 Message message = new MimeMessage(session);
                 message.setFrom(new InternetAddress("knowu@outlook.com.br")); //Remetente
 
-                Usuario usuario = new Usuario();
-                usuario = usuarios.get();
-                usuario.setCodigoRecuperaSenha(ThreadLocalRandom.current().nextInt(10000, 99999));
-                System.out.println(usuario.getCodigoRecuperaSenha());
-                usuarioRepository.save(usuario);
+                Usuario usuario1 = new Usuario();
+                usuario1 = usuarios.get();
+                usuario1.setCodigoRecuperaSenha(ThreadLocalRandom.current().nextInt(10000, 99999));
+                System.out.println(usuario1.getCodigoRecuperaSenha());
+                usuarioRepository.save(usuario1);
 
                 message.setRecipients(Message.RecipientType.TO,
                         InternetAddress.parse(usuario.getEmail())); //Destinatário(s)
-                message.setSubject("Código de recuperação de senha");//Assunto
+                message.setSubject("Código de recuperação de senha"); //Assunto
                 message.setText(String.format("Prezado(a) %s, espero que esteja tendo um ótimo dia! ☺\n\n" +
                                 "Para recuperar sua senha, digite o código abaixo no site\n" +
                                 "%d\n\n" +
                                 "KnowU, revolucionando o jeito de fazer novas amizades",
-                        usuario.getNome(), usuario.getCodigoRecuperaSenha()));
+                        usuario1.getNome(), usuario1.getCodigoRecuperaSenha()));
 
                 /**Método para enviar a mensagem criada*/
                 Transport.send(message);
@@ -154,8 +153,21 @@ public class AutenticacaoController {
         }
 
 
-        return null;
+        return ResponseEntity.status(204).build();
 
+    }
+
+    @PostMapping("/validarCodigo")
+    public ResponseEntity validarCodigoRecuperacao(@RequestBody Usuario usuario) {
+
+        Optional<Usuario> usuario1 = Optional.ofNullable((usuarioRepository.findByCodigoRecuperaSenha(usuario.getCodigoRecuperaSenha())));
+
+        if (!usuario1.isEmpty()) {
+            return ResponseEntity.status(200).body(usuario1.get().getIdUsuario());
+
+        }
+
+        return ResponseEntity.status(204).build();
     }
 
     @PatchMapping("/atualizarDadosConta/{id}")
