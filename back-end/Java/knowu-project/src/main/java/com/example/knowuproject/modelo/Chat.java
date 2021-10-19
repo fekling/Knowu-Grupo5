@@ -31,9 +31,8 @@ public abstract class Chat {
 
     @Override
     public String toString() {
-        return "Chat{" +
-                "idChat=" + idChat +
-                ", dataEnvioMensagem=" + dataEnvioMensagem +
-                '}';
+        return String.format("Chat\n" +
+                             "idChat: %d\n" +
+                             "Data envio da mensagem: " + dataEnvioMensagem);
     }
 }

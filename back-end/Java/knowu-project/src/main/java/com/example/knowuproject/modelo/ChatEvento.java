@@ -35,9 +35,9 @@ public class ChatEvento extends Chat {
 
     @Override
     public String toString() {
-        return "ChatEvento{" +
-                "mensagem='" + mensagem + '\'' +
-                ", usuarioRemetente='" + usuarioRemetente + '\'' +
-                "} " + super.toString();
+        return String.format("Chat Evento\n" +
+                             "Mensagem: %s\n" +
+                             "Usuário Remetente: %s\n" +
+                             super.toString());
     }
 }

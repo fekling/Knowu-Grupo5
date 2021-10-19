@@ -7,8 +7,11 @@ import java.util.List;
 import java.util.Optional;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
-
     public Usuario findByUsuario(String usuario);
+
+    public Usuario findByEmail(String email);
+
+    public Usuario findByCodigoRecuperaSenha(Integer codigo);
 
 
 
