@@ -203,6 +203,4 @@ public class AutenticacaoController {
 
         return ResponseEntity.status(200).build();
     }
-
-
 }
