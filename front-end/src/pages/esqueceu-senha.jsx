@@ -45,23 +45,24 @@ function Index() {
 
 
   return (
-    <div className="content">
+    <div className="content-esqueceu-senha">
       <img src={Bg} alt="" className="bg-color" />
-      <div className="meio">
-        <div className="header">
-          <img src={Seta} alt="" />
+      <div className="header-esqueceu-sua-senha">
+          <img src={Seta} alt="" className="seta-esqueceu-sua-senha" />
           <h1 className="text-voltar">Voltar</h1>
         </div>
+      <div className="meio-esqueceu-sua-senha">
+ 
 
-        <img src={Logo} alt="" className="logo" />
-        <img src={Sino} alt="" className="wifi" />
-        <h1 className="texto">Esqueceu a senha?</h1>
-        <h2 className="sub-titulo">
+        <img src={Logo} alt="" className="logo-esqueceu-sua-senha" />
+        <img src={Sino} alt="" className="icons-esqueceu-sua-senha" />
+        <h1 className="texto-esqueceu-sua-senha">Esqueceu a senha?</h1>
+        <h2 className="sub-titulo-esqueceu-sua-senha">
           Vamos te enviar um link para seu email cadastrado para que possamos alterar sua senha.
         </h2>
-        <form onSubmit={handleEnviarCodigo}>
-          <input type="text" placeholder="Email cadastrado" className="input" onChange={dados => setEmail(dados.target.value)} />
-          <button className="confirmar" type="submit">Enviar código</button>
+        <form className="form-esqueceu-sua-senha" onSubmit={handleEnviarCodigo}>
+          <input type="text" placeholder="Email cadastrado" className="input-esqueceu-sua-senha" onChange={dados => setEmail(dados.target.value)} />
+          <button className="botao-esqueceu-sua-senha" type="submit">Enviar código</button>
         </form>
       </div>
     </div>

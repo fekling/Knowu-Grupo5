@@ -42,20 +42,21 @@ function Index() {
     }, [codigoRecuperaSenha, history])
 
   return (
-    <div className="content">
+    <div className="content-esqueceu-senha">
       <img src={Bg} alt="" className="bg-color" />
-      <div className="meio">
-        <div className="header">
-          <img src={Seta} alt="" />
+      <div className="header-esqueceu-sua-senha">
+          <img src={Seta} alt="" className="seta-esqueceu-sua-senha" />
           <h1 className="text-voltar">Voltar</h1>
         </div>
+      <div className="meio-esqueceu-sua-senha">
+    
 
-        <img src={Logo} alt="" className="logo" />
-        <img src={Wifi} alt="" className="wifi" />
-        <h1 className="texto">Insira o código que te enviamos</h1>
-        <form onSubmit={handleValidarCodigo}>
-          <input type="text" placeholder="Código" className="input" onChange={dados => setCodigoRecuperaSenha(dados.target.value)} />
-          <button className="confirmar" type="submit">Confirmar</button>
+        <img src={Logo} alt="" className="logo-esqueceu-sua-senha" />
+        <img src={Wifi} alt="" className="icons-esqueceu-sua-senha" />
+        <h1 className="texto-esqueceu-sua-senha">Insira o código que te enviamos</h1>
+        <form className="form-esqueceu-sua-senha" onSubmit={handleValidarCodigo}>
+          <input type="text" placeholder="Código" className="input-esqueceu-sua-senha" onChange={dados => setCodigoRecuperaSenha(dados.target.value)} />
+          <button className="botao-esqueceu-sua-senha" type="submit">Confirmar</button>
         </form>
         <div className="reenviar">
           Não recebeu o código? <u>Reenviar</u>

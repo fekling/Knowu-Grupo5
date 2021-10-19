@@ -16,8 +16,8 @@ function Routes(){
                 <Route exact path="/login" component={Login}/>
                 <Route exact path="/cadastro" component={Cadastro}/>
                 <Route exact path="/perfil" component={PerfilUsuario}/>
-                <Route exact path="/recuperar-senha" component={RecuperarSenha}/>
                 <Route exact path="/esqueceu-senha" component={EsqueceuSenha}/>
+                <Route exact path="/recuperar-senha" component={RecuperarSenha}/>
                 <Route exact path="/alterar-senha" component={AlterarSenha}/>
                 <Route exact path="*" component={NotFound}/>
             </Switch>

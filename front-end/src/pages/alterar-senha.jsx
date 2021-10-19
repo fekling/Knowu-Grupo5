@@ -39,19 +39,19 @@ function Index() {
       }
     }, [senha, history])
   return (
-    <div className="content">
-      <img src={bg} alt="" className="bg-color" />
-      <div className="meio">
-        <div className="header">
-          <img src={seta} alt="" className="seta" />
+    <div className="content-esqueceu-senha">
+         <img src={bg} alt="" className="bg-color" />
+      <div className="header-esqueceu-sua-senha">
+          <img src={seta} alt="" className="seta-esqueceu-sua-senha" />
           <h1 className="text-voltar">Voltar</h1>
         </div>
-        <img src={Logo} alt="" className="logo" />
-        <h1 className="texto">Altere sua senha:</h1>
-        <form onSubmit={handleTrocarSenha}>
-          <input type="text" placeholder="Senha" className="input" onChange={dados => setSenha(dados.target.value)} />
-          <input type="text" placeholder="Confirme sua senha" className="input" onChange={dados => setConfSenha(dados.target.value)} />
-          <button className="confirmar" type="submit">Alterar</button>
+      <div className="meio-esqueceu-sua-senha">
+      <img src={Logo} alt="" className="logo-esqueceu-sua-senha" />
+        <h1 className="texto-esqueceu-sua-senha">Altere sua senha:</h1>
+        <form className="form-esqueceu-sua-senha" onSubmit={handleTrocarSenha}>
+          <input type="text" placeholder="Senha" className="input-esqueceu-sua-senha" onChange={dados => setSenha(dados.target.value)} />
+          <input type="text" placeholder="Confirme sua senha" className="input-esqueceu-sua-senha" onChange={dados => setConfSenha(dados.target.value)} />
+          <button className="botao-esqueceu-sua-senha" type="submit">Alterar</button>
         </form>
       </div>
     </div>
