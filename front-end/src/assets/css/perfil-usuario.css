@@ -582,9 +582,9 @@ span{
   */
 
 
-*{
+/* *{
   overflow: visible;
-}
+} */
 
   .header-menu-perfil{
     display: flex;

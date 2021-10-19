@@ -69,8 +69,10 @@ function Index() {
 
                     </div>
 
+
                 </div>
 
+           
                 <button class="btn-cadastro" type="submit">Cadastrar</button>
                 </form>
             </div>
