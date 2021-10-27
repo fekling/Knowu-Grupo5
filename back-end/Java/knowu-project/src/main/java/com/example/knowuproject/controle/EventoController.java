@@ -4,6 +4,7 @@ import com.example.knowuproject.modelo.Evento;
 import com.example.knowuproject.modelo.ListaObj;
 import com.example.knowuproject.modelo.Usuario;
 import com.example.knowuproject.repositorio.EventoRepository;
+import com.example.knowuproject.repositorio.LocalidadeRepository;
 import com.example.knowuproject.repositorio.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -25,10 +26,15 @@ public class EventoController {
     @Autowired
     UsuarioRepository usuarioRepository;
 
+    @Autowired
+    LocalidadeRepository localidadeRepository;
+
     @PostMapping("/criar/{id}")
     public ResponseEntity criarEvento(@PathVariable Integer id, @RequestBody Evento evento) {
 
         evento.setUsuario(usuarioRepository.findById(id));
+        evento.buscarLocalizacao();
+        localidadeRepository.save(evento.getLocalidade());
         eventoRepository.save(evento);
         return ResponseEntity.status(201).build();
 
@@ -75,6 +81,21 @@ public class EventoController {
         }
         return ResponseEntity.status(204).build();
     }
+
+    @GetMapping("/downloadEvento")
+    public ResponseEntity downloadDeEventos() {
+
+        ListaObj<Evento> eventos = new ListaObj<Evento>((int) eventoRepository.count());
+        List<Evento> eventosAuxiliar = eventoRepository.findAll();
+
+        for (int i = 0; i < eventoRepository.count(); i++) {
+            eventos.adicionar(eventosAuxiliar.get(i));
+        }
+
+        gravaArquivoCsv(eventos, "eventos");
+        return ResponseEntity.status(200).build();
+    }
+
 
     @PostMapping("/downloadEvento/{id}")
     public ResponseEntity downloadDeEvento(@PathVariable Integer id) {

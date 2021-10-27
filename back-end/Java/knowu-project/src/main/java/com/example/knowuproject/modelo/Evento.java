@@ -17,6 +17,8 @@ public class Evento {
     private String dataFim;
     @OneToOne
     private Usuario usuario;
+    @OneToOne
+    private Localidade localidade;
 
     /*
     public Evento(Integer idEvento, String nome, String descricao, DateTimeFormat dataInicio, DateTimeFormat dataFim) {
@@ -76,6 +78,18 @@ public class Evento {
     public void setUsuario(Optional<Usuario> usuario) {
         Usuario usuario1 = usuario.get();
         this.usuario = usuario1;
+    }
+
+    public Localidade getLocalidade() {
+        return localidade;
+    }
+
+    public void setLocalidade(Localidade localidade) {
+        this.localidade = localidade;
+    }
+
+    public void buscarLocalizacao() {
+        this.localidade = new Localidade().buscarLocalizacao();
     }
 
 
