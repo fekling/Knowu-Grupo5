@@ -12,12 +12,6 @@ body {
   height: 150vh;
 }
 
-/* @media (min-width: 2000px) {
-   *{
-    overflow: hidden;
-   }
-} */
-
 .content-esqueceu-senha {
   width: 100%;
 }
@@ -31,6 +25,7 @@ body {
 
 .seta-esqueceu-sua-senha {
   width: 3%;
+  cursor: pointer;
 }
 
 .meio-esqueceu-sua-senha {
