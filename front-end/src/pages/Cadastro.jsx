@@ -14,7 +14,6 @@ function Index() {
     const [cpf, setCpf] = useState("")
     const [dataNascimento, setDataNascimento] = useState("")
     const [genero, setGenero] = useState("")
-    // const [error, setError] = useState("")
 
     const handleCadastro = useCallback(
         async (dados) => {

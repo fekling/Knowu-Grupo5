@@ -73,6 +73,7 @@ header .botao .botao-cadastro {
     #fb9739 78.32%,
     #fdcb7a 87.02%
   );
+  cursor: pointer;
 }
 
 .container-cadastro {
@@ -220,7 +221,7 @@ header .botao .botao-cadastro {
   }
 
   .input-senha-cadastro{
-    width: 120%;
+    width: autp;
     height: 80px;
     font-size: 20px;
   }
