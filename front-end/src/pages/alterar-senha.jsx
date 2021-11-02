@@ -1,57 +1,67 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback } from "react";
 import seta from "../assets/images/seta.png";
 import bg from "../assets/images/bg-color.png";
 import Logo from "../assets/images/logo.png";
 import "../assets/css/react.css";
-import Api from '../components/Axios';
-import { useHistory } from "react-router-dom"
+import Api from "../components/Axios";
+import { useHistory } from "react-router-dom";
 
 function Index() {
+  const history = useHistory();
 
-  const history = useHistory()
-
-  const [senha, setSenha] = useState("")
-  const [confSenha, setConfSenha] = useState("")
-  // const [error, setError] = useState("")
+  const [senha, setSenha] = useState("");
+  const [confSenha, setConfSenha] = useState("");
 
   const handleTrocarSenha = useCallback(
     async (dados) => {
-      dados.preventDefault()
+      dados.preventDefault();
       if (senha != confSenha) {
-        alert("Suas senhas não coincidem!")
+        alert("Suas senhas não coincidem!");
       } else {
         try {
           let params = {
-
-            senha: senha
-
-          }
-          const response = await Api.patch(`/usuarios/atualizarDadosConta/${sessionStorage.id_usuario}`, params)
+            senha: senha,
+          };
+          const response = await Api.patch(
+            `/usuarios/atualizarDadosConta/${sessionStorage.id_usuario}`,
+            params
+          );
           if (response.status === 200) {
-            // const id = JSON.stringify(response.data)
-            // sessionStorage.id_usuario = id;
-
-            history.push("/login")
+            history.push("/login");
           }
         } catch (erro) {
           alert(erro);
         }
       }
-    }, [senha, history])
+    },
+    [senha, history]
+  );
   return (
     <div className="content-esqueceu-senha">
-         <img src={bg} alt="" className="bg-color" />
+      <img src={bg} alt="" className="bg-color" />
       <div className="header-esqueceu-sua-senha">
-          <img src={seta} alt="" className="seta-esqueceu-sua-senha" />
-          <h1 className="text-voltar">Voltar</h1>
-        </div>
+        <img src={seta} alt="" className="seta-esqueceu-sua-senha" />
+        <h1 className="text-voltar">Voltar</h1>
+      </div>
       <div className="meio-esqueceu-sua-senha">
-      <img src={Logo} alt="" className="logo-esqueceu-sua-senha" />
+        <img src={Logo} alt="" className="logo-esqueceu-sua-senha" />
         <h1 className="texto-esqueceu-sua-senha">Altere sua senha:</h1>
         <form className="form-esqueceu-sua-senha" onSubmit={handleTrocarSenha}>
-          <input type="text" placeholder="Senha" className="input-esqueceu-sua-senha" onChange={dados => setSenha(dados.target.value)} />
-          <input type="text" placeholder="Confirme sua senha" className="input-esqueceu-sua-senha" onChange={dados => setConfSenha(dados.target.value)} />
-          <button className="botao-esqueceu-sua-senha" type="submit">Alterar</button>
+          <input
+            type="text"
+            placeholder="Senha"
+            className="input-esqueceu-sua-senha"
+            onChange={(dados) => setSenha(dados.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Confirme sua senha"
+            className="input-esqueceu-sua-senha"
+            onChange={(dados) => setConfSenha(dados.target.value)}
+          />
+          <button className="botao-esqueceu-sua-senha" type="submit">
+            Alterar
+          </button>
         </form>
       </div>
     </div>

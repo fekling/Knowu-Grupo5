@@ -12,7 +12,6 @@ function Index() {
   const history = useHistory()
 
   const [codigoRecuperaSenha, setCodigoRecuperaSenha] = useState("")
-  // const [error, setError] = useState("")
 
   const handleValidarCodigo = useCallback(
     async (dados) => {
