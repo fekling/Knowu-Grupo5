@@ -1,6 +1,7 @@
 package com.example.knowuproject.controle;
 
 import com.example.knowuproject.dto.Usuariodto;
+import com.example.knowuproject.modelo.Localidade;
 import com.example.knowuproject.modelo.Usuario;
 import com.example.knowuproject.repositorio.LocalidadeRepository;
 import com.example.knowuproject.repositorio.UsuarioRepository;

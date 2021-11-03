@@ -11,9 +11,9 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idUsuario;
     private String nome;
+    private String usuario;
     private String celular;
     private String email;
-    private String usuario;
     private String descricao;
     private String cpf;
     private String dataNascimento;
@@ -26,6 +26,21 @@ public class Usuario {
     //    private String localizacao;
     @OneToOne
     private Localidade localidade;
+
+    public Usuario(Integer idUsuario, String nome, String usuario, String celular, String email, String cpf, String dataNascimento, String genero) {
+        this.idUsuario = idUsuario;
+        this.nome = nome;
+        this.usuario = usuario;
+        this.celular = celular;
+        this.email = email;
+        this.cpf = cpf;
+        this.dataNascimento = dataNascimento;
+        this.genero = genero;
+    }
+
+    public Usuario() {
+
+    }
 
     public Integer getIdUsuario() {
         return idUsuario;
