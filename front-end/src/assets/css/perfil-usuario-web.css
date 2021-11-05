@@ -1,0 +1,582 @@
+/* p {
+  line-height: 19px;
+  font-style: normal;
+  position: relative;
+  top: -11px;
+  margin-left: 23%;
+} */
+  
+  .sidebar-navigation-perfil-web {
+    display: inline-block;
+    min-height: 100vh;
+    background-color: #E3E4EE;
+    float: left;
+    position: fixed;
+  }
+
+  .icones-abaixo{
+    margin-top: 72%;
+    margin-left: 29%;
+    width: 56%;
+
+  }
+
+  #retangulo-perfil-web{
+    width: 7px;
+    position: absolute;
+    left: 0px;
+    top: 500px;
+  }
+
+  #home-perfil-web{
+    font-size: 188%;
+    cursor: pointer;
+    width: 57%;
+  }
+
+
+  #chat-perfil-web{
+    margin-top: 76%;
+    width: 28px;
+    cursor: pointer;
+    width: 57%;
+  }
+
+  #calendario-perfil-web{
+    width: 75%;
+    margin-top: 76%;
+    width: 27px;
+    cursor: pointer;
+    width: 57%;
+  }
+
+  #usuario-perfil-web{
+    margin-top: 76%;
+    width: 28px;
+    cursor: pointer;
+    width: 57%;
+  }
+
+  #usuario-titulo {
+    margin-top: 21px;
+}
+
+  #logout-perfil-usuario-web{
+    margin-top: 114%;
+    cursor: pointer;
+    width: 54%;
+  }
+
+  #usuario-frase{
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    right: 39px;
+    top: 58px;
+    font-size: 20px;
+  }
+
+  #fotos-perfil-usuario-web {
+    position: relative;
+    font-size: 27px;
+    float: right;
+    margin-right: 54%;
+}
+
+  #fotos-do-usuario-perfil-usuario-web {
+    width: 66%;
+    margin-right: 0px;
+    margin-top: 10%;
+}
+#usuario-frase-perfil-usuario-web {
+  font-size: 12px;
+}
+
+  #link-info-perfil-usuario-web {
+    font-family: 'Poppins', sans-serif;
+    width: 11%;
+    margin-right: 70%;
+    margin-top: 12%;
+}
+
+  #link-do-usuario {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    width: 80%;
+    left: 30px;
+    bottom: 29px;
+    font-size: 14px;
+}
+
+  #eventos-letra-web{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: initial;
+    position: relative;
+    top: 5%;
+    margin-left: 14px;
+  }
+
+  #nome-evento-perf-web{
+    font-size: 14px;
+    margin-left: 27%;
+    position: relative;
+    bottom: 34px;
+  }
+
+ .meio-usuario-perfil-web{
+  width: 955px;
+
+ }
+
+ .post-do-perfil-usuario-perfil-web{
+   display: flex;
+   flex-direction: column;
+ }
+
+.comentario-caixa-primeiro-perfil-web{
+  width: 50%;
+  height: 105px;
+  border-radius: 16px;
+  padding: 1%;
+  background-color: #E3E4EE;
+  border-color: #2138CB;
+  margin-left: 8%;
+  margin-top: 0%;
+}
+
+.comentario-caixa{
+  width: 50%;
+  height: 114px;
+  border-radius: 16px;
+  padding: 1%;
+  background-color: #E3E4EE;
+  border-color: #2138CB;
+  margin-left: 8%;
+  margin-top: 2%;
+}
+
+.tres-pontos{
+  position: absolute;
+}
+
+.ponto{
+ width: 2%;
+ left: 66%;
+ margin-top: 10px;
+ position: absolute;
+ cursor: pointer;
+}
+
+  #usuarios-letra {
+    margin-left: 15px;
+    size: 8px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: initial;
+    position: relative;
+    top: 8%;
+}
+
+#nickname{
+  position: relative;
+  top: 3px;
+}
+
+span{
+  position: relative;
+  right: -19%;
+  left: 50px;
+  top: 6px;
+  font-size: 87%;
+}
+
+  #evento-perfil-web{
+    width: 40px;
+    margin-left: 6%;
+    margin-top: 2%;
+  }
+
+  .foto-usuario-perfil-web{
+    display: inline-block;
+    border-radius: 50%;
+    width: 94%;
+    margin-left: 2%;
+    margin-top: 14%;
+  }
+
+  .logo-sorriso-perfil-web{
+    width: 41%;
+    margin-left: 27%;
+    margin-top: 28%;
+  }
+
+  .circulo-imagem-perfil-web {
+    width: 79%;
+    margin-left: 7%;
+}
+
+  .sidebar-navigation ul li .tooltip {
+    display: inline-block;
+    position: absolute;
+    background-color: #313443;
+    padding: 8px 15px;
+    border-radius: 3px;
+    margin-top: -26px;
+    left: 90px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+
+  /* Style the header with a grey background and some padding */
+.header {
+    overflow: hidden;
+    padding: 18px 127px;
+  }
+  
+  /* Style the header links */
+  .header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 0px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  
+  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+  .header a .pesquisar-pessoas {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  #input-pessoas {
+    margin-left: 126%;
+    border-radius: 17px;
+    width: 205%;
+    line-height: 199%;
+    border-radius: 17px;
+    background: url(../images/sistema/bx_bx-search.png) no-repeat scroll 0px 0px;
+    padding-left: 72px;
+    background-size: 6%;
+    background-position-x: 5%;
+    background-position: 19px;
+    border-color: #D15FC0;
+  }
+
+.bolinhas-coloridas-web{
+  background: linear-gradient(180deg, #D15FC0 0%, #8C9CFF 100%);
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  margin-left: 14px;
+  margin-right: 1px;
+}
+
+  .tip {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    background: transparent;
+    border: 10px solid #ccc;
+  }
+  
+  .tip-up {
+    top: -25px; /* Same as body margin top + border */
+    left: 10px;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+  }
+  
+  .tip-down {
+    bottom: -25px;
+    left: 10px;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+  }
+  
+  .tip-left {
+    top: 10px;
+    left: -25px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+  }
+  
+  .tip-right {
+    top: 10px;
+    right: -25px;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+  }
+  
+  .dialogbox-usuario .body-usuario-perfil {
+    position: relative;
+    max-width: 300px;
+    height: auto;
+    margin: 20px;
+    padding: 5px;
+    border-radius: 3px;
+    margin-left: 3%;
+}
+
+    
+
+  #foto-comentarios-usuario{
+    width: 66px;
+    position: relative;
+    float: left;
+}
+
+#foto-comentarios2{
+  width: 66px;
+  position: relative;
+  float: left;
+  left: 22px;
+  margin-top: 14%;
+}
+  .foto-usuario2-perfil-usuario-web {
+    width: 37%;
+}
+
+  #nome-user-perfil-web{
+    position: absolute;
+    left: 9%;
+    top: 10%;
+    font-size: 17px;
+  }
+
+  #nome-user2{
+    position: absolute;
+    left: 8%;
+    bottom: 46%;
+    font-size: 21px;
+  }
+
+  #nick-user-perfil-web {
+    position: absolute;
+    left: 9%;
+    font-size: 14px;
+    color: gray;
+    top: 13%;
+  }
+
+  #nick-user2 {
+    position: absolute;
+    left: 8%;
+    font-size: 14px;
+    color: gray;
+    bottom: 43%;
+  }
+
+  #nome-do-evento-perfil-web{
+    position: absolute;
+    left: 21%;
+    top: 60px;
+    font-size: 17px;
+  }
+
+  #nome-do-evento2{
+    position: absolute;
+    left: 20%;
+    bottom: 46%;
+    font-size: 21px;
+  }
+
+  #comentario1-perfil-web {
+    position: absolute;
+    left: 90px;
+    font-size: 14px;
+    color: gray;
+    top: 20%;
+  }
+
+  #comentario2-perfil-web {
+    position: absolute;
+    font-size: 19px;
+    color: gray;
+    top: 25%;
+    width: 18%;
+    right: 848px;
+  }
+
+  #comentario-dentro2{
+    position: absolute;
+    font-size: 19px;
+    color: gray;
+    top: 68%;
+    right: 76%;
+    width: 19%;
+  }
+
+  #comentario-segundo {
+    position: absolute;
+    left: 118px;
+    font-size: 14px;
+    color: gray;
+    bottom: 35%;
+  }
+
+
+#nome-usuario{
+  position: relative;
+  bottom: 0;
+  right: 13%;
+  top: -77%;
+}
+
+::placeholder {
+  text-align: center;
+} 
+
+.buttons-do-post-perfil-web {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  left: 16%;
+  top: 33%;
+}
+
+
+.button-post-perfil-web {
+  border-radius: 50px;
+  width: 125px;
+  height: 40px;
+  background-color: #EFF0F8;
+  border-color: #2138CB;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button-post-perfil-web:hover {
+  background-color: #2138CB;
+  color: #fff;
+}
+
+  
+  /* Style the active/current link*/
+  .header a.active {
+    background: linear-gradient(180deg, #D15FC0 0%, #8C9CFF 100%);
+    color: white;
+    width: 133%;
+    line-height: 210%;
+    border-radius: 50px;
+  }
+  
+  /* Float the link section to the right */
+  .header-right {
+    float: right;
+    margin-right: 28%;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Poppins;
+  }
+  
+  /* Float four columns side by side */
+  .column-perfil-usuario-web {
+    float: right;
+    width: 23%;
+    padding: 7px 39px;
+    margin-top: -52%;
+    margin-right: 0%;
+  }
+
+  /* Remove extra left and right margins, due to padding */
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+    /* Style the counter cards */
+    .card-web {
+      background-color: #E3E4EE;
+    }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column-perfil-usuario {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+  @media screen and (max-width: 500px) {
+  .container-pesquisar-pessoas{
+    width: 100%;
+  }
+    
+    .sidebar-navigation{
+       display: none;
+    }
+
+    .header-pesquisar-pessoas {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      margin: 0;
+    }
+
+    #input-pessoas{
+      width:200%;
+      height: 30%;
+      margin-left: -40%;
+    }
+
+    .column-perfil-usuario{
+      width: 80%;
+      margin-top: 1px  ;
+    }
+  }
+  .square-perfil-usuario-web{
+    width: 53%;
+    height: 0;
+    padding-bottom: 53%;
+    position: relative;
+}
+
+.block-perfil-usuario-web{
+  position: absolute;
+  text-align: center;
+  background-color: #E3E4EE;
+  width: 40%;
+  height: 79%;
+  left: 23%;
+  bottom: 0;
+  border-radius: 10px;
+  top: 5%;
+  }
+
+
+.block-meio{
+  position: absolute;
+  text-align: center;
+  width: 88%;
+  height: 93%;
+  bottom: 41px;
+  border-radius: 10px;
+  left: 35%;
+  }
