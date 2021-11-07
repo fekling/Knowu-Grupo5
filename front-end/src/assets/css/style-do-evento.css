@@ -383,6 +383,8 @@ body {
   color: transparent;
 }
 
+
+
 /* Remove extra left and right margins, due to padding */
 
 /* Clear floats after the columns */
@@ -427,9 +429,7 @@ body {
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
 @media screen and (max-width: 1001px) {
-  .desktop {
-    display: none;
-  }
+  
   .container {
     width: 100%;
   }

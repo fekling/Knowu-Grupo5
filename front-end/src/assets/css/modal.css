@@ -1,70 +1,76 @@
-h2{
+h2 {
   font-size: 18px;
 }
- /* The Modal (background) */
- .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    left: 1%;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  } 
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
 
-   /* Modal Header */
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%; /* Could be more or less, depending on screen size */
+  height: 100%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  left: -5%;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal Header */
 .modal-header {
-    padding: 2px 16px;
-    background-color: #E9EAF4;
-    color: white;
-    font-family: Poppins;
-  }
+  padding: 2px 16px;
+  background-color: #e9eaf4;
+  color: white;
+  font-family: Poppins;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  #crie-evento{
+#crie-evento {
   text-align: center;
   font-size: 165%;
   font-weight: bold;
   color: black;
   margin-left: 1%;
-  }
-
-  #text {
-    float: right;
-    margin-right: 39%;
-    margin-top: 2px;
 }
 
-  #numero-pessoas {
-    position: relative;
-    left: 7%;
+#text {
+  float: right;
+  margin-right: 39%;
+  margin-top: 2px;
+}
+
+#numero-pessoas {
+  position: relative;
+  width: 90%;
+  left: 7%;
+  background-color: transparent;
 }
 
 textarea {
@@ -72,73 +78,74 @@ textarea {
   position: relative;
   bottom: 7px;
   border-radius: 10px;
-  border-color: #2138CB;
+  border-color: #2138cb;
   line-height: 157%;
   height: 95px;
 }
+
+.scores{
+  margin-bottom: 20px;
+}
+
+.inputs-sim-nao{
+  display: flex;
+  margin-left: 10%;
+
+}
+
 .required1 {
-  position: relative;
-  left: 41px;
   font-size: 17px;
-  top: -11px;
 }
 
 .required2 {
-  position: relative;
-  left: 89px;
   font-size: 17px;
-  top: -11px;
+  margin-left: 20px;
 }
 
-  #retangulo2{
-    width: 279px;
-    left: 24%;
-    bottom: 73%;
-    margin-left: 24%;
-    float: inline-start;
-    margin-top: -2%;
-  }
+#retangulo2 {
+  width: 279px;
+}
 
-  #foto{
-    border-radius: 50%;
-    width: 22%;
-    margin-top: 8px;
-    margin-left: 38%;
-  }
+#foto {
+  border-radius: 50%;
+  width: 50%;
+  margin-top: 8px;
+}
 
-  #foto2{
-    border-radius: 50%;
-    width: 9%;
-    position: relative;
-    right: 87px;
-  }
+.image-evento-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  #desc-evento{
-    position: relative;
-    left: 2px;
-  }
+#foto2 {
+  border-radius: 50%;
+  width: 9%;
+  position: absolute;
+  margin: 0 auto;
+}
 
-  #imglink {
-    width: 5%;
-    margin-left: 6%;
-    margin-bottom: 5%;
-    margin-top: -6px;
+#desc-evento {
+  position: relative;
+  left: 2px;
 }
 
 #link-texto {
   margin-top: 0px;
   position: relative;
   font-size: 17px;
-  float: inline-end;
-  right: 43%;
   top: 0%;
+  margin-left: 0;
 }
 
-#copy{
+#link-convite{
+
+}
+
+#copy {
   float: inline-end;
   position: relative;
-  left: 45%;
-  background: linear-gradient(180deg, #D15FC0 0%, #8C9CFF 100%);
+  background: linear-gradient(180deg, #d15fc0 0%, #8c9cff 100%);
   color: white;
   border-radius: 50px;
   width: 19%;
@@ -146,53 +153,98 @@ textarea {
   margin-top: -9px;
   font-size: 108%;
   cursor: pointer;
-
 }
 
-  #input-qtd{
-    position: relative;
-    left: 7%;
-    border-radius: 50px;
-    width: 83%;
-    height: 32px;
-    bottom: 4px;
-    border-color: #2138CB;
-  }
-  
-  /* Modal Body */
-  .modal-body {padding: 2px 16px;
-    margin-top: 2%;
-    margin-left: 24px;}
-  
-  /* Modal Footer */
-  .modal-footer {
-    padding: 2px 16px;
-    background-color: #E9EAF4;
-    color: white;
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    position: relative;
-    background-color: #E9EAF4;
-    margin: auto;
-    padding: 0;
-    border: 1px solid #888;
-    width: 47%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    animation-name: animatetop;
-    animation-duration: 0.4s
-  }
+.link-modal{
+ display: flex;
+margin-bottom: 20px;
+justify-content: space-evenly;
+}
 
-  /* Input */
-  input {
-    height:26px;
-    border: none;
-    border:#83bbd9 1px solid;
-    } 
-  
-  /* Add Animation */
-  @keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
-  } 
+
+#input-qtd {
+  position: relative;
+  border-color: #2138cb;
+  width: 80%;
+  margin-left: 30px;
+  padding-left: 20px;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 2px 16px;
+  margin-left: 24px;
+}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #e9eaf4;
+  color: white;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #e9eaf4;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 47%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Input */
+input {
+  height: 26px;
+  border: none;
+  border: #83bbd9 1px solid;
+}
+
+.input-nome-evento-modal {
+  width: 90%;
+  border-radius: 50px;
+  background-color: transparent;
+  border-color: blue;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.descricao-evento-modal {
+  width: 90%;
+  background-color: transparent;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+
+.criar-evento-modal{
+  width: 50%;
+  height: 40px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  background: linear-gradient(180deg, #d15fc0 0%, #8c9cff 100%);
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+}
