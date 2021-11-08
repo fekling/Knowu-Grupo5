@@ -248,3 +248,69 @@ input {
   color: #fff;
   font-size: 20px;
 }
+
+#imglink{
+  display: none;
+}
+
+
+@media (max-width: 900px){
+.modal-header, .modal-body, .scores, .modal-footer, .qtd-pessoas{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-body{
+  margin-left: 0;
+}
+
+  #crie-evento{
+    font-size: 100%;
+  }
+
+  #retangulo2{
+    width: 100%;
+  }
+
+  #foto2{
+    width: 20%;
+  }
+
+.input-nome-evento-modal, .descricao-evento-modal{
+  width: 100%;
+}
+
+#numero-pessoas{
+  font-size: 15px;
+}
+
+#input-qtd{
+  width: 85%;
+  margin-left: 15px;
+}
+
+#link-texto{
+  font-size: 13px;
+}
+
+#copy{
+  display: none;
+}
+
+.criar-evento-modal{
+  width: 90%;
+}
+
+#imglink{
+  display: block;
+  width: 15%;
+  cursor: pointer;
+}
+
+.link-modal{
+  display: flex;
+  align-items: center;
+}
+
+}
