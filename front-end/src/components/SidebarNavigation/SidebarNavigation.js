@@ -6,6 +6,8 @@ import { SidebarNavigationData } from './SidebarNavigationData';
 import './SidebarNavigation.css';
 import '../../assets/css/reset.css';
 import { IconContext } from 'react-icons';
+import imagemLogo from '../../assets/images/Logo-U.png';
+import imagemUsuario from '../../assets/images/criareventos/img/conta-usuario.png';
 
 function SidebarNavigation() {
 
@@ -24,13 +26,13 @@ function SidebarNavigation() {
                         <nav className="navbar-header-itens">
                             <ul>
                                 <li>
-                                    <a href="#">Postagens</a>
+                                    <a href="/usuario/postagens">Postagens</a>
                                 </li>
                                 <li>
-                                    <a href="#">Perfil</a>
+                                    <a href="/usuario/perfil">Perfil</a>
                                 </li>
                                 <li>
-                                    <a href="#">Conta</a>
+                                    <a href="/usuario/conta">Conta</a>
                                 </li>
                                 <li>
                                     <AiIcons.AiOutlineBell className="bel" />
@@ -45,6 +47,12 @@ function SidebarNavigation() {
                             <Link to="#" className="navsidebar-menu-bars">
                                 <AiIcons.AiOutlineClose />
                             </Link>
+                        </li>
+                        <li>
+                            <img className="imagem-logo" src={imagemLogo} />
+                        </li>
+                        <li>
+                            <img className="imagem-usuario" src={imagemUsuario} />
                         </li>
                         {SidebarNavigationData.map((item, index) => {
                             return (

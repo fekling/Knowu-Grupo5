@@ -5,7 +5,9 @@ import RecuperarSenha from './pages/recuperar-senha';
 import EsqueceuSenha from './pages/esqueceu-senha';
 import Cadastro from './pages/Cadastro';
 import Login from './pages/login';
-import Home from './pages/home';
+import UsuarioPostagens from './pages/usuario-postagens';
+import UsuarioPerfil from './pages/usuario-perfil';
+import UsuarioConta from './pages/usuario-conta';
 
 
 function Routes(){
@@ -17,7 +19,9 @@ function Routes(){
                 <Route exact path="/recuperar-senha" component={RecuperarSenha}/>
                 <Route exact path="/esqueceu-senha" component={EsqueceuSenha}/>
                 <Route exact path="/alterar-senha" component={AlterarSenha}/>
-                <Route exact path="/home" component={Home}/>
+                <Route exact path="/usuario/postagens" component={UsuarioPostagens}/>
+                <Route exact path="/usuario/perfil" component={UsuarioPerfil}/>
+                <Route exact path="/usuario/conta" component={UsuarioConta}/>
             </Switch>
         </Router>
     );

@@ -1,0 +1,15 @@
+.home-main{
+    width: 50%;
+    background-color: red;
+    height: 100vh;
+    margin-left: 26%;
+}
+
+
+.container-home-aside{
+    width: 15%;
+    height: 100%;
+    position: fixed; 
+    right: 1%; 
+    top: 12%;
+}
