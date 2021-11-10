@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.mail.*;
+import javax.validation.Valid;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.ArrayList;
@@ -37,7 +38,7 @@ public class AutenticacaoController {
 
 
     @PostMapping("/adicionar")
-    public ResponseEntity adicionarUsuario(@RequestBody Usuario usuario) {
+    public ResponseEntity adicionarUsuario(@RequestBody @Valid Usuario usuario) {
         usuarioRepository.save(usuario);
         return ResponseEntity.status(201).build();
     }
