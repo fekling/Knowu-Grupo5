@@ -2,6 +2,7 @@ package com.example.knowuproject.controle;
 
 import com.example.knowuproject.modelo.Evento;
 import com.example.knowuproject.modelo.ListaObj;
+import com.example.knowuproject.modelo.Localidade;
 import com.example.knowuproject.modelo.Usuario;
 import com.example.knowuproject.repositorio.EventoRepository;
 import com.example.knowuproject.repositorio.LocalidadeRepository;
@@ -18,6 +19,7 @@ import java.util.*;
 
 @RestController
 @RequestMapping("/evento")
+@CrossOrigin("*")
 public class EventoController {
 
     @Autowired
@@ -106,6 +108,19 @@ public class EventoController {
 
         gravaArquivoCsv(eventos, "eventos");
         return ResponseEntity.status(200).build();
+    }
+
+    @PostMapping("/eventos-proximos")
+    public ResponseEntity eventosProximos(@RequestBody Localidade localidade) {
+
+        System.out.println(localidade.getLatitute());
+
+        List eventos = localidadeRepository.findByAllEventosProximos(localidade.getLatitute(), localidade.getLongitute());
+
+        if (eventos.isEmpty()) {
+            return ResponseEntity.status(204).build();
+        }
+        return ResponseEntity.status(200).body(eventos);
     }
 
     //    Método gravar Arquivo .csv

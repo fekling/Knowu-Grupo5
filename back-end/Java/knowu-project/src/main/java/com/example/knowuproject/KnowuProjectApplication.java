@@ -1,7 +1,5 @@
 package com.example.knowuproject;
 
-import com.example.knowuproject.controle.AutenticacaoController;
-import com.example.knowuproject.dto.Usuariodto;
 import com.example.knowuproject.modelo.Usuario;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

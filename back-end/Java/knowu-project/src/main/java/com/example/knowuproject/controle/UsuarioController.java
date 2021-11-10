@@ -21,8 +21,8 @@ import java.util.concurrent.ThreadLocalRandom;
 
 @RestController
 @RequestMapping("/usuarios")
-@CrossOrigin("http://localhost:3000")
-public class AutenticacaoController {
+@CrossOrigin("*")
+public class UsuarioController {
 
     List<Usuariodto> usuariodtos;
 
@@ -32,7 +32,7 @@ public class AutenticacaoController {
     @Autowired
     LocalidadeRepository localidadeRepository;
 
-    public AutenticacaoController() {
+    public UsuarioController() {
         this.usuariodtos = new ArrayList<>();
     }
 
@@ -216,5 +216,18 @@ public class AutenticacaoController {
         usuarioRepository.save(dadosOriginais);
 
         return ResponseEntity.status(200).build();
+    }
+
+    @PostMapping("/usuarios-proximos")
+    public ResponseEntity eventosProximos(@RequestBody Localidade localidade) {
+
+        System.out.println("teste");
+
+        List usuarios = localidadeRepository.findByAllUsuariosProximos(localidade.getLatitute(), localidade.getLongitute());
+
+        if (usuarios.isEmpty()) {
+            return ResponseEntity.status(204).build();
+        }
+        return ResponseEntity.status(200).body(usuarios);
     }
 }
