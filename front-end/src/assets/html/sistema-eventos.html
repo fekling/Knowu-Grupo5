@@ -7,10 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,100;1,300&display=swap"
         rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/modal.css">
     <link rel="stylesheet" href="../css/evento.css">
     <title>KnowU</title>
 </head>
@@ -134,10 +137,10 @@
 
                 <div class="header-meio">
                     <div class="input-pesquisa">
-                        <input type="text" class="pesquisa-desktop" placeholder="Pesquise eventos...">
+                        <input type="text" class="pesquisa-desktop" placeholder="Pesquise eventos..." id="myBtn">
                     </div>
                     <div class="button-criar-evento">
-                        <button class="criar-evento">+ criar evento</button>
+                        <button class="criar-evento" id="myBtn-cria-evento">+ criar evento</button>
                     </div>
                 </div>
 
@@ -223,6 +226,54 @@
         </div>
     </div>
 
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="modal-header">
+            <h2 id="crie-evento">Criar um novo evento</h2>
+            <img src="../images/criareventos/img/Rectangle 295.png" alt="" id="retangulo2">
+            <div class="image-evento-modal">
+              <img src="../images/criareventos/img/Ellipse 148.png" alt="" id="foto">
+              <img src="../images/criareventos/img/Vector.png" alt="" id="foto2">
+            </div>
+          </div>
+            <div class="modal-body">
+              <h2>Nome do evento:</h2>
+              <input type="text" class="input-nome-evento-modal" id="nomeEvento">
+              <h2 id="desc-evento">Descrição do evento:</h2>
+              <textarea id="w3review" name="w3review" rows="4" cols="50" class="descricao-evento-modal"></textarea>
+            </div>
+  
+            <div class="scores">
+              <h2 id="numero-pessoas">Número máximo de convidados?</h2>
+              <div class="inputs-sim-nao">
+                <label for="score_1" class="required1">
+                  <input type="radio" id="score_1" name="score" required="required" value="2">Sim</label>
+                <label for="score_2" class="required2">
+                  <input type="radio" id="score_2" name="score" required="required" value="3">Não</label>
+              </div>
+            </div>
+            <div id="qtd-pessoas">
+              <h2 id="numero-pessoas">Quantas pessoas participarão?</h2>
+              <input type="text" name="" id="input-qtd" class="input-nome-evento-modal">
+            </div>
+  
+            <div id="link-convite">
+              <h2 id="numero-pessoas">Link de convite:</h2>
+              <img src="../images/criareventos/img/link.png/" alt="" id="imglink">
+              <div class="link-modal">
+                <p id="link-texto">knowu.com.br/invite/abcd-1234</p>
+                <button id="copy">Copiar</button>
+              </div>
+              <div class="modal-footer">
+                <button class="criar-evento-modal" onclick="criarEvento()">Criar evento</button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Mobile  -->
 
     <div class="mobile">
@@ -292,5 +343,133 @@
     </div>
 
 </body>
-
 </html>
+  
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+  
+    // Get the button that opens the modal
+    var btnMobile = document.getElementById("myBtn-mobile")
+    var btn = document.getElementById("myBtn-cria-evento");
+  
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+  
+    // When the user clicks on the button, open the modal
+    // btnMobile.onclick = function () {
+    //   modal.style.display = "block"
+    // }
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+  
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+  
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+<script>
+
+    var eventosProximos = []
+    var locations = [];
+    var idUsuario;
+  
+  
+    function buscarId() {
+      var params = new URLSearchParams(window.location.search)
+      idUsuario = params.get('id')
+    }
+  
+    function buscarEventosProximos() {
+  
+      let params = {
+        latitute: -23.5791213,
+        longitute: -46.6658027
+      }
+      axios.post("http://localhost:8080/evento/eventos-proximos", params).then(function (resultado) {
+        console.log(resultado.data.length);
+        for (let i = 0; i < resultado.data.length; i++) {
+          locations[i] = new Array(resultado.data.length)
+          for (let j = 0; j < locations.length; j++) {
+            locations[i][0] = resultado.data[i][0]
+            locations[i][1] = resultado.data[i][3]
+            locations[i][2] = resultado.data[i][4]
+            document.getElementById(`evento${i + 1}`).innerHTML = resultado.data[i][0];
+  
+          }
+        }
+        // eventosProximos = resultado.data[0]
+      }).catch(e => {
+        console.log(e);
+      })
+  
+      return locations
+  
+    }
+  
+    function buscarUsuariosProximos() {
+  
+      let params = {
+        latitute: -23.5791213,
+        longitute: -46.6658027
+      }
+      axios.post("http://localhost:8080/usuarios/usuarios-proximos", params).then(function (resultadoUsuario) {
+        console.log(resultadoUsuario.data[4][0]);
+        for (let i = 1; i < 4; i++) {
+          // alert(resultadoUsuario.data);
+          document.getElementById(`nickname${i}`).innerHTML = resultadoUsuario.data[i][0];
+          document.getElementById(`usuario${i}`).innerHTML = resultadoUsuario.data[i][1];
+        }
+        // eventosProximos = resultado.data[0]
+      }).catch(e => {
+        console.log(e);
+      })
+  
+      return locations
+  
+    }
+  
+  
+    function criarEvento() {
+      var qntdParticipantes = 10;
+      var nomeEvento = document.getElementById("nomeEvento").value;
+      alert(nomeEvento)
+      var dataInicio = '05/11/2021 17:00:00';
+      var descricao = document.getElementById("w3review").value;
+      var dataFim = '05/11/2021 18:00:00';
+      var qntdParticipantes = document.getElementById("input-qtd").value
+      var link = document.getElementById("link-texto").value
+  
+      let params = {
+        nome: nomeEvento,
+        descricao: descricao,
+        dataInicio: dataInicio,
+        dataFim: dataFim,
+        qntdParticipantes: qntdParticipantes,
+        link: link,
+        usuario: {
+          idUsuario: idUsuario
+        }
+      }
+  
+  
+      axios.post("http://localhost:8080/evento/criar/" + idUsuario, params).then(function (resultado) {
+        alert("Evento criado com sucesso!!")
+        // eventosProximos = resultado.data[0]
+      }).catch(e => {
+        console.log(e);
+      })
+    }
+  
+  
+  
+  </script>
