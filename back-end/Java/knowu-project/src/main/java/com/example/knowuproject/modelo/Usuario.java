@@ -2,6 +2,8 @@ package com.example.knowuproject.modelo;
 
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.validation.constraints.*;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -17,24 +19,24 @@ public class Usuario {
     private Integer idUsuario;
 
 
-    @NotNull
-    @NotBlank
-    @Size(min = 5, max = 50)
-    @Pattern(regexp = "[A-Z][a-z]+",
-            message = "O nome não pode conter sua primeira letra miniscula. Digite um nome válido.")
-    @Pattern(regexp = "^[a-zA-Z0-9-Zàèìòùáéíóúâêîôûãõ\b]+$",
-            message = "O nome não deve conter caracteres especiais. Digite um nome válido.")
-    @Pattern(regexp = "[^\\d]+",
-            message = "O nome não deve conter numeros. Digite um nome válido.")
+//    @NotNull
+//    @NotBlank
+//    @Size(min = 5, max = 50)
+//    @Pattern(regexp = "[A-Z][a-z]+",
+//            message = "O nome não pode conter sua primeira letra miniscula. Digite um nome válido.")
+//    @Pattern(regexp = "^[a-zA-Z0-9-Zàèìòùáéíóúâêîôûãõ\b]+$",
+//            message = "O nome não deve conter caracteres especiais. Digite um nome válido.")
+//    @Pattern(regexp = "[^\\d]+",
+//            message = "O nome não deve conter numeros. Digite um nome válido.")
     private String nome;
 
-    @NotNull
-    @NotBlank
-    @Size(min = 5, max = 15)
-    @Pattern(regexp = "^[a-zA-Z0-9-Zàèìòùáéíóúâêîôûãõ\b]+$",
-            message = "O nickname não deve conter caracteres especiais. Digite um nickname válido. EX: dylancolonhesi")
-    @Pattern(regexp = "[^\\d]+",
-            message = "O nickname não deve conter numeros. Digite um nickname válido. EX: dylancolonhesi")
+//    @NotNull
+//    @NotBlank
+//    @Size(min = 5, max = 15)
+//    @Pattern(regexp = "^[a-zA-Z0-9-Zàèìòùáéíóúâêîôûãõ\b]+$",
+//            message = "O nickname não deve conter caracteres especiais. Digite um nickname válido. EX: dylancolonhesi")
+//    @Pattern(regexp = "[^\\d]+",
+//            message = "O nickname não deve conter numeros. Digite um nickname válido. EX: dylancolonhesi")
     private String usuario;
 
 
@@ -45,7 +47,6 @@ public class Usuario {
     @NotNull
     @NotBlank
     private String email;
-
 
     private String descricao;
 
@@ -61,29 +62,32 @@ public class Usuario {
 //    @Size(min = 11, message = "Digite uma data de nascimento válida.")
     private String dataNascimento;
 
-
-    @NotNull(message = "O genero não pode ser em branco.")
-    @NotBlank(message = "O campo genero não deve conter espaços em branco.")
-    @Size(min = 5, max = 50)
-    @Pattern(regexp = "^[a-zA-Z0-9-Zàèìòùáéíóúâêîôûãõ\b]+$",
-            message = "O nome não deve conter caracteres especiais. Digite um genero válido. EX: Não-Binário")
-    @Pattern(regexp = "[^\\d]+",
-            message = "O genero não deve conter numeros. Digite um genero válido. EX: Feminino")
+//    @NotNull(message = "O genero não pode ser em branco.")
+//    @NotBlank(message = "O campo genero não deve conter espaços em branco.")
+//    @Size(min = 5, max = 50)
+//    @Pattern(regexp = "^[a-zA-Z0-9-Zàèìòùáéíóúâêîôûãõ\b]+$",
+//            message = "O nome não deve conter caracteres especiais. Digite um genero válido. EX: Não-Binário")
+//    @Pattern(regexp = "[^\\d]+",
+//            message = "O genero não deve conter numeros. Digite um genero válido. EX: Feminino")
     private String genero;
 
-    @NotNull(message = "A senha não pode ser em branco. EX: Abc@1234")
-    @NotBlank(message = "A senha não deve conter espaços em branco. EX: Abc@1234")
-    @Size(min = 8, max = 20, message = "A senha deve conter no maximo 8 caracteres. EX: Abc@1234")
+//    @NotNull(message = "A senha não pode ser em branco. EX: Abc@1234")
+//    @NotBlank(message = "A senha não deve conter espaços em branco. EX: Abc@1234")
+//    @Size(min = 8, max = 20, message = "A senha deve conter no maximo 8 caracteres. EX: Abc@1234")
     private String senha;
-
 
     private Integer codigoRecuperaSenha;
 //    private Boolean isBloqueado = false;
     private Boolean autenticado;
     private String autenticadoEm;
+
     //    private String localizacao;
     @OneToOne
     private Localidade localidade;
+
+    @JsonIgnore // será igonrado no JSON
+    @Column(length = 20_000_000) //20MB
+    private byte[] foto;
 
     public Usuario(Integer idUsuario, String nome, String usuario, String celular, String email, String cpf, String dataNascimento, String genero) {
         this.idUsuario = idUsuario;
@@ -205,7 +209,14 @@ public class Usuario {
         this.localidade = localidade;
     }
 
-//    Fim Getters e Setters
+    public byte[] getFoto() {
+        return foto;
+    }
+
+    public void setFoto(byte[] foto) {
+        this.foto = foto;
+    }
+    //    Fim Getters e Setters
 
 
     public void bloquearUsuario(String usuario, String motivo) {

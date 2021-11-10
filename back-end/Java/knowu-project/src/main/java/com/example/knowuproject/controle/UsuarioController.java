@@ -9,6 +9,7 @@ import com.example.knowuproject.repositorio.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.mail.*;
 import javax.validation.Valid;
@@ -36,6 +37,29 @@ public class UsuarioController {
         this.usuariodtos = new ArrayList<>();
     }
 
+    @PatchMapping("/foto/{idUsuario}")
+    public ResponseEntity patchFoto(@PathVariable int idUsuario, @RequestParam MultipartFile foto) throws IOException { //MultipartFile indica o tipo de arquivo
+        if (usuarioRepository.existsById(idUsuario)) {
+            Usuario user = usuarioRepository.findById(idUsuario).get();
+            byte[] novaFoto = foto.getBytes();
+            user.setFoto(novaFoto);
+            usuarioRepository.save(user);
+            return ResponseEntity.status(200).build();
+        } else {
+            return ResponseEntity.status(404).build();
+        }
+    }
+
+    @GetMapping("/foto/{id}")
+    public ResponseEntity getFoto(@PathVariable int id) {
+        if (usuarioRepository.existsById(id)) {
+            Usuario user = usuarioRepository.findById(id).get();
+            return ResponseEntity.status(200).header("content-type", "image/jpeg")
+                    .body(user.getFoto());
+        } else {
+            return ResponseEntity.status(404).build();
+        }
+    }
 
     @PostMapping("/adicionar")
     public ResponseEntity adicionarUsuario(@RequestBody @Valid Usuario usuario) {
@@ -243,7 +267,7 @@ public class UsuarioController {
         List<Usuario> listaUsuarios = new ArrayList<>();
         listaUsuarios.add(usuario);
         gravaArquivoTxt(listaUsuarios, "usuarios.txt");
-        leArquivoUsuarioTxt("usuarios.txt");
+        //leArquivoUsuarioTxt("usuarios.txt");
     }
 
     public static void gravaArquivoTxt(List<Usuario> lista, String nomeArq) {

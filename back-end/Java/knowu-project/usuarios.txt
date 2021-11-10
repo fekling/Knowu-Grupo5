@@ -1,3 +1,12 @@
 LISTA_USUARIOS_10-11-2021 18:34:31US00
 US01  25Lohnwick                                          Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
 US02: 1 dados registrados
+LISTA_USUARIOS_10-11-2021 19:27:44US00
+US01  27Lohnwick                                          Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
+US02: 1 dados registrados
+LISTA_USUARIOS_10-11-2021 19:35:51US00
+US01  28Lohnwick                                          Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
+US02: 1 dados registrados
+LISTA_USUARIOS_10-11-2021 19:37:45US00
+US01  29Lohnwick                                          Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
+US02: 1 dados registrados
