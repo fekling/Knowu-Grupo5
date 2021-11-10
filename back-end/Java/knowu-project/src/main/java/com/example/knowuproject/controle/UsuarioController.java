@@ -78,7 +78,7 @@ public class UsuarioController {
             usuario.setIdUsuario(usuarioLogin.get().getIdUsuario());
             localidadeRepository.save(usuario.getLocalidade());
             usuarioRepository.save(usuario);
-            return ResponseEntity.status(200).body(usuario);
+            return ResponseEntity.status(200).body(usuario.getIdUsuario());
         }
 
         return ResponseEntity.status(204).build();

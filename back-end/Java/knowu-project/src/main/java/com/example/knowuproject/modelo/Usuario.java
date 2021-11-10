@@ -43,9 +43,9 @@ public class Usuario {
     private String celular;
 
 
-    @Email(message = "Digite um email válido. EX: seuemail@email.com")
-    @NotNull
-    @NotBlank
+//    @Email(message = "Digite um email válido. EX: seuemail@email.com")
+//    @NotNull
+//    @NotBlank
     private String email;
 
     private String descricao;
@@ -62,6 +62,10 @@ public class Usuario {
 //    @Size(min = 11, message = "Digite uma data de nascimento válida.")
     private String dataNascimento;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5db286cf8426a4234d0b1c3763f069047ecb1043
 //    @NotNull(message = "O genero não pode ser em branco.")
 //    @NotBlank(message = "O campo genero não deve conter espaços em branco.")
 //    @Size(min = 5, max = 50)
