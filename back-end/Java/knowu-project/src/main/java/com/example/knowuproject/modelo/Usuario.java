@@ -1,8 +1,13 @@
 package com.example.knowuproject.modelo;
 
+
+
+import javax.validation.constraints.*;
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+
 
 @Entity
 public class Usuario {
@@ -10,15 +15,68 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idUsuario;
+
+
+    @NotNull
+    @NotBlank
+    @Size(min = 5, max = 50)
+    @Pattern(regexp = "[A-Z][a-z]+",
+            message = "O nome não pode conter sua primeira letra miniscula. Digite um nome válido.")
+    @Pattern(regexp = "^[a-zA-Z0-9-Zàèìòùáéíóúâêîôûãõ\b]+$",
+            message = "O nome não deve conter caracteres especiais. Digite um nome válido.")
+    @Pattern(regexp = "[^\\d]+",
+            message = "O nome não deve conter numeros. Digite um nome válido.")
     private String nome;
+
+    @NotNull
+    @NotBlank
+    @Size(min = 5, max = 15)
+    @Pattern(regexp = "^[a-zA-Z0-9-Zàèìòùáéíóúâêîôûãõ\b]+$",
+            message = "O nickname não deve conter caracteres especiais. Digite um nickname válido. EX: dylancolonhesi")
+    @Pattern(regexp = "[^\\d]+",
+            message = "O nickname não deve conter numeros. Digite um nickname válido. EX: dylancolonhesi")
     private String usuario;
+
+
     private String celular;
+
+
+    @Email(message = "Digite um email válido. EX: seuemail@email.com")
+    @NotNull
+    @NotBlank
     private String email;
+
+
     private String descricao;
+
+    @NotNull
+    @NotBlank
+    @Size(min = 11)
+    @Pattern(regexp = "/^\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}$/",
+            message = "O CPF não deve conter números ou caracteres especiais. Digite um CPF válido. EX: 000.000.000-00")
     private String cpf;
+
+    @NotNull
+    @NotBlank
+    @Size(min = 11, message = "Digite uma data de nascimento válida.")
     private String dataNascimento;
+
+
+    @NotNull(message = "O genero não pode ser em branco.")
+    @NotBlank(message = "O campo genero não deve conter espaços em branco.")
+    @Size(min = 5, max = 50)
+    @Pattern(regexp = "^[a-zA-Z0-9-Zàèìòùáéíóúâêîôûãõ\b]+$",
+            message = "O nome não deve conter caracteres especiais. Digite um genero válido. EX: Não-Binário")
+    @Pattern(regexp = "[^\\d]+",
+            message = "O genero não deve conter numeros. Digite um genero válido. EX: Feminino")
     private String genero;
+
+    @NotNull(message = "A senha não pode ser em branco. EX: Abc@1234")
+    @NotBlank(message = "A senha não deve conter espaços em branco. EX: Abc@1234")
+    @Size(min = 8, max = 20, message = "A senha deve conter no maximo 8 caracteres. EX: Abc@1234")
     private String senha;
+
+
     private Integer codigoRecuperaSenha;
 //    private Boolean isBloqueado = false;
     private Boolean autenticado;
