@@ -49,16 +49,16 @@ public class Usuario {
 
     private String descricao;
 
-    @NotNull
-    @NotBlank
-    @Size(min = 11)
-    @Pattern(regexp = "/^\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}$/",
-            message = "O CPF não deve conter números ou caracteres especiais. Digite um CPF válido. EX: 000.000.000-00")
+//    @NotNull
+//    @NotBlank
+//    @Size(min = 11)
+//    @Pattern(regexp = "/^\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}$/",
+//            message = "O CPF não deve conter números ou caracteres especiais. Digite um CPF válido. EX: 000.000.000-00")
     private String cpf;
 
-    @NotNull
-    @NotBlank
-    @Size(min = 11, message = "Digite uma data de nascimento válida.")
+//    @NotNull
+//    @NotBlank
+//    @Size(min = 11, message = "Digite uma data de nascimento válida.")
     private String dataNascimento;
 
 
