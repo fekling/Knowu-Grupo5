@@ -163,6 +163,6 @@ public class KnowuProjectApplication {
 		listaUsuarios.add(user);
 
 		//Chamar método para gravar conteúdo da lista em arquivo txt
-		gravaArquivoTxt(listaUsuarios, "C:\\Program Files\\JetBrains\\usuarios.txt");
+//		gravaArquivoTxt(listaUsuarios, "C:\\Program Files\\JetBrains\\usuarios.txt");
 	}
 }

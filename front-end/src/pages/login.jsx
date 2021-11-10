@@ -3,7 +3,7 @@ import "../assets/css/login-react.css";
 import Logo from "../assets/images/logo.png";
 import Apple from "../assets/images/apple.png";
 import Facebook from "../assets/images/face.png";
-import Google from "../assets/images/google.png";
+import Google from "../assets/images/Google.png";
 import Localizacao from "../assets/images/localizacao.png";
 import Bg from "../assets/images/bg-color.png";
 import Api from '../components/Axios';
@@ -13,17 +13,19 @@ import { useHistory } from "react-router-dom"
 
 function Index() {
 
-    const [login, setLogin] = useState("11");
-    const [password, setPassword] = useState("22");
+    const [login, setLogin] = useState("");
+    const [password, setPassword] = useState("");
     const [erroAutentication, setErrorAutenticatin] = useState(false);
     const history = useHistory();
 
     
     return (
-
-    
-
     <div className="content-login">
+        {/* { setErrorAutenticatin && (
+            <h1> erro de login ou senha</h1>
+        )
+
+        } */}
         <div className="desktop mobile">
 
             <div className="header-desktop">
@@ -50,11 +52,11 @@ function Index() {
                     <img src={Localizacao} alt="" className="map" />
                 </div>
                 <div className="direita">
-                    <form action="">
+                    
                         <input type="text" className="input-login" placeholder="usuário ou email" onChange={e => setLogin(e.target.value)}/>
                         <input type="text" className="input-login" placeholder="Senha" onChange={e => setPassword(e.target.value)}/>
                         <button className="button-login" onClick={handleLogin}>Login</button>
-                    </form>
+                    
                     <h2>Ou continue com</h2>
                     <div className="opcoes">
                         <div className="apple">
@@ -77,14 +79,15 @@ function Index() {
     async function handleLogin() {
 
         try {
-
-            const { data } = await Api.get('/usuarios/login/',{
+            const { data } = await Api.post('/usuarios/login/',{
                 usuario: login,
                 senha: password
             });
-            console.log(data);
-            localStorage.setItem("@dataUser", JSON.stringify(data));
-            history.push("/perfil");
+            
+            console.log(data);  
+            var id = JSON.stringify(data);
+            // history.push('/home-evento')
+            window.location = `https://guilherme-nascimentosantos.github.io/knowu.github.io/?id=${id}`;
 
         } catch (err) {
             setErrorAutenticatin(true);
