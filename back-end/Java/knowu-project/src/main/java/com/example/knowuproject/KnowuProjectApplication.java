@@ -153,8 +153,6 @@ public class KnowuProjectApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(KnowuProjectApplication.class, args);
-<<<<<<< HEAD
-=======
 
 		Usuario user = new Usuario(1,"Renato", "Ren", "(11)99999-9999", "mail@mail.com", "123.456.789-00", "11/05/92", "M");  //TESTE
 		Usuario user1 = new Usuario(1,"André", "Andrézito", "(11)88888-8888", "zzz@mail.com", "XXX.XXX.XXX-XX", "00/00/00", "M");  //TESTE
@@ -166,6 +164,5 @@ public class KnowuProjectApplication {
 
 		//Chamar método para gravar conteúdo da lista em arquivo txt
 		gravaArquivoTxt(listaUsuarios, "C:\\Program Files\\JetBrains\\usuarios.txt");
->>>>>>> 5db286cf8426a4234d0b1c3763f069047ecb1043
 	}
 }
