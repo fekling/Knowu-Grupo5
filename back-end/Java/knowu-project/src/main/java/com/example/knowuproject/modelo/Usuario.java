@@ -22,6 +22,7 @@ public class Usuario {
     @NotEmpty(message = "O nome não po ser vazio. Digite um nome válido. EX: Dylan Colonhesi")
     @NotNull
     @Size(min = 5, max = 50)
+    @Pattern(regexp = "^[a-zA-Z]+[\\-'\\s]?[a-zA-Z ]+$", message = "O nome não deve conter caracteres especiais. Digite um nome válido. EX: Dylan Colonhesi")
     private String nome;
 
     @NotEmpty(message = "O usuario não po ser vazio. Digite um usuario válido. EX: Nomedeusuario")
