@@ -1,0 +1,45 @@
+US00USUARIO17-11-2021 18:56:46v01
+US01  46LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino
+US02: 1 dados registrados
+US00USUARIO17-11-2021 18:58:41v01
+US01  47LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
+US02: 1 dados registrados
+US00USUARIO17-11-2021 18:59:45v01
+US01  48LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
+US02: 1 dados registrados
+US00USUARIO17-11-2021 19:01:55v01
+US01  49LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
+US02: 1 dados registrados
+US00USUARIO17-11-2021 19:04:01v01
+US01  50LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
+US02: 1 dados registrados
+US00USUARIO17-11-2021 19:18:45v01
+US01  51LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
+US02: 1 dados registrados
+US00USUARIO17-11-2021 19:24:58v01
+US01  52LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
+US02: 1 dados registrados
+US00USUARIO17-11-2021 19:25:37v01
+US01  53LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
+US02: 1 dados registrados
+US00USUARIO17-11-2021 19:28:41v01
+US01  54LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
+US02: 1 dados registrados
+US00USUARIO17-11-2021 19:30:52v01
+US01  55LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
+US02: 1 dados registrados
+US00USUARIO17-11-2021 19:33:23v01
+US01  56LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
+US02: 1 dados registrados
+US00USUARIO17-11-2021 19:36:18v01
+US01  57LohDDDDDD                               Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
+US02: 1 dados registrados
+US00USUARIO17-11-2021 19:38:53v01
+US01  58LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
+US02: 1 dados registrados
+US00USUARIO17-11-2021 19:42:29v01
+US01  59LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
+US02: 1 dados registrados
+US00USUARIO17-11-2021 19:43:38v01
+US01  60LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
+US02: 1 dados registrados

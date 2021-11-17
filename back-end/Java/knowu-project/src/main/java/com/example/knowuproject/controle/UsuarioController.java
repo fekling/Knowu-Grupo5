@@ -65,6 +65,7 @@ public class UsuarioController {
     public ResponseEntity adicionarUsuario(@RequestBody @Valid Usuario usuario) {
         usuarioRepository.save(usuario);
         listaUsuarioDocLayout(usuario);
+        leArquivoUsuarioTxt("usuarios.txt");
         return ResponseEntity.status(201).build();
     }
 
@@ -270,18 +271,35 @@ public class UsuarioController {
         //leArquivoUsuarioTxt("usuarios.txt");
     }
 
+    public static void gravaRegistroUsuario(String registro, String nomeArq) {
+        BufferedWriter saida = null;
+        //Abre Arquivo
+        try {
+            saida = new BufferedWriter(new FileWriter(nomeArq, true));
+        } catch (IOException erro) {
+            System.out.println("Erro ao abrir o arquivo: " + erro.getMessage());
+        }
+        //Grava o registro e fecha o arquivo, mas ainda não gravou o arquivo!
+        try {
+            saida.append(registro + "\n");
+            saida.close();
+        } catch (IOException erro) {
+            System.out.println("Erro ao gravar no arquivo: " + erro.getMessage());
+        }
+    }
+
     public static void gravaArquivoTxt(List<Usuario> lista, String nomeArq) {
         int contaRegDados = 0; //São os registros de corpo do documento de layout
 
         //Monta o registro de Header
-        String header = "LISTA_USUARIOS_"; //Aqui é onde cria o documento de layout
+        String header = "US00USUARIO"; //Aqui é onde cria o documento de layout
         Date dataDeHoje = new Date(); 		//Formato no padrão Java, não é o desejado, então criar objeto para formatar...
         SimpleDateFormat formataData = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss"); //Data e horário formatado
         header += formataData.format(dataDeHoje);
-        header += "US00"; //‘String’ para mostrar a versão do documento
+        header += "v01"; //‘String’ para mostrar a versão do documento
 
         //Grava o registro de header
-        gravaRegistroAluno(header, nomeArq);
+        gravaRegistroUsuario(header, nomeArq);
 
         //Monta e grava o corpo do arquivo
         for (Usuario user : lista) {
@@ -300,30 +318,13 @@ public class UsuarioController {
             //corpo += String.format("%-40.40s", user.getAutenticadoEm());
 
             contaRegDados++;
-            gravaRegistroAluno(corpo, nomeArq);
+            gravaRegistroUsuario(corpo, nomeArq);
         }
 
         //Monta e grava o registro Usuário trailer
         String trailer = "US02"; 							//Lá do documento de layout
         trailer += String.format(": %d dados registrados", contaRegDados);
-        gravaRegistroAluno(trailer, nomeArq);
-    }
-
-    public static void gravaRegistroAluno(String registro, String nomeArq) {
-        BufferedWriter saida = null;
-        //Abre Arquivo
-        try {
-            saida = new BufferedWriter(new FileWriter(nomeArq, true));
-        } catch (IOException erro) {
-            System.out.println("Erro ao abrir o arquivo: " + erro.getMessage());
-        }
-        //Grava o registro e fecha o arquivo, mas ainda não gravou o arquivo!
-        try {
-            saida.append(registro + "\n");
-            saida.close();
-        } catch (IOException erro) {
-            System.out.println("Erro ao gravar no arquivo: " + erro.getMessage());
-        }
+        gravaRegistroUsuario(trailer, nomeArq);
     }
 
     public static void leArquivoUsuarioTxt(String nomeArq) {
@@ -356,19 +357,18 @@ public class UsuarioController {
         //Lê o arquivo
         try {
             //lê o primeiro registro do arquivo
-            assert entrada != null;
             registro = entrada.readLine();
             while (registro != null) { 					//Enquanto diferir de NULL é porque não chegou ao fim do arquivo
                 tipoRegistro = registro.substring(0,4); //lê o 0, 1, 2 e 3, mas vai até o 4, então no próximo começa do 4 até o seu final
                 if (tipoRegistro.equals("US00")) {
                     System.out.println("Header");
-                    System.out.println("Tipo de arquivo: " + registro.substring(4,11));
+                    System.out.println("Tipo de arquivo: " + registro.substring(0,11));
                     System.out.println("Data/hora de gravação do arquivo: " + registro.substring(11,30));
                     System.out.println("Versão do layout: " + registro.substring(30,33));
 
                 } else if (tipoRegistro.equals("US02")) {
                     System.out.println("Trailer");
-                    qtdRegistrosGravados = Integer.parseInt(registro.substring(4,9));
+                    qtdRegistrosGravados = Integer.parseInt(registro.substring(5,8).trim());
                     if (qtdRegistrosGravados == listaLidaDeUsuarios.size()){
                         System.out.println("Quantidade de registros gravados compatível com a quantidade lida");
                     } else {
@@ -377,14 +377,14 @@ public class UsuarioController {
 
                 } else if (tipoRegistro.equals("US01")) {
                     System.out.println("Corpo");
-                    idUsuario = Integer.parseInt(registro.substring(4,9));
-                    nome = registro.substring(9,59);
+                    idUsuario = Integer.parseInt(registro.substring(4,8).trim());
+                    nome = registro.substring(8,50);
                     usuario = registro.substring(59,70); 					//VERIFICAR SEQUÊNCIA DOS ATRIBUTOS DA CLASSE USUÁRIO!
-                    celular = registro.substring(70,84); //trim();
-                    email = registro.substring(84,124); //trim();
-                    cpf = registro.substring(124,138);
-                    dataNascimento = registro.substring(138,148);
-                    genero = registro.substring(148,163);
+                    celular = registro.substring(70,82); //trim();
+                    email = registro.substring(82,122); //trim();
+                    cpf = registro.substring(122,136);
+                    dataNascimento = registro.substring(136,146);
+                    genero = registro.substring(146,147).trim();
                     //localizacao = registro.substring(105,110);
                     Usuario user = new Usuario(idUsuario, nome, usuario, celular, email, cpf, dataNascimento, genero);
                     listaLidaDeUsuarios.add(user);

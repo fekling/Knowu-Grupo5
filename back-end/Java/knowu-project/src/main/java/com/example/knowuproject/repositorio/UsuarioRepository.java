@@ -21,7 +21,7 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
     @Query("select new com.example.knowuproject.requisicao.UsuarioLoginSimples (u.usuario, u.senha) from Usuario u")
     List<UsuarioLoginSimples> findLoginUsuario();
 
-    @Query("select new com.example.knowuproject.requisicao.UsuarioCadastroSimples.UsuarioCadastroSimples (u.nome, u.usuario, u.email, u.cpf, u.dataNascimento, u.genero, u.senha ) from Usuario u")
+    @Query("select new com.example.knowuproject.requisicao.UsuarioCadastroSimples (u.nome, u.usuario, u.email, u.cpf, u.dataNascimento, u.genero, u.senha ) from Usuario u")
     List<UsuarioCadastroSimples> findCstroUsuario();
 
 
