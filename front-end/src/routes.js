@@ -24,10 +24,10 @@ function Routes(){
                 <Route exact path="/esqueceu-senha" component={EsqueceuSenha}/>
                 <Route exact path="/recuperar-senha" component={RecuperarSenha}/>
                 <Route exact path="/alterar-senha" component={AlterarSenha}/>
+                <Route exact path="/usuario-postagens" component={UsuarioPostagens}/>
+                <Route exact path="/usuario-perfil" component={UsuarioPerfil}/>
+                <Route exact path="/usuario-conta" component={UsuarioConta}/>
                 <Route exact path="*" component={NotFound}/>
-                <Route exact path="/usuario/postagens" component={UsuarioPostagens}/>
-                <Route exact path="/usuario/perfil" component={UsuarioPerfil}/>
-                <Route exact path="/usuario/conta" component={UsuarioConta}/>
             </Switch>
         </Router>
     );

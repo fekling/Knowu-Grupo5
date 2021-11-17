@@ -4,14 +4,18 @@ body{
 }
 
 .conta-main{
-    width: 70%;
+    width: 50%;
     background-color: #E9EAF4;
     height: 100vh;
     margin: 5% 0 0 26%;
 }
 
+.conta-infos{
+    height: 80px;
+}
+
 .conta-form{
-    width: 40%;
+    width: 90%;
     display: inline-block;
     margin: 5% 0 0 5%;
 }
@@ -23,10 +27,11 @@ body{
 
 .conta-input{
     height: 40px;
-    width: 70%;
+    width: 80%;
     border-color: rgba(76, 39, 151, 1);
     border-radius: 30px;
-    margin-bottom: 5%;
+    margin: 2% 0;
+    background: transparent;
 }
 
 .conta-btn-editar{
@@ -42,16 +47,15 @@ body{
 
 .conta-info-foto{
     float: left;
-    margin-left: 5%;
 }
 
 .conta-info-nome{
     font-size: 1.5rem;
-    margin: 1% 0 0 12%;
+    margin: 1% 0 0 13%;
 }
 
 .conta-info-usuario{
-    margin: 0 0 0 12%;
+    margin: 0 0 0 13%;
 }
 
 .conta-alterar{

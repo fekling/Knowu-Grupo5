@@ -23,6 +23,7 @@ function BoxInfosUsuario(props) {
       <ItemBox image={imagemUsuario3} nome="Guilherme Pau." usuario="@GuiPau"/>
       <ItemBox image={imagemUsuario2} nome="Felipe Colonhesi" usuario="@Fecolo "/>
       <ItemBox image={imagemUsuario1} nome="Andre Mallasen" usuario="@Andsen"/>
+      <ItemBox image={imagemUsuario1} nome="Andre Mallasen" usuario="@Andsen"/>
     </aside>
     </>
     );  

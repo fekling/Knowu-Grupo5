@@ -1,6 +1,5 @@
 import "../assets/css/perfil-usuario-web.css";
 import FotoPerfilUsuario from "../assets/images/Perfil-Dylan.png";
-import ImagemPerfilUsuario from "../assets/images/sistema/Rectangle 233.png";
 import LPerfilUsuario from "../assets/images/sistema/link.png";
 import Fut1 from "../assets/images/criareventos/img/fut1.png"
 import Fut2 from "../assets/images/criareventos/img/fut2.png"
@@ -38,7 +37,7 @@ function PerfilUsuario() {
                 <h5 id="usuario-frase-perfil-usuario-web">Gosto muito de ver meus amigos, sou fã de narutinho e como pão.</h5>
                 <img id="link-info-perfil-usuario-web" src={LPerfilUsuario} /><h4 id="link-do-usuario">Github.com/Andre</h4>
                 <span id="fotos-perfil-usuario-web">Fotos</span>
-                <img src={ImagemPerfilUsuario} alt="" id="fotos-do-usuario-perfil-usuario-web" />
+                <img src={FotoPerfilUsuario} alt="" id="fotos-do-usuario-perfil-usuario-web" />
               </div>
             </div>
           </div>
