@@ -1,0 +1,29 @@
+.boxinfos::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  .boxinfos::-webkit-scrollbar-track {
+    background: #E9EAF4;        /* color of the tracking area */
+  }
+  
+  .boxinfos::-webkit-scrollbar-thumb {
+    background-color: #837979;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #E9EAF4;  /* creates padding around scroll thumb */
+  }
+
+.boxinfos{
+    background-color: #E9EAF4;
+    width: 100%;
+    height: 40vh;
+    border-radius: 20px;
+    margin-top: 15px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.boxinfos-titulo{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    margin: 5% 3%;
+}

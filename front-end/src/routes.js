@@ -8,11 +8,14 @@ import Login from './pages/login';
 import PerfilUsuario from './pages/perfil-usuario';
 import NotFound from './pages/PaginaNaoEncontrada';
 import PerfilUsuarioWeb from './pages/perfil-usuario-web';
+import UsuarioPostagens from './pages/usuario-postagens';
+import UsuarioPerfil from './pages/usuario-perfil';
+import UsuarioConta from './pages/usuario-conta';
 
 
 function Routes(){
     return(
-        <Router>
+        <Router>    
             <Switch>
                 <Route exact path="/login" component={Login}/>
                 <Route exact path="/cadastro" component={Cadastro}/>
@@ -22,6 +25,9 @@ function Routes(){
                 <Route exact path="/recuperar-senha" component={RecuperarSenha}/>
                 <Route exact path="/alterar-senha" component={AlterarSenha}/>
                 <Route exact path="*" component={NotFound}/>
+                <Route exact path="/usuario/postagens" component={UsuarioPostagens}/>
+                <Route exact path="/usuario/perfil" component={UsuarioPerfil}/>
+                <Route exact path="/usuario/conta" component={UsuarioConta}/>
             </Switch>
         </Router>
     );

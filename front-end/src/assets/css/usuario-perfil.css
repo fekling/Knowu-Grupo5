@@ -1,0 +1,84 @@
+body{
+    background-color: #E9EAF4;
+}
+
+.perfil-main{
+    width: 50%;
+    background-color: #E9EAF4;
+    height: 100vh;
+    margin-left: 26%;
+}
+
+.perfil-midia{
+    float: right;
+    margin: 5% 5% 0 0;
+    width: 25%;
+}
+
+.perfil-midia-titulo{
+    float: left;
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 3%;
+}
+
+.perfil-midia-btn{
+    font-size: 2.5rem;
+    border: none;
+    float: left;
+    margin-left: 15%;
+    color: #8C9CFF;
+}
+
+.perfil-form{
+    width: 50%;
+    display: inline-block;
+    margin: 5% 0 0 5%;
+}
+
+.perfil-label{
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: #171616;
+}
+
+.perfil-input{
+    height: 40px;
+    width: 90%;
+    border-color: rgba(76, 39, 151, 1);
+    border-radius: 30px;
+    margin-bottom: 5%;
+}
+
+.perfil-btn-editar{
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    color: #ffffff;
+    background: linear-gradient(180deg, #D15FC0 0%, #8C9CFF 100%);
+    border: none;
+    border-radius: 20px;
+    margin-left: 8px;
+    
+}
+
+.perfil-btn-editar:last-child{
+       vertical-align: top;
+}
+
+.perfil-textarea{
+    border-color: rgba(76, 39, 151, 1);;
+    border-radius: 22px; 
+}
+
+.container-home-aside{
+    width: 15%;
+    height: 100%;
+    position: fixed; 
+    right: 1%; 
+    top: 12%;
+}
+
+.perfil-midia-image{
+    width: 200px;
+}

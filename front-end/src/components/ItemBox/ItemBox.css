@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.item-box-container{
+    margin: 5% 0;
+}
+
+.item-box-imagem{
+    width: 40px;
+    float: left;
+    margin-left: 5%;
+}
+
+.item-box-nome{
+    margin: 1% 0 0 22%;
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.item-box-usuario{
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 22%;
+}

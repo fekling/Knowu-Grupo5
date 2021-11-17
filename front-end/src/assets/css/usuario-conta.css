@@ -1,0 +1,60 @@
+body{
+    background-color: #E9EAF4;
+    font-family: 'Poppins', sans-serif;
+}
+
+.conta-main{
+    width: 70%;
+    background-color: #E9EAF4;
+    height: 100vh;
+    margin: 5% 0 0 26%;
+}
+
+.conta-form{
+    width: 40%;
+    display: inline-block;
+    margin: 5% 0 0 5%;
+}
+
+.conta-label{
+    font-size: 1.5rem;
+    color: #171616;
+}
+
+.conta-input{
+    height: 40px;
+    width: 70%;
+    border-color: rgba(76, 39, 151, 1);
+    border-radius: 30px;
+    margin-bottom: 5%;
+}
+
+.conta-btn-editar{
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    color: #ffffff;
+    background: linear-gradient(180deg, #D15FC0 0%, #8C9CFF 100%);
+    border: none;
+    border-radius: 20px;
+    margin-left: 8px;   
+}
+
+.conta-info-foto{
+    float: left;
+    margin-left: 5%;
+}
+
+.conta-info-nome{
+    font-size: 1.5rem;
+    margin: 1% 0 0 12%;
+}
+
+.conta-info-usuario{
+    margin: 0 0 0 12%;
+}
+
+.conta-alterar{
+    color: #3158D4;
+    margin-left: 2%;
+}
