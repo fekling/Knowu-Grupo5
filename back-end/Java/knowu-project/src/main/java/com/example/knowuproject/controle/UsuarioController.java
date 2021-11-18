@@ -1,12 +1,12 @@
 package com.example.knowuproject.controle;
 
-import com.example.knowuproject.KnowuProjectApplication;
 import com.example.knowuproject.dto.Usuariodto;
 import com.example.knowuproject.modelo.FilaObj;
 import com.example.knowuproject.modelo.Localidade;
 import com.example.knowuproject.modelo.Usuario;
 import com.example.knowuproject.repositorio.LocalidadeRepository;
 import com.example.knowuproject.repositorio.UsuarioRepository;
+import com.example.knowuproject.requisicao.UsuarioAvaliacaoResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -123,22 +123,34 @@ public class UsuarioController {
     }
 
     @PatchMapping("/avaliar-usuario/{id}")
-    public ResponseEntity avaliarUsuario(@RequestBody Boolean isGood,
+    public ResponseEntity avaliarUsuario(@RequestBody UsuarioAvaliacaoResponse usuario,
                                          @PathVariable Integer id) {
 
         Optional<Usuario> usuarioAux = Optional.of(new Usuario());
+        UsuarioAvaliacaoResponse usuario1 = new UsuarioAvaliacaoResponse();
         usuarioAux = usuarioRepository.findById(id);
-        Usuario usuario = usuarioAux.get();
 
-        if (isGood) {
-            usuario.setAvaliacao(usuario.getAvaliacao() + 2);
-            usuarioRepository.save(usuario);
-        } else {
-            usuario.setAvaliacao(usuario.getAvaliacao() - 3);
-            usuarioRepository.save(usuario);
+        if (usuarioRepository.existsById(id)) {
+            if (usuario.getAvaliacao() > 0) {
+                Integer avaliacao = usuarioAux.get().getAvaliacao() + 2;
+                if (avaliacao < 100) {
+                    usuario1.setAvaliacao(avaliacao);
+                    usuario1.setIdUsuario(id);
+                    usuarioRepository.atualizarAvaliacao(usuario1.getIdUsuario(), usuario1.getAvaliacao());
+                }
+            } else {
+                Integer avaliacao = usuarioAux.get().getAvaliacao() - 3;
+                if (avaliacao > 0) {
+                    usuario1.setAvaliacao(avaliacao);
+                    usuario1.setIdUsuario(id);
+                    usuarioRepository.atualizarAvaliacao(usuario1.getIdUsuario(), usuario1.getAvaliacao());
+                }
+            }
+            return ResponseEntity.status(200).build();
         }
 
-        return ResponseEntity.status(200).build();
+        return ResponseEntity.status(204).build();
+
 
     }
 
@@ -277,7 +289,7 @@ public class UsuarioController {
         return ResponseEntity.status(200).build();
     }
 
-    public static void listaUsuarioDocLayout(Usuario usuario){
+    public static void listaUsuarioDocLayout(Usuario usuario) {
         usuario.setDescricao(null);
         usuario.setSenha(null);
         usuario.setAutenticado(null);
@@ -313,7 +325,7 @@ public class UsuarioController {
 
         //Monta o registro de Header
         String header = "US00USUARIO"; //Aqui é onde cria o documento de layout
-        Date dataDeHoje = new Date(); 		//Formato no padrão Java, não é o desejado, então criar objeto para formatar...
+        Date dataDeHoje = new Date();        //Formato no padrão Java, não é o desejado, então criar objeto para formatar...
         SimpleDateFormat formataData = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss"); //Data e horário formatado
         header += formataData.format(dataDeHoje);
         header += "v01"; //‘String’ para mostrar a versão do documento
@@ -342,7 +354,7 @@ public class UsuarioController {
         }
 
         //Monta e grava o registro Usuário trailer
-        String trailer = "US02"; 							//Lá do documento de layout
+        String trailer = "US02";                            //Lá do documento de layout
         trailer += String.format(": %d dados registrados", contaRegDados);
         gravaRegistroUsuario(trailer, nomeArq);
     }
@@ -378,18 +390,18 @@ public class UsuarioController {
         try {
             //lê o primeiro registro do arquivo
             registro = entrada.readLine();
-            while (registro != null) { 					//Enquanto diferir de NULL é porque não chegou ao fim do arquivo
-                tipoRegistro = registro.substring(0,4); //lê o 0, 1, 2 e 3, mas vai até o 4, então no próximo começa do 4 até o seu final
+            while (registro != null) {                    //Enquanto diferir de NULL é porque não chegou ao fim do arquivo
+                tipoRegistro = registro.substring(0, 4); //lê o 0, 1, 2 e 3, mas vai até o 4, então no próximo começa do 4 até o seu final
                 if (tipoRegistro.equals("US00")) {
                     System.out.println("Header");
-                    System.out.println("Tipo de arquivo: " + registro.substring(0,11));
-                    System.out.println("Data/hora de gravação do arquivo: " + registro.substring(11,30));
-                    System.out.println("Versão do layout: " + registro.substring(30,33));
+                    System.out.println("Tipo de arquivo: " + registro.substring(0, 11));
+                    System.out.println("Data/hora de gravação do arquivo: " + registro.substring(11, 30));
+                    System.out.println("Versão do layout: " + registro.substring(30, 33));
 
                 } else if (tipoRegistro.equals("US02")) {
                     System.out.println("Trailer");
-                    qtdRegistrosGravados = Integer.parseInt(registro.substring(5,8).trim());
-                    if (qtdRegistrosGravados == listaLidaDeUsuarios.size()){
+                    qtdRegistrosGravados = Integer.parseInt(registro.substring(5, 8).trim());
+                    if (qtdRegistrosGravados == listaLidaDeUsuarios.size()) {
                         System.out.println("Quantidade de registros gravados compatível com a quantidade lida");
                     } else {
                         System.out.println("Quantidade de registros gravados não confere com a quantidade lida");
@@ -397,14 +409,14 @@ public class UsuarioController {
 
                 } else if (tipoRegistro.equals("US01")) {
                     System.out.println("Corpo");
-                    idUsuario = Integer.parseInt(registro.substring(4,8).trim());
-                    nome = registro.substring(8,50);
-                    usuario = registro.substring(59,70); 					//VERIFICAR SEQUÊNCIA DOS ATRIBUTOS DA CLASSE USUÁRIO!
-                    celular = registro.substring(70,82); //trim();
-                    email = registro.substring(82,122); //trim();
-                    cpf = registro.substring(122,136);
-                    dataNascimento = registro.substring(136,146);
-                    genero = registro.substring(146,147).trim();
+                    idUsuario = Integer.parseInt(registro.substring(4, 8).trim());
+                    nome = registro.substring(8, 50);
+                    usuario = registro.substring(59, 70);                    //VERIFICAR SEQUÊNCIA DOS ATRIBUTOS DA CLASSE USUÁRIO!
+                    celular = registro.substring(70, 82); //trim();
+                    email = registro.substring(82, 122); //trim();
+                    cpf = registro.substring(122, 136);
+                    dataNascimento = registro.substring(136, 146);
+                    genero = registro.substring(146, 147).trim();
                     //localizacao = registro.substring(105,110);
                     Usuario user = new Usuario(idUsuario, nome, usuario, celular, email, cpf, dataNascimento, genero);
                     listaLidaDeUsuarios.add(user);
@@ -418,12 +430,12 @@ public class UsuarioController {
 
             entrada.close();
 
-        } catch(IOException erro){
+        } catch (IOException erro) {
             System.out.println("Erro ao ler o arquivo: " + erro.getMessage());
         }
 
         System.out.println("\nConteúdo lido do arquivo");
-        for (Usuario user : listaLidaDeUsuarios){
+        for (Usuario user : listaLidaDeUsuarios) {
             System.out.println(user);
         }
     }

@@ -11,11 +11,47 @@ import ComentarioPerfilUsuarioWeb from "../components/ComentariosPerfilUsuarioWe
 import Like from "../assets/images/like.svg";
 import Deslike from "../assets/images/deslike.svg";
 import Bloqueio from "../assets/images/bloqueio.svg";
-import CardDeEventos from "../components/CardDeEventos";]
+import CardDeEventos from "../components/CardDeEventos";
 import Api from '../components/Axios';
 
 
 function PerfilUsuario() {
+
+  
+  function handleAvaliar(avaliacao) {
+    const id = 14;
+
+    if (avaliacao) {
+
+
+      try {
+        const { data } = Api.patch(`usuarios/avaliar-usuario/${id}`, {
+          avaliacao: 2
+        });
+
+        console.log("Usuario avaliado positivamente!")
+
+      } catch (err) {
+        console.log("usuario não foi avaliado");
+      }
+
+    } else {
+
+      try {
+        const { data } = Api.patch(`usuarios/avaliar-usuario/${id}`, {
+          avaliacao: -3
+        });
+
+        console.log("Usuario avaliado negativamente!")
+
+      } catch (err) {
+        console.log("usuario não foi avaliado");
+      }
+
+    }
+
+
+  }
   return (
     <>
       <div>
@@ -35,6 +71,8 @@ function PerfilUsuario() {
               <div className="centered-perfil-usuario-web">
                 <h1 id="usuario-titulo-perfil-usuario-web">André Santos</h1>
                 <h4 id="usuario-titulo-pequeno-web">@Andrezito</h4>
+                <button onClick={() => handleAvaliar(true)}>Avaliação positiva</button>
+                <button onClick={() => handleAvaliar(false)}>Avaliação negativo</button>
                 <h5 id="usuario-frase-perfil-usuario-web">Gosto muito de ver meus amigos, sou fã de narutinho e como pão.</h5>
                 <img id="link-info-perfil-usuario-web" src={LPerfilUsuario} /><h4 id="link-do-usuario">Github.com/Andre</h4>
                 <span id="fotos-perfil-usuario-web">Fotos</span>
@@ -63,12 +101,12 @@ function PerfilUsuario() {
           {/* Eventos em comum */}
 
           <div className="column-perfil-usuario-web">
-            <button className="bolinhas-coloridas-web" onSubmit={handleAvaliar(true)}>
+            <button className="bolinhas-coloridas-web">
               <img src={Like} />
             </button>
 
-            <button className="bolinhas-coloridas-web" onSubmit={handleAvaliar(false)}>
-              <img src={Deslike} />
+            <button className="bolinhas-coloridas-web" >
+              <img src={Deslike} onClick={() => handleAvaliar(false)}/>
             </button>
 
             <button className="bolinhas-coloridas-web">
@@ -88,43 +126,8 @@ function PerfilUsuario() {
   );
 
 
-
-  async function handleAvaliar(avaliacao) {
-
-    const id = 14;
-
-    if (avaliacao) {
-
-
-      try {
-        const { data } = await Api.post(`usuarios/avaliar-usuario/${id}`, {
-          isGood: true
-        });
-
-        console.log("Usuario avaliado positivamente!")
-
-      } catch (err) {
-        console.log("usuario não foi avaliado");
-      }
-
-    } else {
-
-      try {
-        const { data } = await Api.post(`usuarios/avaliar-usuario/${id}`, {
-          isGood: false
-        });
-
-        console.log("Usuario avaliado negativamente!")
-
-      } catch (err) {
-        console.log("usuario não foi avaliado");
-      }
-
-    }
-
-
-  }
-
 }
+
+
 
 export default PerfilUsuario;
