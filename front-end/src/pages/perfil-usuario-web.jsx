@@ -53,7 +53,7 @@ function PerfilUsuario() {
                   </div>
                   {/* Comentario 1 */}
                   <div className="perfil-web-comentarios">
-                      <ComentarioPerfilUsuarioWeb nomeuser="Andre Santos" nomeevento="Progama TV Cultura e Ouvir MPB" nickname="@Andrezito" comentario="Só conteudo bom!" />
+                    <ComentarioPerfilUsuarioWeb nomeuser="Andre Santos" nomeevento="Progama TV Cultura e Ouvir MPB" nickname="@Andrezito" comentario="Só conteudo bom!" />
                   </div>
                 </div>
               </div>
@@ -62,29 +62,68 @@ function PerfilUsuario() {
           {/* Eventos em comum */}
 
           <div className="column-perfil-usuario-web">
-            <button className="bolinhas-coloridas-web">
-            <img src={Deslike} />
+            <button className="bolinhas-coloridas-web" onSubmit={handleAvaliar(true)}>
+              <img src={Like} />
+            </button>
+
+            <button className="bolinhas-coloridas-web" onSubmit={handleAvaliar(false)}>
+              <img src={Deslike} />
             </button>
 
             <button className="bolinhas-coloridas-web">
-            <img src={Like} />
-            </button>
-
-            <button className="bolinhas-coloridas-web">
-            <img src={Bloqueio} />
+              <img src={Bloqueio} />
             </button>
 
             <div className="card-web">
-            <h4 id="eventos-letra-web">Eventos em comum:</h4>
-              <CardDeEventos nomedoevento="Futebol dos cria"/>
-              <CardDeEventos nomedoevento="Futebol dos cria"/>
-              <CardDeEventos nomedoevento="Futebol dos cria"/>
-              <CardDeEventos nomedoevento="Futebol dos cria"/>
+              <h4 id="eventos-letra-web">Eventos em comum:</h4>
+              <CardDeEventos nomedoevento="Futebol dos cria" />
+              <CardDeEventos nomedoevento="Futebol dos cria" />
+              <CardDeEventos nomedoevento="Futebol dos cria" />
+              <CardDeEventos nomedoevento="Futebol dos cria" />
             </div>
           </div>
         </div></div>
     </>
   );
+
+
+
+  async function handleAvaliar(avaliacao) {
+
+    const id = 14;
+
+    if (avaliacao) {
+
+
+      try {
+        const { data } = await Api.post(`/avaliar-usuario/${id}`, {
+          isGood: true
+        });
+
+        console.log("Usuario avaliado positivamente!")
+
+      } catch (err) {
+        console.log("usuario não foi avaliado");
+      }
+
+    } else {
+
+      try {
+        const { data } = await Api.post(`/avaliar-usuario/${id}`, {
+          isGood: false
+        });
+
+        console.log("Usuario avaliado negativamente!")
+
+      } catch (err) {
+        console.log("usuario não foi avaliado");
+      }
+
+    }
+
+
+  }
+
 }
 
 export default PerfilUsuario;

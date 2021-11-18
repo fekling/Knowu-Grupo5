@@ -234,7 +234,10 @@
           locations[i][0] = resultado.data[i][0]
           locations[i][1] = resultado.data[i][3]
           locations[i][2] = resultado.data[i][4]
-          document.getElementById(`evento${i + 1}`).innerHTML = resultado.data[i][0];
+          if (i <= 4) {
+            document.getElementById(`evento${i + 1}`).innerHTML = resultado.data[i][0];
+          }
+          
 
         }
       }
@@ -253,10 +256,9 @@
       latitute: -23.5791213,
       longitute: -46.6658027
     }
-    axios.post("http://localhost:8080/usuarios/usuarios-proximos", params).then(function (resultadoUsuario) {
-      console.log(resultadoUsuario.data[4][0]);
+    axios.post("http://localhost:8080/usuarios/atualizarusuarios-proximos", params).then(function (resultadoUsuario) {
       for (let i = 1; i < 4; i++) {
-        // alert(resultadoUsuario.data);
+        console.log(resultadoUsuario)
         document.getElementById(`nickname${i}`).innerHTML = resultadoUsuario.data[i][0];
         document.getElementById(`usuario${i}`).innerHTML = resultadoUsuario.data[i][1];
       }
@@ -280,12 +282,11 @@
       latitute: -23.5791213,
       longitute: -46.6658027
     }
-    axios.post("http://localhost:8080/usuarios/atualizarusuarios-proximos", params).then(function (resultadoUsuario) {
-      console.log(resultadoUsuario.data[4][0]);
+    axios.post("http://localhost:8080/usuarios/atualizarusuarios-proximos", params).then(function (resultadoAtualizacaoUsuario) {
       for (let i = 1; i < 4; i++) {
         // alert(resultadoUsuario.data);
-        document.getElementById(`nickname${i}`).innerHTML = resultadoUsuario.data[i][0];
-        document.getElementById(`usuario${i}`).innerHTML = resultadoUsuario.data[i][1];
+        document.getElementById(`nickname${i}`).innerHTML = resultadoAtualizacaoUsuario.data[i][0];
+        document.getElementById(`usuario${i}`).innerHTML = resultadoAtualizacaoUsuario.data[i][1];
       }
       console.log("Está funcionando a atualização de usuários")
     }).catch(e => {
@@ -302,15 +303,15 @@
       latitute: -23.5791213,
       longitute: -46.6658027
     }
-    axios.post("http://localhost:8080/evento/atualizareventos-proximos", params).then(function (resultado) {
-      console.log(resultado.data.length);
-      for (let i = 0; i < resultado.data.length; i++) {
-        locations[i] = new Array(resultado.data.length)
+    axios.post("http://localhost:8080/evento/atualizareventos-proximos", params).then(function (resultadoAtualizacaoEvento) {
+      console.log(resultadoAtualizacaoEvento.data.length);
+      for (let i = 0; i < resultadoAtualizacaoEvento.data.length; i++) {
+        locations[i] = new Array(resultadoAtualizacaoEvento.data.length)
         for (let j = 0; j < locations.length; j++) {
-          locations[i][0] = resultado.data[i][0]
-          locations[i][1] = resultado.data[i][3]
-          locations[i][2] = resultado.data[i][4]
-          document.getElementById(`evento${i + 1}`).innerHTML = resultado.data[i][0];
+          locations[i][0] = resultadoAtualizacaoEvento.data[i][0]
+          locations[i][1] = resultadoAtualizacaoEvento.data[i][3]
+          locations[i][2] = resultadoAtualizacaoEvento.data[i][4]
+          document.getElementById(`evento${i + 1}`).innerHTML = resultadoAtualizacaoEvento.data[i][0];
 
         }
       }

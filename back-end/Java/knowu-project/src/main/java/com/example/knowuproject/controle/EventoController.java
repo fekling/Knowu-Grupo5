@@ -121,10 +121,9 @@ public class EventoController {
     }
 
     @PostMapping("/atualizareventos-proximos")
-    public ResponseEntity AtualizarEventosProximos(@RequestBody Localidade localidade,
-                                                   int[] idsEventos) {
+    public ResponseEntity AtualizarEventosProximos(@RequestBody Localidade localidade) {
 
-        PilhaObj pilhaObj = new PilhaObj(idsEventos.length);
+        PilhaObj pilhaObj = new PilhaObj(5);
         for (int i = 0; i < pilhaObj.getTamanho(); i++) {
             pilhaObj.push(localidadeRepository.findByAllEventosProximos(localidade.getLatitute(), localidade.getLongitute()));
         }

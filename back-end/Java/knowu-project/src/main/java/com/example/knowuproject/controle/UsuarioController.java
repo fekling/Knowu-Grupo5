@@ -143,15 +143,15 @@ public class UsuarioController {
     }
 
     @PostMapping("/atualizarusuarios-proximos")
-    public ResponseEntity usuariosProximos(@RequestBody Localidade localidade, int[] idsUsuarios) {
+    public ResponseEntity usuariosProximos(@RequestBody Localidade localidade) {
 
 
-        FilaObj filaObj = new FilaObj(idsUsuarios.length);
+        FilaObj filaObj = new FilaObj(3);
         do {
-            filaObj.insert(localidadeRepository.findByAllEventosProximos(localidade.getLatitute(), localidade.getLongitute()));
+            filaObj.insert(localidadeRepository.findByAllUsuariosProximos(localidade.getLatitute(), localidade.getLongitute()));
         } while (!filaObj.isFull());
-
-        return ResponseEntity.status(200).body(filaObj);
+        System.out.println(filaObj.peek());
+        return ResponseEntity.status(200).body(filaObj.peek());
     }
 
     @PutMapping("/enviarCodigo")
