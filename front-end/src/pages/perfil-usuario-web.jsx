@@ -11,7 +11,8 @@ import ComentarioPerfilUsuarioWeb from "../components/ComentariosPerfilUsuarioWe
 import Like from "../assets/images/like.svg";
 import Deslike from "../assets/images/deslike.svg";
 import Bloqueio from "../assets/images/bloqueio.svg";
-import CardDeEventos from "../components/CardDeEventos";
+import CardDeEventos from "../components/CardDeEventos";]
+import Api from '../components/Axios';
 
 
 function PerfilUsuario() {
@@ -96,7 +97,7 @@ function PerfilUsuario() {
 
 
       try {
-        const { data } = await Api.post(`/avaliar-usuario/${id}`, {
+        const { data } = await Api.post(`usuarios/avaliar-usuario/${id}`, {
           isGood: true
         });
 
@@ -109,7 +110,7 @@ function PerfilUsuario() {
     } else {
 
       try {
-        const { data } = await Api.post(`/avaliar-usuario/${id}`, {
+        const { data } = await Api.post(`usuarios/avaliar-usuario/${id}`, {
           isGood: false
         });
 
