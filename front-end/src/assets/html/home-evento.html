@@ -77,38 +77,39 @@
       <div id="mapa" onload="buscarEventosProximos()"></div>
 
       <div class="post-home">
-      <div class="dialogbox">
-        <div class="body">
-          <div class="message">
-            <img src="../images/criareventos/img/Ellipse 60.png" alt="" id="bolinha">
-            <img src="../images/criareventos/img/usuario3.png" alt="" id="foto-comentarios">
-           
-          </div> 
-          <div class="info-usuario">
-          <h4 id="nome-user">Guilherme Paulino 
-            <span id="nome-do-evento"> - Futebol dos cria</span>
-          </h4>
-          <h4 id="nick-user">@Gui</h4>
-          </div>
-         
-          
-        </div>
-      </div>
-      <div class="meio">
+        <div class="dialogbox">
+          <div class="body">
+            <div class="message">
+              <img src="../images/criareventos/img/Ellipse 60.png" alt="" id="bolinha">
+              <img src="../images/criareventos/img/usuario3.png" alt="" id="foto-comentarios">
 
-        <div class="post">
-          <div id="" class="comentario" >
-            <img src="../images/sistema/tres-pontinhos.png" alt="" class="ponto"> 
-            <p> Evento muito massa! dei uma caneta no Renatão, mó perna.
-            #Ruimdemais</p></div>
-          <div class="buttons">
-            <button class="button">Curtir</button>
-            <button class="button">Comentar</button>
-            <button class="button">Compartilhar</button>
+            </div>
+            <div class="info-usuario">
+              <h4 id="nome-user">Guilherme Paulino
+                <span id="nome-do-evento"> - Futebol dos cria</span>
+              </h4>
+              <h4 id="nick-user">@Gui</h4>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="meio">
+
+          <div class="post">
+            <div id="" class="comentario">
+              <img src="../images/sistema/tres-pontinhos.png" alt="" class="ponto">
+              <p> Evento muito massa! dei uma caneta no Renatão, mó perna.
+                #Ruimdemais</p>
+            </div>
+            <div class="buttons">
+              <button class="button">Curtir</button>
+              <button class="button">Comentar</button>
+              <button class="button">Compartilhar</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
 
 
@@ -166,38 +167,38 @@
             <img src="../images/criareventos/img/Vector.png" alt="" id="foto2">
           </div>
         </div>
-          <div class="modal-body">
-            <h2>Nome do evento:</h2>
-            <input type="text" class="input-nome-evento-modal" id="nomeEvento">
-            <h2 id="desc-evento">Descrição do evento:</h2>
-            <textarea id="w3review" name="w3review" rows="4" cols="50" class="descricao-evento-modal"></textarea>
-          </div>
+        <div class="modal-body">
+          <h2>Nome do evento:</h2>
+          <input type="text" class="input-nome-evento-modal" id="nomeEvento">
+          <h2 id="desc-evento">Descrição do evento:</h2>
+          <textarea id="w3review" name="w3review" rows="4" cols="50" class="descricao-evento-modal"></textarea>
+        </div>
 
-          <div class="scores">
-            <h2 id="numero-pessoas">Número máximo de convidados?</h2>
-            <div class="inputs-sim-nao">
-              <label for="score_1" class="required1">
-                <input type="radio" id="score_1" name="score" required="required" value="2">Sim</label>
-              <label for="score_2" class="required2">
-                <input type="radio" id="score_2" name="score" required="required" value="3">Não</label>
-            </div>
+        <div class="scores">
+          <h2 id="numero-pessoas">Número máximo de convidados?</h2>
+          <div class="inputs-sim-nao">
+            <label for="score_1" class="required1">
+              <input type="radio" id="score_1" name="score" required="required" value="2">Sim</label>
+            <label for="score_2" class="required2">
+              <input type="radio" id="score_2" name="score" required="required" value="3">Não</label>
           </div>
-          <div id="qtd-pessoas">
-            <h2 id="numero-pessoas">Quantas pessoas participarão?</h2>
-            <input type="text" name="" id="input-qtd" class="input-nome-evento-modal">
-          </div>
+        </div>
+        <div id="qtd-pessoas">
+          <h2 id="numero-pessoas">Quantas pessoas participarão?</h2>
+          <input type="text" name="" id="input-qtd" class="input-nome-evento-modal">
+        </div>
 
-          <div id="link-convite">
-            <h2 id="numero-pessoas">Link de convite:</h2>
-            <img src="../images/criareventos/img/link.png/" alt="" id="imglink">
-            <div class="link-modal">
-              <p id="link-texto">knowu.com.br/invite/abcd-1234</p>
-              <button id="copy">Copiar</button>
-            </div>
-            <div class="modal-footer">
-              <button class="criar-evento-modal" onclick="criarEvento()">Criar evento</button>
-            </div>
+        <div id="link-convite">
+          <h2 id="numero-pessoas">Link de convite:</h2>
+          <img src="../images/criareventos/img/link.png/" alt="" id="imglink">
+          <div class="link-modal">
+            <p id="link-texto">knowu.com.br/invite/abcd-1234</p>
+            <button id="copy">Copiar</button>
           </div>
+          <div class="modal-footer">
+            <button class="criar-evento-modal" onclick="criarEvento()">Criar evento</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -260,6 +261,60 @@
         document.getElementById(`usuario${i}`).innerHTML = resultadoUsuario.data[i][1];
       }
       // eventosProximos = resultado.data[0]
+    }).catch(e => {
+      console.log(e);
+    })
+
+    return locations
+
+  }
+
+  setInterval(() => {
+    atualizarUsuariosProximos();
+    atualizarEventosProximos();
+  }, 5000);
+
+  function atualizarUsuariosProximos() {
+
+    let params = {
+      latitute: -23.5791213,
+      longitute: -46.6658027
+    }
+    axios.post("http://localhost:8080/usuarios/atualizarusuarios-proximos", params).then(function (resultadoUsuario) {
+      console.log(resultadoUsuario.data[4][0]);
+      for (let i = 1; i < 4; i++) {
+        // alert(resultadoUsuario.data);
+        document.getElementById(`nickname${i}`).innerHTML = resultadoUsuario.data[i][0];
+        document.getElementById(`usuario${i}`).innerHTML = resultadoUsuario.data[i][1];
+      }
+      console.log("Está funcionando a atualização de usuários")
+    }).catch(e => {
+      console.log(e);
+    })
+
+    return locations
+
+  }
+
+  function atualizarEventosProximos() {
+
+    let params = {
+      latitute: -23.5791213,
+      longitute: -46.6658027
+    }
+    axios.post("http://localhost:8080/evento/atualizareventos-proximos", params).then(function (resultado) {
+      console.log(resultado.data.length);
+      for (let i = 0; i < resultado.data.length; i++) {
+        locations[i] = new Array(resultado.data.length)
+        for (let j = 0; j < locations.length; j++) {
+          locations[i][0] = resultado.data[i][0]
+          locations[i][1] = resultado.data[i][3]
+          locations[i][2] = resultado.data[i][4]
+          document.getElementById(`evento${i + 1}`).innerHTML = resultado.data[i][0];
+
+        }
+      }
+      console.log("Está funcionando a atualização de eventos")
     }).catch(e => {
       console.log(e);
     })

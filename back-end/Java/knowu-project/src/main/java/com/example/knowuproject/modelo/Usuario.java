@@ -72,6 +72,8 @@ public class Usuario {
     @Column(length = 20_000_000) //20MB
     private byte[] foto;
 
+    private Integer avaliacao = 100;
+
     public Usuario(Integer idUsuario, String nome, String usuario, String celular, String email, String cpf, String dataNascimento, String genero) {
         this.idUsuario = idUsuario;
         this.nome = nome;
@@ -201,6 +203,18 @@ public class Usuario {
     }
     //    Fim Getters e Setters
 
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public Integer getAvaliacao() {
+        return avaliacao;
+    }
+
+    public void setAvaliacao(Integer avaliacao) {
+        this.avaliacao = avaliacao;
+    }
 
     public void bloquearUsuario(String usuario, String motivo) {
         if (usuario.equals(getUsuario())) {

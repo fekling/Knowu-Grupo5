@@ -2,6 +2,7 @@ package com.example.knowuproject.controle;
 
 import com.example.knowuproject.KnowuProjectApplication;
 import com.example.knowuproject.dto.Usuariodto;
+import com.example.knowuproject.modelo.FilaObj;
 import com.example.knowuproject.modelo.Localidade;
 import com.example.knowuproject.modelo.Usuario;
 import com.example.knowuproject.repositorio.LocalidadeRepository;
@@ -119,6 +120,38 @@ public class UsuarioController {
         }
 
         return ResponseEntity.status(204).build();
+    }
+
+    @PatchMapping("/avaliar-usuario/{id}")
+    public ResponseEntity avaliarUsuario(@RequestBody Boolean isGood,
+                                         @PathVariable Integer id) {
+
+        Optional<Usuario> usuarioAux = Optional.of(new Usuario());
+        usuarioAux = usuarioRepository.findById(id);
+        Usuario usuario = usuarioAux.get();
+
+        if (isGood) {
+            usuario.setAvaliacao(usuario.getAvaliacao() + 2);
+            usuarioRepository.save(usuario);
+        } else {
+            usuario.setAvaliacao(usuario.getAvaliacao() - 3);
+            usuarioRepository.save(usuario);
+        }
+
+        return ResponseEntity.status(200).build();
+
+    }
+
+    @PostMapping("/atualizarusuarios-proximos")
+    public ResponseEntity usuariosProximos(@RequestBody Localidade localidade, int[] idsUsuarios) {
+
+
+        FilaObj filaObj = new FilaObj(idsUsuarios.length);
+        do {
+            filaObj.insert(localidadeRepository.findByAllEventosProximos(localidade.getLatitute(), localidade.getLongitute()));
+        } while (!filaObj.isFull());
+
+        return ResponseEntity.status(200).body(filaObj);
     }
 
     @PutMapping("/enviarCodigo")
@@ -242,19 +275,6 @@ public class UsuarioController {
         usuarioRepository.save(dadosOriginais);
 
         return ResponseEntity.status(200).build();
-    }
-
-    @PostMapping("/usuarios-proximos")
-    public ResponseEntity eventosProximos(@RequestBody Localidade localidade) {
-
-        System.out.println("teste");
-
-        List usuarios = localidadeRepository.findByAllUsuariosProximos(localidade.getLatitute(), localidade.getLongitute());
-
-        if (usuarios.isEmpty()) {
-            return ResponseEntity.status(204).build();
-        }
-        return ResponseEntity.status(200).body(usuarios);
     }
 
     public static void listaUsuarioDocLayout(Usuario usuario){

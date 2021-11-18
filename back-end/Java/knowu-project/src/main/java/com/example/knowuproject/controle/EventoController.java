@@ -1,9 +1,6 @@
 package com.example.knowuproject.controle;
 
-import com.example.knowuproject.modelo.Evento;
-import com.example.knowuproject.modelo.ListaObj;
-import com.example.knowuproject.modelo.Localidade;
-import com.example.knowuproject.modelo.Usuario;
+import com.example.knowuproject.modelo.*;
 import com.example.knowuproject.repositorio.EventoRepository;
 import com.example.knowuproject.repositorio.LocalidadeRepository;
 import com.example.knowuproject.repositorio.UsuarioRepository;
@@ -121,6 +118,19 @@ public class EventoController {
             return ResponseEntity.status(204).build();
         }
         return ResponseEntity.status(200).body(eventos);
+    }
+
+    @PostMapping("/atualizareventos-proximos")
+    public ResponseEntity AtualizarEventosProximos(@RequestBody Localidade localidade,
+                                                   int[] idsEventos) {
+
+        PilhaObj pilhaObj = new PilhaObj(idsEventos.length);
+        for (int i = 0; i < pilhaObj.getTamanho(); i++) {
+            pilhaObj.push(localidadeRepository.findByAllEventosProximos(localidade.getLatitute(), localidade.getLongitute()));
+        }
+
+        return ResponseEntity.status(200).body(pilhaObj);
+
     }
 
     //    Método gravar Arquivo .csv
