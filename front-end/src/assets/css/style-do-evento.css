@@ -245,15 +245,10 @@ body {
   }
 
   #input-evento {
-    margin-left: 14%;
+    margin-left: 20%;
     border-radius: 17px;
-    width: 134%;
-    line-height: 199%;
-    background: url(img/bx_bx-search.png) no-repeat scroll 0px 0px;
-    padding-left: 45px;
-    background-size: 6%;
-    background-position-x: 5%;
-    background-position: 19px;
+    width: 300px;
+    background: transparent;
     border-color: #d15fc0;
   }
   .tip {

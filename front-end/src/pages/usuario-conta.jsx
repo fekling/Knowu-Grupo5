@@ -3,13 +3,13 @@ import '../assets/css/usuario-conta.css';
 import BoxInfosEvento from "../components/BoxInfosEvento/BoxInfosEvento";
 import BoxInfosUsuario from "../components/BoxInfoUsuario/BoxInfosUsuario";
 import * as BsIcons from "react-icons/bs";
-import imagemUsuario from '../assets/images/criareventos/img/conta-usuario.png';
+import imagemUsuario from '../assets/images/sistema/imgDefault.png';
 
 
 function UsuarioConta() {
   return (
     <>
-      <SidebarNavigation />
+      <SidebarNavigation titulo1="Postagens" titulo2="Perfil" titulo3="Conta"/>
       <section className="conta-main">
         <div className="conta-infos">
           <img className="conta-info-foto" src={imagemUsuario} alt="" />
@@ -73,7 +73,7 @@ function UsuarioConta() {
       <div className="container-home"></div>
       <div className="container-home-aside">
         <BoxInfosEvento titulo="Eventos!"/>
-        <BoxInfosUsuario titulo="Usuários perto de você!"/>
+        <BoxInfosUsuario titulo="Usuários próximos!"/>
       </div>
     </>
   );

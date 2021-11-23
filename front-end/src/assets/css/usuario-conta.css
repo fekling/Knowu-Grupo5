@@ -32,6 +32,7 @@ body{
     border-radius: 30px;
     margin: 2% 0;
     background: transparent;
+    padding-left: 15px;
 }
 
 .conta-btn-editar{
@@ -47,6 +48,7 @@ body{
 
 .conta-info-foto{
     float: left;
+    width: 100px;
 }
 
 .conta-info-nome{

@@ -1,7 +1,7 @@
 import React from "react";
 import "../assets/css/perfil-usuario-web.css";
 import LogoSorriso from "../assets/images/criareventos/img/logosorriso.png";
-import FotoPerfilUsuario from "../assets/images/Perfil-Dylan.png";
+import FotoPerfilUsuario from "../assets/images/sistema/imgDefault.png";
 import HomePerfilUsuario from "../assets/images/sistema/home.png";
 import ChatPerfilUsuario from "../assets/images/sistema/chat.png";
 import CalendarPerfilUsuario from "../assets/images/sistema/calendar.png";

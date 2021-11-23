@@ -3,24 +3,23 @@
   }
   
   .boxinfos::-webkit-scrollbar-track {
-    background: #E9EAF4;        /* color of the tracking area */
+    background: #E3E4EE;        /* color of the tracking area */
   }
   
   .boxinfos::-webkit-scrollbar-thumb {
     background-color: #837979;    /* color of the scroll thumb */
     border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 3px solid #E9EAF4;  /* creates padding around scroll thumb */
+    border: 3px solid #E3E4EE;  /* creates padding around scroll thumb */
   }
 
 .boxinfos{
-    background-color: #E9EAF4;
+    background-color: #E3E4EE;
     width: 100%;
     height: 40vh;
     border-radius: 20px;
     margin-top: 15px;
     overflow: hidden;
     overflow-y: scroll;
-    box-shadow: yellow 10px;
 }
 
 .boxinfos-titulo{

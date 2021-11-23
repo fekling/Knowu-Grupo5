@@ -7,9 +7,9 @@ import './SidebarNavigation.css';
 import '../../assets/css/reset.css';
 import { IconContext } from 'react-icons';
 import imagemLogo from '../../assets/images/Logo-U.png';
-import imagemUsuario from '../../assets/images/criareventos/img/conta-usuario.png';
+import imagemUsuario from '../../assets/images/sistema/imgDefault.png';
 
-function SidebarNavigation() {
+function SidebarNavigation(props) {
 
     const [sidebar, setSidebar] = useState(false)
 
@@ -26,13 +26,13 @@ function SidebarNavigation() {
                         <nav className="navbar-header-itens">
                             <ul>
                                 <li>
-                                    <a href="/usuario/postagens">Postagens</a>
+                                    <a href="/usuario/postagens">{props.titulo1}</a>
                                 </li>
                                 <li>
-                                    <a href="/usuario/perfil">Perfil</a>
+                                    <a href="/usuario/perfil">{props.titulo2}</a>
                                 </li>
                                 <li>
-                                    <a href="/usuario/conta">Conta</a>
+                                    <a href="/usuario/conta">{props.titulo3}</a>
                                 </li>
                                 <li>
                                     <AiIcons.AiOutlineBell className="bel" />

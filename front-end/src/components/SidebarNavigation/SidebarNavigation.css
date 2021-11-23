@@ -32,7 +32,7 @@ body{
 }
 
 .navbar-header-itens li:last-child {
-    padding-left: 100px;
+    margin-left: 300px;
 }
 
 .navbar{
@@ -75,7 +75,7 @@ body{
     display: flex;
     justify-content: start;
     align-items: center;
-    padding: 50px 0 8px 16px;
+    padding: 50px 0 0 16px;
     list-style: none;
     height: 60px;
 }
@@ -83,14 +83,11 @@ body{
 .navsidebar-text a{
     text-decoration: none;
     color: #000;
-    font-size: 18px;
-    width: 95%;
-    height: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding: 0 16px;
     border-radius: 4px;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .navsidebar-menu-items{
@@ -111,7 +108,7 @@ body{
 }
 
 .navsidebar-titulo {
-    margin-left: 16px;
+    font-size: 1.5rem;
 }
 
 .imagem-usuario{

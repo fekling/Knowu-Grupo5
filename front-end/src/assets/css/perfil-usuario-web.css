@@ -256,20 +256,17 @@ span{
   }
 
   #input-pessoas {
-    margin-left: 126%;
-    border-radius: 17px;
-    width: 205%;
-    line-height: 199%;
+    margin: 2% 0 0 13%;
+    width: 20%;
+    line-height: 1.5rem;
     border-radius: 17px;
     background: url(../images/sistema/bx_bx-search.png) no-repeat scroll 0px 0px;
-    padding-left: 72px;
     background-size: 6%;
-    background-position-x: 5%;
     background-position: 19px;
     border-color: #D15FC0;
   }
 
-.bolinhas-coloridas-web{
+.botoes-avaliacao-web{
   background: linear-gradient(180deg, #D15FC0 0%, #8C9CFF 100%);
   color: #fff;
   width: 50px;
@@ -277,8 +274,9 @@ span{
   border-radius: 50px;
   border: none;
   cursor: pointer;
-  margin-left: 14px;
-  margin-right: 1px;
+  margin: 10px 1px 10px 14px;
+  font-size: 1.7rem;
+  padding-top: 10px;
 }
 
   .tip {
