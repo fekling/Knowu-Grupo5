@@ -36,7 +36,6 @@ public class EventoController {
         localidadeRepository.save(evento.getLocalidade());
         eventoRepository.save(evento);
         return ResponseEntity.status(201).build();
-
     }
 
     @GetMapping("/todos")
@@ -68,7 +67,6 @@ public class EventoController {
         eventoRepository.save(dadosOriginais);
 
         return ResponseEntity.status(200).build();
-
     }
 
     @DeleteMapping("/excluir/{id}")
@@ -129,7 +127,6 @@ public class EventoController {
         }
 
         return ResponseEntity.status(200).body(pilhaObj);
-
     }
 
     //    Método gravar Arquivo .csv

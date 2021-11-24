@@ -4,6 +4,7 @@ import com.example.knowuproject.modelo.Localidade;
 import com.example.knowuproject.modelo.Usuario;
 import com.example.knowuproject.repositorio.LocalidadeRepository;
 import com.example.knowuproject.repositorio.UsuarioRepository;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -27,7 +28,8 @@ class UsuarioControllerTest {
     UsuarioRepository userRepository;
 
     @Test
-    void getSemUsuarios_status200(){ //Teste quando não tem usuários
+    @DisplayName("Verifica se não há usuários")
+    void getSemUsuarios_status204(){ //Teste quando não tem usuários
         when(userRepository.findAll()).thenReturn(new ArrayList<>());
 
         ResponseEntity response = userController.exibirUsuarios();
@@ -38,6 +40,7 @@ class UsuarioControllerTest {
     }
 
     @Test
+    @DisplayName("Verifica se há usuários")
     void getUsuarios_status200(){ //Teste quando tem usuários
         List<Usuario> usersMock = List.of(mock(Usuario.class), mock(Usuario.class));
         when(userRepository.findAll()).thenReturn(usersMock);

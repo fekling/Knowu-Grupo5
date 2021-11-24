@@ -30,9 +30,7 @@ public class Usuario {
     @Size(min = 5, max = 15)
     private String usuario;
 
-
     private String celular;
-
 
     @Email(message = "Digite um email válido. EX: seuemail@email.com")
     @NotEmpty(message = "O Email não po ser vazio. Digite um email válido. EX: seuemail@email.com")
