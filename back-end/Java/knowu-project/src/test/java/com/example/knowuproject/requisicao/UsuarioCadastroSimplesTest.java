@@ -99,6 +99,20 @@ class UsuarioCadastroSimplesTest {
     }
 
     @Test
+    @DisplayName("O campo usuario deve estar preenchido sem espaços em branco")
+    void campoUsuarioDeveSerPreenchidoSemEspaçosEmBrancoNoConstrutor(){
+
+        UsuarioCadastroSimples cadastroTest = new UsuarioCadastroSimples("Dylan Colonhesi",
+                "dylancolonhesi",
+                "colonhesidylan@gmail.com",
+                "48720863845", "13-02-2002",
+                "Masculino", "Abcd@1234", "Abcd@1234");
+
+        assertEquals("dylancolonhesi", cadastroTest.getUsuario());
+
+    }
+
+    @Test
     @DisplayName("O campo email deve estar preenchido")
     void campoEmailDeveSerPreenchidoNoConstrutor(){
 
@@ -113,8 +127,50 @@ class UsuarioCadastroSimplesTest {
     }
 
     @Test
+    @DisplayName("Deve verificar se exist o '@' no email")
+    void deveVerificarSeExisteOArroba(){
+
+        UsuarioCadastroSimples cadastroTest = new UsuarioCadastroSimples("Dylan Colonhesi",
+                "dylancolonhesi",
+                "colonhesidylan@gmail.com",
+                "48720863845", "13-02-2002",
+                "Masculino", "Abcd@1234", "Abcd@1234");
+
+        assertEquals("colonhesidylan@gmail.com", cadastroTest.getEmail());
+
+    }
+
+    @Test
+    @DisplayName("Deve verificar se exist o '.com' no email")
+    void deveVerificarSeExistePontoCom(){
+
+        UsuarioCadastroSimples cadastroTest = new UsuarioCadastroSimples("Dylan Colonhesi",
+                "dylancolonhesi",
+                "colonhesidylan@gmail.com",
+                "48720863845", "13-02-2002",
+                "Masculino", "Abcd@1234", "Abcd@1234");
+
+        assertEquals("colonhesidylan@gmail.com", cadastroTest.getEmail());
+
+    }
+
+    @Test
     @DisplayName("O campo CPF deve estar preenchido")
     void campoCPFDeveSerPreenchidoNoConstrutor(){
+
+        UsuarioCadastroSimples cadastroTest = new UsuarioCadastroSimples("Dylan Colonhesi",
+                "dylancolonhesi",
+                "colonhesidylan@gmail.com",
+                "48720863845", "13-02-2002",
+                "Masculino", "Abcd@1234", "Abcd@1234");
+
+        assertEquals("48720863845", cadastroTest.getCpf());
+
+    }
+
+    @Test
+    @DisplayName("O campo CPF deve estar preenchido com 14 caracteres")
+    void campoCPFDeveSerPreenchidoCom14Caracteres(){
 
         UsuarioCadastroSimples cadastroTest = new UsuarioCadastroSimples("Dylan Colonhesi",
                 "dylancolonhesi",
@@ -151,6 +207,20 @@ class UsuarioCadastroSimplesTest {
                 "Masculino", "Abcd@1234", "Abcd@1234");
 
         assertEquals("Masculino", cadastroTest.getGenero());
+
+    }
+
+    @Test
+    @DisplayName("O campo genero deve aceitar '-'")
+    void campoGeneroDeveAceitarTraço(){
+
+        UsuarioCadastroSimples cadastroTest = new UsuarioCadastroSimples("Ariel",
+                "ariel",
+                "ariel@gmail.com",
+                "48720863849", "13-02-2002",
+                "Não-Binário", "Abcd@1234", "Abcd@1234");
+
+        assertEquals("Não-Binário", cadastroTest.getGenero());
 
     }
 
