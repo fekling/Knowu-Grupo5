@@ -37,7 +37,12 @@ public class UsuarioCadastroSimples {
     @Size(min = 8, max = 20, message = "A senha deve conter no maximo 8 caracteres. EX: Abc@1234")
     private String senha;
 
-    public UsuarioCadastroSimples(String nome, String usuario, String email, String cpf, String dataNascimento, String genero, String senha) {
+    @NotNull(message = "A senha não pode ser em branco. EX: Abc@1234")
+    @NotBlank(message = "A senha não deve conter espaços em branco. EX: Abc@1234")
+    @Size(min = 8, max = 20, message = "A senha deve conter no maximo 8 caracteres. EX: Abc@1234")
+    private String confirmarSenha;
+
+    public UsuarioCadastroSimples(String nome, String usuario, String email, String cpf, String dataNascimento, String genero, String senha, String confirmarSenha) {
         this.nome = nome;
         this.usuario = usuario;
         this.email = email;
@@ -45,6 +50,15 @@ public class UsuarioCadastroSimples {
         this.dataNascimento = dataNascimento;
         this.genero = genero;
         this.senha = senha;
+        this.confirmarSenha = confirmarSenha;
+    }
+
+    public String getConfirmarSenha() {
+        return confirmarSenha;
+    }
+
+    public void setConfirmarSenha(String confirmarSenha) {
+        this.confirmarSenha = confirmarSenha;
     }
 
     public String getNome() {

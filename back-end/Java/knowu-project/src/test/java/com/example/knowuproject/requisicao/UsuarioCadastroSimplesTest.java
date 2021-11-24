@@ -15,7 +15,7 @@ class UsuarioCadastroSimplesTest {
                 "dylancolonhesi",
                 "colonhesidylan@gmail.com",
                 "48720863845", "13-02-2002",
-                "Masculino", "Abcd@1234");
+                "Masculino", "Abcd@1234", "Abcd@1234");
 
         assertEquals("Dylan Colonhesi", cadastroTest.getNome());
         assertEquals("dylancolonhesi", cadastroTest.getUsuario());
@@ -24,6 +24,7 @@ class UsuarioCadastroSimplesTest {
         assertEquals("13-02-2002", cadastroTest.getDataNascimento());
         assertEquals("Masculino", cadastroTest.getGenero());
         assertEquals("Abcd@1234", cadastroTest.getSenha());
+        assertEquals("Abcd@1234", cadastroTest.getConfirmarSenha());
     }
 
 
@@ -35,7 +36,7 @@ class UsuarioCadastroSimplesTest {
                 "dylancolonhesi",
                 "colonhesidylan@gmail.com",
                 "48720863845", "13-02-2002",
-                "Masculino", "Abcd@1234");
+                "Masculino", "Abcd@1234", "Abcd@1234");
 
         assertEquals("Dylan Colonhesi", cadastroTest.getNome());
 
@@ -43,13 +44,41 @@ class UsuarioCadastroSimplesTest {
 
     @Test
     @DisplayName("O campo nome não deve ter caracteres especiais")
-    void campoNomeNãoDeveTerMaisQue60Caracteres(){
+    void campoNomeNãoDeveTerCaracteresEspeciais(){
 
-        UsuarioCadastroSimples cadastroTest = new UsuarioCadastroSimples("Dylan  Colonhesi",
+        UsuarioCadastroSimples cadastroTest = new UsuarioCadastroSimples("Dylan Colonhesi",
                 "dylancolonhesi",
                 "colonhesidylan@gmail.com",
                 "48720863845", "13-02-2002",
-                "Masculino", "Abcd@1234");
+                "Masculino", "Abcd@1234", "Abcd@1234");
+
+        assertEquals("Dylan Colonhesi", cadastroTest.getNome());
+
+    }
+
+    @Test
+    @DisplayName("Não deve haver números no campo nome")
+    void campoNomeNãoDeveTerNumeros(){
+
+        UsuarioCadastroSimples cadastroTest = new UsuarioCadastroSimples("Dylan Colonhesi",
+                "dylancolonhesi",
+                "colonhesidylan@gmail.com",
+                "48720863845", "13-02-2002",
+                "Masculino", "Abcd@1234", "Abcd@1234");
+
+        assertEquals("Dylan Colonhesi", cadastroTest.getNome());
+
+    }
+
+    @Test
+    @DisplayName("O campo nome não deve ter a primeira letra minuscula")
+    void campoNomeNãoDeveTerAPrimeiraLetraMinuscula(){
+
+        UsuarioCadastroSimples cadastroTest = new UsuarioCadastroSimples("Dylan Colonhesi",
+                "dylancolonhesi",
+                "colonhesidylan@gmail.com",
+                "48720863845", "13-02-2002",
+                "Masculino", "Abcd@1234", "Abcd@1234");
 
         assertEquals("Dylan Colonhesi", cadastroTest.getNome());
 
@@ -63,7 +92,7 @@ class UsuarioCadastroSimplesTest {
                 "dylancolonhesi",
                 "colonhesidylan@gmail.com",
                 "48720863845", "13-02-2002",
-                "Masculino", "Abcd@1234");
+                "Masculino", "Abcd@1234", "Abcd@1234");
 
         assertEquals("dylancolonhesi", cadastroTest.getUsuario());
 
@@ -77,7 +106,7 @@ class UsuarioCadastroSimplesTest {
                 "dylancolonhesi",
                 "colonhesidylan@gmail.com",
                 "48720863845", "13-02-2002",
-                "Masculino", "Abcd@1234");
+                "Masculino", "Abcd@1234", "Abcd@1234");
 
         assertEquals("colonhesidylan@gmail.com", cadastroTest.getEmail());
 
@@ -91,7 +120,7 @@ class UsuarioCadastroSimplesTest {
                 "dylancolonhesi",
                 "colonhesidylan@gmail.com",
                 "48720863845", "13-02-2002",
-                "Masculino", "Abcd@1234");
+                "Masculino", "Abcd@1234", "Abcd@1234");
 
         assertEquals("48720863845", cadastroTest.getCpf());
 
@@ -105,7 +134,7 @@ class UsuarioCadastroSimplesTest {
                 "dylancolonhesi",
                 "colonhesidylan@gmail.com",
                 "48720863845", "13-02-2002",
-                "Masculino", "Abcd@1234");
+                "Masculino", "Abcd@1234", "Abcd@1234");
 
         assertEquals("13-02-2002", cadastroTest.getDataNascimento());
 
@@ -119,7 +148,7 @@ class UsuarioCadastroSimplesTest {
                 "dylancolonhesi",
                 "colonhesidylan@gmail.com",
                 "48720863845", "13-02-2002",
-                "Masculino", "Abcd@1234");
+                "Masculino", "Abcd@1234", "Abcd@1234");
 
         assertEquals("Masculino", cadastroTest.getGenero());
 
@@ -133,9 +162,52 @@ class UsuarioCadastroSimplesTest {
                 "dylancolonhesi",
                 "colonhesidylan@gmail.com",
                 "48720863845", "13-02-2002",
-                "Masculino", "Abcd@1234");
+                "Masculino", "Abcd@1234", "Abcd@1234");
 
         assertEquals("Abcd@1234", cadastroTest.getSenha());
+
+    }
+
+    @Test
+    @DisplayName("O campo senha deve conter no minimo 8 caracteres")
+    void campoSenhaDeveTerNoMinimo8Caracteres(){
+
+        UsuarioCadastroSimples cadastroTest = new UsuarioCadastroSimples("Dylan Colonhesi",
+                "dylancolonhesi",
+                "colonhesidylan@gmail.com",
+                "48720863845", "13-02-2002",
+                "Masculino", "Abcd@1234", "Abcd@1234");
+
+        assertEquals("Abcd@1234", cadastroTest.getSenha());
+
+    }
+
+    @Test
+    @DisplayName("O campo senha deve conter no minimo 8 caracteres")
+    void campoSenhaDeveSerDigitadoNoAlfabetoLatino(){
+
+        UsuarioCadastroSimples cadastroTest = new UsuarioCadastroSimples("Dylan Colonhesi",
+                "dylancolonhesi",
+                "colonhesidylan@gmail.com",
+                "48720863845", "13-02-2002",
+                "Masculino", "Abcd@1234", "Abcd@1234");
+
+        assertEquals("Abcd@1234", cadastroTest.getSenha());
+
+    }
+
+    @Test
+    @DisplayName("O campo senha deve conferir com confirmar senha")
+    void campoSenhaDeveConferirConfirmarSenha(){
+
+        UsuarioCadastroSimples cadastroTest = new UsuarioCadastroSimples("Dylan Colonhesi",
+                "dylancolonhesi",
+                "colonhesidylan@gmail.com",
+                "48720863845", "13-02-2002",
+                "Masculino", "Abcd@1234", "Abcd@1234");
+
+        assertEquals("Abcd@1234", cadastroTest.getSenha());
+        assertEquals("Abcd@1234", cadastroTest.getConfirmarSenha());
 
     }
 
