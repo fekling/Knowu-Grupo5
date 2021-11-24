@@ -35,4 +35,22 @@ class UsuarioLoginSimplesTest {
 
         assertEquals("Abcd@1234", response.getSenha());
     }
+
+    @Test
+    @DisplayName("O nome de usuario não pode ser vazio")
+    void campoNomeDeUsuarioNaoPodeSerVazio(){
+
+        UsuarioLoginSimples response = new UsuarioLoginSimples("Kling", "Abcd@1234");
+
+        assertEquals("Kling", response.getUsuario());
+    }
+
+    @Test
+    @DisplayName("O campo senha nao pode ser vazio")
+    void campoSenhaNaoPodeSerVazio(){
+
+        UsuarioLoginSimples response = new UsuarioLoginSimples("Kling", "Abcd@1234");
+
+        assertEquals("Abcd@1234", response.getSenha());
+    }
 }
