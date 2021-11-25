@@ -106,7 +106,6 @@ public class UsuarioController {
 
     @GetMapping("/todos")
     public ResponseEntity exibirUsuarios() {
-
         return ResponseEntity.status(200).body(usuarioRepository.findAll());
     }
 
