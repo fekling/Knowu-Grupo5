@@ -8,7 +8,7 @@ import ComentarioPerfilUsuarioWeb from "../components/ComentariosPerfilUsuarioWe
 function UsuarioPostagens() {
   return (
     <>
-      <SidebarNavigation />
+      <SidebarNavigation titulo1="Postagens" titulo2="Perfil" titulo3="Conta" />
       <section className="home-main">
         <ComentarioPerfilUsuarioWeb/>
       </section>

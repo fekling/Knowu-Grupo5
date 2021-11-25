@@ -14,7 +14,7 @@ body{
 }
 
 .navbar-header-itens {
-    align-self: center;
+    margin-left: 160px;
 }
 
 .navbar-header-itens li {

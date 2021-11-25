@@ -6,8 +6,7 @@ body{
 .conta-main{
     width: 50%;
     background-color: #E9EAF4;
-    height: 100vh;
-    margin: 5% 0 0 26%;
+    margin: 0 auto;
 }
 
 .conta-infos{
@@ -48,19 +47,47 @@ body{
 
 .conta-info-foto{
     float: left;
-    width: 100px;
+    width: 85px;
+    margin-left: 40px;
 }
 
 .conta-info-nome{
     font-size: 1.5rem;
-    margin: 1% 0 0 13%;
+    margin: 1% 0 0 18%;
 }
 
 .conta-info-usuario{
-    margin: 0 0 0 13%;
+    margin: 0 0 0 18%;
 }
 
 .conta-alterar{
     color: #3158D4;
     margin-left: 2%;
+}
+
+.conta-btn-atualizar{
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    margin: 5%;
+    width: 30%;
+    height: 40px;
+    background: linear-gradient(180deg, #D15FC0 0%, #8C9CFF 100%);
+    border: none;
+    border-radius: 50px;
+}
+
+@media (min-width: 320px) {
+    .conta-input{
+        width: 70%;
+    }
+}
+
+@media (min-width: 768px) {
+    .conta-input{
+        width: 70%;
+    }
+
+    .conta-btn-atualizar{
+        margin: 5% 0 0 35%;
+    }
 }

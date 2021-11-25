@@ -26,13 +26,13 @@ function SidebarNavigation(props) {
                         <nav className="navbar-header-itens">
                             <ul>
                                 <li>
-                                    <a href="/usuario/postagens">{props.titulo1}</a>
+                                    <a href="/usuario-postagens">{props.titulo1}</a>
                                 </li>
                                 <li>
-                                    <a href="/usuario/perfil">{props.titulo2}</a>
+                                    <a href="/usuario-perfil">{props.titulo2}</a>
                                 </li>
                                 <li>
-                                    <a href="/usuario/conta">{props.titulo3}</a>
+                                    <a href="/usuario-conta">{props.titulo3}</a>
                                 </li>
                                 <li>
                                     <AiIcons.AiOutlineBell className="bel" />

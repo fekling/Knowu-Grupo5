@@ -113,10 +113,9 @@ function UsuarioConta() {
             onChange={(dados) => setSenha(dados.target.value)}
           />
           <a className="conta-alterar" href="#">Alterar senha?</a>
-          <button onClick={handleAtualizarDados}>ATUALIZAR</button>
+          <button className="conta-btn-atualizar" onClick={handleAtualizarDados}>ATUALIZAR</button>
         </div>
       </section>
-      <div className="container-home"></div>
       <div className="container-home-aside">
         <BoxInfosEvento titulo="Eventos!" />
         <BoxInfosUsuario titulo="Usuários próximos!" />

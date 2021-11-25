@@ -27,3 +27,35 @@
     font-size: 1rem;
     margin: 5% 3%;
 }
+
+@media (min-width: 320px) {
+  .boxinfos{
+    height: 15%;
+  }
+
+  .boxinfos-titulo{
+    font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .boxinfos{
+    height: 30%;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .boxinfos{
+    height: 50%;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  
+  .boxinfos{
+    height: 50%;
+  }
+
+}

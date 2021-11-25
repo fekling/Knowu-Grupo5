@@ -21,3 +21,17 @@
     font-family: 'Poppins', sans-serif;
     margin-left: 22%;
 }
+
+@media (min-width: 320px) {
+    .item-box-nome{
+        margin: 15% 0 0 22%;
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .item-box-nome{
+        margin: 10% 0 0 22%;
+        font-size: 1.5rem;
+    }
+}
