@@ -9,13 +9,15 @@ import { useHistory } from "react-router-dom";
 function Index() {
   const history = useHistory();
 
-  const [senha, setSenha] = useState("");
-  const [confSenha, setConfSenha] = useState("");
+  const [senha, setSenha] = useState();
+  const [confSenha, setConfSenha] = useState();
 
   const handleTrocarSenha = useCallback(
     async (dados) => {
       dados.preventDefault();
       if (senha != confSenha) {
+        alert(senha)
+        alert(confSenha)
         alert("Suas senhas não coincidem!");
       } else {
         try {
@@ -34,7 +36,7 @@ function Index() {
         }
       }
     },
-    [senha, history]
+    [senha, confSenha, history]
   );
   return (
     <div className="content-esqueceu-senha">
@@ -48,13 +50,13 @@ function Index() {
         <h1 className="texto-esqueceu-sua-senha">Altere sua senha:</h1>
         <form className="form-esqueceu-sua-senha" onSubmit={handleTrocarSenha}>
           <input
-            type="text"
+            type="password"
             placeholder="Senha"
             className="input-esqueceu-sua-senha"
             onChange={(dados) => setSenha(dados.target.value)}
           />
           <input
-            type="text"
+            type="password"
             placeholder="Confirme sua senha"
             className="input-esqueceu-sua-senha"
             onChange={(dados) => setConfSenha(dados.target.value)}

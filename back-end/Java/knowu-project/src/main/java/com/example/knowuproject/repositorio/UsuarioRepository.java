@@ -31,6 +31,16 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
     @Query(value = "update usuario SET avaliacao = ?2 where id_usuario = ?1", nativeQuery = true)
     void atualizarAvaliacao(Integer idUsuario, Integer avaliacao);
 
+    @Modifying
+    @Transactional
+    @Query(value = "update usuario SET codigo_recupera_senha = ?2 where id_usuario = ?1", nativeQuery = true)
+    void atualizarCodigoDeRecuperaçãoSenha(Integer idUsuario, Integer codigo);
+
+    @Modifying
+    @Transactional
+    @Query(value = "update usuario SET data_nascimento = ?2, genero = ?3, email = ?4, senha = ?5, nome = ?6, usuario = ?7, descricao= ?8 where id_usuario = ?1", nativeQuery = true)
+    void atualizarDadosDaConta(Integer idUsuario, String dataNascimento, String genero, String email, String senha, String nome, String usuario, String descricao);
+
 
 
 }

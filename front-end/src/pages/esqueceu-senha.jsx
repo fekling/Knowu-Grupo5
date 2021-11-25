@@ -22,14 +22,14 @@ function Index() {
           let params = {
             email: email,
           };
-          const response = await Api.put("/usuarios/enviarCodigo", params);
+          const response = await Api.patch("/usuarios/enviarCodigo", params);
           if (response.status == 200) {
             history.push("/recuperar-senha");
           } else {
             alert("Insira um email cadastrado!");
           }
         } catch (erro) {
-          alert("teste");
+          alert("Erro ao enviar email");
         }
       }
     },

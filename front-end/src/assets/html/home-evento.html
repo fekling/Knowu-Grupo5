@@ -260,7 +260,7 @@
       for (let i = 1; i < 4; i++) {
         console.log(resultadoUsuario)
         document.getElementById(`nickname${i}`).innerHTML = resultadoUsuario.data[i][0];
-        document.getElementById(`usuario${i}`).innerHTML = resultadoUsuario.data[i][1];
+        document.getElementById(`usuario${i}`).innerHTML =  "@" + resultadoUsuario.data[i][1];
       }
       // eventosProximos = resultado.data[0]
     }).catch(e => {
@@ -286,7 +286,7 @@
       for (let i = 1; i < 4; i++) {
         // alert(resultadoUsuario.data);
         document.getElementById(`nickname${i}`).innerHTML = resultadoAtualizacaoUsuario.data[i][0];
-        document.getElementById(`usuario${i}`).innerHTML = resultadoAtualizacaoUsuario.data[i][1];
+        document.getElementById(`usuario${i}`).innerHTML =  "@" + resultadoAtualizacaoUsuario.data[i][1];
       }
       console.log("Está funcionando a atualização de usuários")
     }).catch(e => {

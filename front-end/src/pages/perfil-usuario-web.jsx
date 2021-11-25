@@ -13,9 +13,11 @@ import * as AiIcons from 'react-icons/ai';
 
 function PerfilUsuario() {
 
+
   
   function handleAvaliar(avaliacao) {
     const id = 14;
+
 
     if (avaliacao) {
 

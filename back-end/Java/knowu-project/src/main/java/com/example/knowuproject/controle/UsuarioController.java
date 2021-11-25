@@ -6,7 +6,9 @@ import com.example.knowuproject.modelo.Localidade;
 import com.example.knowuproject.modelo.Usuario;
 import com.example.knowuproject.repositorio.LocalidadeRepository;
 import com.example.knowuproject.repositorio.UsuarioRepository;
+import com.example.knowuproject.requisicao.UsuarioAtualizarDadosRequest;
 import com.example.knowuproject.requisicao.UsuarioAvaliacaoResponse;
+import com.example.knowuproject.requisicao.UsuarioRecuperarSenhaRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -76,6 +78,7 @@ public class UsuarioController {
         Optional<Usuario> usuarioLogin = Optional.ofNullable(usuarioRepository.findByUsuario(usuario.getUsuario()));
 
         if (usuario.getUsuario().equals(usuarioLogin.get().getUsuario()) && usuario.senha().equals(usuarioLogin.get().senha())) {
+            usuario = usuarioLogin.get();
             usuario.login();
             usuario.setIdUsuario(usuarioLogin.get().getIdUsuario());
             localidadeRepository.save(usuario.getLocalidade());
@@ -166,9 +169,8 @@ public class UsuarioController {
         return ResponseEntity.status(200).body(filaObj.peek());
     }
 
-    @PutMapping("/enviarCodigo")
+    @PatchMapping("/enviarCodigo")
     public ResponseEntity enviarCodigoRecuperacaoSenha(@RequestBody Usuario usuario) {
-
 
         Optional<Usuario> usuarios = Optional.ofNullable(usuarioRepository.findByEmail(usuario.getEmail()));
         System.out.println(usuarios.get());
@@ -200,11 +202,11 @@ public class UsuarioController {
                 Message message = new MimeMessage(session);
                 message.setFrom(new InternetAddress("knowu@outlook.com.br")); //Remetente
 
-                Usuario usuario1 = new Usuario();
-                usuario1 = usuarios.get();
+                UsuarioRecuperarSenhaRequest usuario1 = new UsuarioRecuperarSenhaRequest();
                 usuario1.setCodigoRecuperaSenha(ThreadLocalRandom.current().nextInt(10000, 99999));
-                System.out.println(usuario1.getCodigoRecuperaSenha());
-                usuarioRepository.save(usuario1);
+                usuario1.setIdUsuario(usuarios.get().getIdUsuario());
+                usuario1.setNome(usuarios.get().getNome());
+                usuarioRepository.atualizarCodigoDeRecuperaçãoSenha(usuario1.getIdUsuario(), usuario1.getCodigoRecuperaSenha());
 
                 message.setRecipients(Message.RecipientType.TO,
                         InternetAddress.parse(usuario.getEmail())); //Destinatário(s)
@@ -249,7 +251,8 @@ public class UsuarioController {
 
         Usuario dadosUsuario = usuario;
         Optional<Usuario> dados = usuarioRepository.findById(id);
-        Usuario dadosOriginais = dados.get();
+        UsuarioAtualizarDadosRequest dadosOriginais = new UsuarioAtualizarDadosRequest(dados.get().getIdUsuario(), dados.get().getDataNascimento(), dados.get().getGenero(),
+                dados.get().getEmail(), dados.get().getSenha(), dados.get().getNome(), dados.get().getUsuario(), dados.get().getDescricao());
 
 //        Dados da conta
         if (usuario.getDataNascimento() != null) {
@@ -284,7 +287,7 @@ public class UsuarioController {
 //        Fim dados do perfil
 
         dadosOriginais.setIdUsuario(id);
-        usuarioRepository.save(dadosOriginais);
+        usuarioRepository.atualizarDadosDaConta(dadosOriginais.getIdUsuario(), dadosOriginais.getDataNascimento(), dadosOriginais.getGenero(), dadosOriginais.getEmail(), dadosOriginais.getSenha(), dadosOriginais.getNome(), dadosOriginais.getUsuario(), dadosOriginais.getDescricao());
 
         return ResponseEntity.status(200).build();
     }

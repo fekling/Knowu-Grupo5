@@ -18,6 +18,7 @@ function Routes(){
         <Router>    
             <Switch>
                 <Route exact path="/login" component={Login}/>
+                <Route exact path="/" component={Login}/>
                 <Route exact path="/cadastro" component={Cadastro}/>
                 <Route exact path="/perfil" component={PerfilUsuario}/>
                 <Route exact path="/perfil-web" component={PerfilUsuarioWeb}/>

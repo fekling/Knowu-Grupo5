@@ -54,7 +54,7 @@ function Index() {
                 <div className="direita">
                     
                         <input type="text" className="input-login" placeholder="usuário ou email" onChange={e => setLogin(e.target.value)}/>
-                        <input type="text" className="input-login" placeholder="Senha" onChange={e => setPassword(e.target.value)}/>
+                        <input type="password" className="input-login" placeholder="Senha" onChange={e => setPassword(e.target.value)}/>
                         <button className="button-login" onClick={handleLogin}>Login</button>
                     
                     <h2>Ou continue com</h2>
