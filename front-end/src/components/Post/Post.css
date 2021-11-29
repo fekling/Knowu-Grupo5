@@ -14,10 +14,6 @@
     font-size: 1.3rem;    
 }
 
-.post-usuario{
-    margin-left: 10%;    
-}
-
 .post-corpo{
     width: 90%;
     height: 110px;
@@ -25,6 +21,7 @@
     border-color: blue;
     border-radius: 10px;
     background-color: #E3E4EE;
+    padding: 10px 0 0 20px;
 }
 
 .post-container-btn{
@@ -58,11 +55,11 @@
     }
 
     .post-nome{
-        margin-left: 15%;
+        margin-left: 10%;
     }
 
     .post-usuario{
-        margin-left: 15%;    
+        margin-left: 10%;    
     }    
 }
 
@@ -71,11 +68,7 @@
         height: 210px;
     }
 
-    .post-nome{
-        margin-left: 10%;
+    .post-nome, .post-usuario{
+        margin-left: 8%;
     }
-
-    .post-usuario{
-        margin-left: 10%;    
-    } 
 }
