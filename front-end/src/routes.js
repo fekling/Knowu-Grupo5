@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import AlterarSenha from './pages/alterar-senha'
 import RecuperarSenha from './pages/recuperar-senha';
 import EsqueceuSenha from './pages/esqueceu-senha';
-import Cadastro from './pages/cadastro';
+import Cadastro from './pages/Cadastro';
 import Login from './pages/login';
 import PerfilUsuario from './pages/perfil-usuario';
 import NotFound from './pages/PaginaNaoEncontrada';
