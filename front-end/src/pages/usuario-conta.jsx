@@ -5,7 +5,7 @@ import BoxInfosUsuario from "../components/BoxInfoUsuario/BoxInfosUsuario";
 import * as BsIcons from "react-icons/bs";
 import imagemUsuario from '../assets/images/sistema/imgDefault.png';
 import { useHistory } from "react-router-dom";
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import Api from "../components/Axios";
 
 
@@ -14,7 +14,9 @@ function UsuarioConta() {
   
   var params = new URLSearchParams(window.location.search);
   var id = params.get('id');
-  id = 60;
+  id = 1;
+
+
 
   const history = useHistory()
 
@@ -22,6 +24,17 @@ function UsuarioConta() {
   const [senha, setSenha] = useState("")
   const [dataNascimento, setDataNascimento] = useState("")
   const [genero, setGenero] = useState("")
+  const [nome, setNome] = useState("");
+  const [usuario, setUsuario] = useState("");
+
+  useEffect(() => {
+    async function buscarUsuario() {
+      const resposta = await Api.get("/usuarios/nome-usuario/" + id)
+      setNome(resposta.data[0].nome)
+      setUsuario(resposta.data[0].usuario)
+    }
+    buscarUsuario()
+  }, [nome, usuario]);
 
   const handleAtualizarDados = useCallback(
     async (dados) => {
@@ -54,8 +67,8 @@ function UsuarioConta() {
       <section className="conta-main">
         <div className="conta-infos">
           <img className="conta-info-foto" src={imagemUsuario} alt="" />
-          <h1 className="conta-info-nome">André Santos</h1>
-          <h3 className="conta-info-usuario">@Andezito</h3>
+          <h1 className="conta-info-nome">{nome}</h1>
+          <h3 className="conta-info-usuario">@{usuario}</h3>
         </div>
         <div className="conta-form">
           <label htmlFor="dataNascimento" className="conta-label">
@@ -67,6 +80,7 @@ function UsuarioConta() {
             name="dataNascimento"
             id="dataNascimento"
             className="conta-input"
+            value={dataNascimento}
             onChange={(dados) => setDataNascimento(dados.target.value)}
           />
           <button className="conta-btn-editar">
@@ -82,6 +96,7 @@ function UsuarioConta() {
             name="nomeUsuario"
             id="nomeUsuario"
             className="conta-input"
+            value={genero}
             onChange={(dados) => setGenero(dados.target.value)}
           />
           <button className="conta-btn-editar">
@@ -97,6 +112,7 @@ function UsuarioConta() {
             name="email"
             id="email"
             className="conta-input"
+            value={email}
             onChange={(dados) => setEmail(dados.target.value)}
           />
           <a className="conta-alterar" href="#">Alterar email?</a>

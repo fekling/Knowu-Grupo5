@@ -56,8 +56,8 @@ function Index() {
                         
                             <input type="text" class="input-senha-cadastro" placeholder="Nome de usuário" id="usuario" onChange={dados => setUsuario(dados.target.value)} />
                             <input type="text" class="input-senha-cadastro" placeholder="Email" id="email" onChange={dados => setEmail(dados.target.value)} />
-                            <input type="text" class="input-senha-cadastro" placeholder="senha" id="senha" onChange={dados => setSenha(dados.target.value)} />
-                            <input type="text" class="input-senha-cadastro" placeholder="Confirme sua senha" />
+                            <input type="password" class="input-senha-cadastro" placeholder="senha" id="senha" onChange={dados => setSenha(dados.target.value)} />
+                            <input type="password" class="input-senha-cadastro" placeholder="Confirme sua senha" />
                         
                     </div>
                     <div class="campo-esquerda">

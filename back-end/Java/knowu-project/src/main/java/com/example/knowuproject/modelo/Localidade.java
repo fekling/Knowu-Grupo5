@@ -19,6 +19,15 @@ public class Localidade {
     private Double latitute;
     private Double longitute;
 
+    public Localidade(String endereco, Double latitute, Double longitute) {
+        this.endereco = endereco;
+        this.latitute = latitute;
+        this.longitute = longitute;
+    }
+
+    public Localidade() {
+    }
+
     public Integer getId() {
         return id;
     }

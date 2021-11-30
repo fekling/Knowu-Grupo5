@@ -5,37 +5,43 @@ import BoxInfosUsuario from "../components/BoxInfoUsuario/BoxInfosUsuario";
 import Post from "../components/Post/Post";
 import { useEffect, useState } from "react";
 import api from "../components/Axios";
+import ItemBox from "../components/ItemBox/ItemBox";
 
 
 function UsuarioPostagens() {
-    var id = 10;
 
-    const [nome, setNome] = useState([]);
-    const [usuario, setUsuario] = useState([]);
+  var params = new URLSearchParams(window.location.search);
+  var id = params.get('id');
+  id = 1;
+
+  const [nome, setNome] = useState("");
+  const [usuario, setUsuario] = useState("");
 
   useEffect(() => {
-    async function buscarUsuario(){
-      const resposta = await api.get("/" + id)
-      setUsuario(resposta.data)
-      console.log("olha o que veio da api!!!",resposta.data)
+    async function buscarUsuario() {
+      const resposta = await api.get("/usuarios/nome-usuario/" + id)
+      setNome(resposta.data[0].nome)
+      setUsuario(resposta.data[0].usuario)
     }
     buscarUsuario()
-  },[nome, usuario]);
+  }, [nome, usuario]);
 
   return (
     <>
       <SidebarNavigation titulo1="Postagens" titulo2="Perfil" titulo3="Conta" />
       <section className="home-main">
-        <Post 
+        <Post
           key={id}
-          nome={usuario.nome}
-          usuario={usuario.usuario}
+          nome={nome}
+          usuario={usuario}
         />
-        <Post/>
+        <Post key={id}
+          nome={nome}
+          usuario={usuario} />
       </section>
       <div className="container-home-aside">
-        <BoxInfosEvento titulo="Eventos!"/>
-        <BoxInfosUsuario titulo="Usuários perto de você!"/>
+        <BoxInfosEvento titulo="Eventos!" />
+        <BoxInfosUsuario titulo="Usuários perto de você!" />
       </div>
     </>
   );

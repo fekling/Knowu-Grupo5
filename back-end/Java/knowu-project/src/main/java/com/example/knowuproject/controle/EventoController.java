@@ -125,7 +125,6 @@ public class EventoController {
         for (int i = 0; i < pilhaObj.getTamanho(); i++) {
             pilhaObj.push(localidadeRepository.findByAllEventosProximos(localidade.getLatitute(), localidade.getLongitute()));
         }
-
         return ResponseEntity.status(200).body(pilhaObj);
     }
 

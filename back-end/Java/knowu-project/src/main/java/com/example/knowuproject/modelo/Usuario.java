@@ -3,6 +3,7 @@ package com.example.knowuproject.modelo;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.validator.constraints.br.CPF;
 
 import javax.validation.constraints.*;
 import javax.persistence.*;
@@ -86,6 +87,7 @@ public class Usuario {
     public Usuario() {
 
     }
+
 
     public Integer getIdUsuario() {
         return idUsuario;

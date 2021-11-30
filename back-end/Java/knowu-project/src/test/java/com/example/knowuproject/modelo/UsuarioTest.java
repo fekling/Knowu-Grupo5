@@ -14,10 +14,10 @@ class UsuarioTest {
     @DisplayName("O construtor deve estar preenchido")
     void construtorUsuarioPreencherCampos() {
 
-        Usuario response = new Usuario(0001, "Renato Paulino", "RenOP", "1199999-9999", "renato.paulino@sptech.com.br",
+        Usuario response = new Usuario(1, "Renato Paulino", "RenOP", "1199999-9999", "renato.paulino@sptech.com.br",
                                        "410.427.638-36", "11/05/1992", "Masculino");
 
-        assertEquals(0001, response.getIdUsuario());
+        assertEquals(1, response.getIdUsuario());
         assertEquals("Renato Paulino", response.getNome());
         assertEquals("RenOP", response.getUsuario());
         assertEquals("1199999-9999", response.getCelular());

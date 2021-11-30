@@ -56,9 +56,10 @@ public class UsuarioController {
     @GetMapping("/foto/{id}")
     public ResponseEntity getFoto(@PathVariable int id) {
         if (usuarioRepository.existsById(id)) {
-            Usuario user = usuarioRepository.findById(id).get();
-            return ResponseEntity.status(200).header("content-type", "image/jpeg")
-                    .body(user.getFoto());
+            Optional<Usuario> user = usuarioRepository.findById(id);
+            // return ResponseEntity.status(200).header("content-type", "image/jpeg")
+            //        .body(user.getFoto());
+            return ResponseEntity.status(200).body(user.get().getFoto());
         } else {
             return ResponseEntity.status(404).build();
         }
@@ -107,6 +108,16 @@ public class UsuarioController {
     @GetMapping("/todos")
     public ResponseEntity exibirUsuarios() {
         return ResponseEntity.status(200).body(usuarioRepository.findAll());
+    }
+
+    @GetMapping("/nome-usuario/{id}")
+    public ResponseEntity exibirNomeUsuario(@PathVariable Integer id) {
+        return ResponseEntity.of(Optional.of(usuarioRepository.listarNomeAndUsuario(id)));
+    }
+
+    @GetMapping("/dados-usuario/{id}")
+    public ResponseEntity exibirDadosUsuario(@PathVariable Integer id) {
+
     }
 
     @PutMapping("/logoff/{id}")

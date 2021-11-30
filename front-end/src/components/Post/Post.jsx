@@ -10,10 +10,10 @@ function Post(props) {
       <>
         <div className="post-container">
           <img className="post-imagem" src={ImagemUsuario} alt="" />
-          <h5 className="post-nome">AAAAAAAAAAA</h5>
-          <h6 className="post-usuario">aaaaaaaaaaaa</h6>
+          <h5 className="post-nome">{props.nome}</h5>
+          <h6 className="post-usuario">@{props.usuario}</h6>
           <div className="post-corpo">
-              uhaudhuahudhauhduah auhudhauhduahudhau haudhauhduahudhau hdauhauhduhaudha
+          sakdjlkdjsak
           </div>
           <div className="post-container-btn">
               <button className="post-btn">Curtir</button>

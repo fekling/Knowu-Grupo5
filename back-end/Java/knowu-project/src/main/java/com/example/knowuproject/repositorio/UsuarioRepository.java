@@ -3,6 +3,7 @@ package com.example.knowuproject.repositorio;
 import com.example.knowuproject.modelo.Usuario;
 import com.example.knowuproject.requisicao.UsuarioCadastroSimples;
 import com.example.knowuproject.requisicao.UsuarioLoginSimples;
+import com.example.knowuproject.requisicao.UsuarioNomeResponse;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -23,8 +24,9 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
     @Query("select new com.example.knowuproject.requisicao.UsuarioLoginSimples (u.usuario, u.senha) from Usuario u")
     List<UsuarioLoginSimples> findLoginUsuario();
 
-    @Query("select new com.example.knowuproject.requisicao.UsuarioCadastroSimples (u.nome, u.usuario, u.email, u.cpf, u.dataNascimento, u.genero, u.senha ) from Usuario u")
-    List<UsuarioCadastroSimples> findCstroUsuario();
+    @Query("select new com.example.knowuproject.requisicao.UsuarioNomeResponse (u.nome, u.usuario) from Usuario u where u.idUsuario = ?1")
+    List<UsuarioNomeResponse> listarNomeAndUsuario(Integer idUsuario);
+
 
     @Modifying
     @Transactional

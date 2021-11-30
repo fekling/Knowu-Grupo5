@@ -1,45 +1,15 @@
-US00USUARIO17-11-2021 18:56:46v01
-US01  46LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino
+US00USUARIO25-11-2021 18:29:50v01
+US01   1Renato Paulino                                    RenOP     1199999-9999  renato.paulino@sptech.com.br            410.427.638-3611/05/1992Masculino      
 US02: 1 dados registrados
-US00USUARIO17-11-2021 18:58:41v01
-US01  47LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
+US00USUARIO29-11-2021 19:39:55v01
+US01   1Guilherme Nascimento dos Santos                   guilherme null          guilherme_nsantos@hotmail.com           49488852828   31/05/2002Masculino      
 US02: 1 dados registrados
-US00USUARIO17-11-2021 18:59:45v01
-US01  48LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
+US00USUARIO29-11-2021 21:26:12v01
+US01   2Felipe Mallasen                                   mallasen  null          felipe.mallasen@bandtec.com.br          49488852828   31/05/2002Masculino      
 US02: 1 dados registrados
-US00USUARIO17-11-2021 19:01:55v01
-US01  49LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
+US00USUARIO29-11-2021 21:26:44v01
+US01   3Felipe Kling                                      kling     null          felipe.kling@bandtec.com.br             49488852828   31/05/2002Masculino      
 US02: 1 dados registrados
-US00USUARIO17-11-2021 19:04:01v01
-US01  50LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
-US02: 1 dados registrados
-US00USUARIO17-11-2021 19:18:45v01
-US01  51LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
-US02: 1 dados registrados
-US00USUARIO17-11-2021 19:24:58v01
-US01  52LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
-US02: 1 dados registrados
-US00USUARIO17-11-2021 19:25:37v01
-US01  53LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
-US02: 1 dados registrados
-US00USUARIO17-11-2021 19:28:41v01
-US01  54LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
-US02: 1 dados registrados
-US00USUARIO17-11-2021 19:30:52v01
-US01  55LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
-US02: 1 dados registrados
-US00USUARIO17-11-2021 19:33:23v01
-US01  56LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
-US02: 1 dados registrados
-US00USUARIO17-11-2021 19:36:18v01
-US01  57LohDDDDDD                               Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
-US02: 1 dados registrados
-US00USUARIO17-11-2021 19:38:53v01
-US01  58LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
-US02: 1 dados registrados
-US00USUARIO17-11-2021 19:42:29v01
-US01  59LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
-US02: 1 dados registrados
-US00USUARIO17-11-2021 19:43:38v01
-US01  60LohDDDDDD                                         Wickfbfdht11997677464   wick@gmail.com                          41042763836   11/05/1992masculino      
+US00USUARIO29-11-2021 21:27:15v01
+US01   4Andre Santos                                      andre     null          andre.silva@bandtec.com.br              49488852828   31/05/2002Masculino      
 US02: 1 dados registrados
