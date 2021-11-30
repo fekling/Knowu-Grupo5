@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/style-do-evento.css">
+  <link rel="stylesheet" href="../css/modal.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <title>KnowU</title>
+</head>
+
+<body onload="buscarId(), buscarUsuariosProximos()">
+  <div class="desktop">
+
+    <div class="header-mobile">
+      <img src="../images/criareventos/img/logosorriso.png" alt="" class="logo-sorriso">
+      <h1>Menu</h1>
+    </div>
+    <nav class="sidebar-navigation">
+
+      <!-- Logo sorriso -->
+      <img src="../images/criareventos/img/logosorriso.png" alt="" class="logo-sorriso">
+
+      <!-- Foto do usuário -->
+      <li class="circulo-imagem">
+        <img src="../images/criareventos/img/Ellipse 29.png" class="foto-usuario"></i>
+      </li>
+
+      <div class="icones-abaixo">
+        <!-- Home (Casinha) -->
+        <div class="home-colorido">
+          <img src="../images/criareventos/img/Rectangle 265.png" alt="" id="retangulo">
+          <li><img src="../images/criareventos/img/home.png" alt="" id="home"></li>
+        </div>
+
+        <!-- Chat -->
+        <div class="chat-colorido" onclick="chat()">
+          <li><img src="../images/criareventos/img/chat.png" alt="" id="chat"></li>
+        </div>
+
+        <!-- Calendario -->
+        <div class="calendario-colorido" onclick="chat()">
+          <li><img src="../images/criareventos/img/calendar.png" alt="" id="calendario"><a
+              href="../sistema-eventos.html"></a></li>
+        </div>
+
+        <!-- Usuario -->
+        <div class="usuario-colorido" onclick="perfil()">
+          <li><img src="../images/criareventos/img/user.png" alt="" id="usuario"><a href="./index.html"></a></li>
+          </li>
+        </div>
+
+        <!-- Logout -->
+        <div class="logout-colorido" onclick="sair()">
+          <li><img src="../images/criareventos/img/logout.png" alt="" id="logout"><a href="./index.html"></a></li>
+          </li>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="header">
+        <a href="#default" class="pesquisar-evento"><input id="input-evento" type="text"
+            placeholder="Pesquisar eventos..."></a>
+        <div class="header-right">
+          <button id="myBtn">+ Criar evento</button>
+
+        </div>
+      </div>
+
+      <div class="btn-mobile" id="myBtn-mobile">+</div>
+
+      <div id="mapa" onload="buscarEventosProximos()"></div>
+
+      <div class="post-home">
+        <div class="dialogbox">
+          <div class="body">
+            <div class="message">
+              <img src="../images/criareventos/img/Ellipse 60.png" alt="" id="bolinha">
+              <img src="../images/criareventos/img/usuario3.png" alt="" id="foto-comentarios">
+
+            </div>
+            <div class="info-usuario">
+              <h4 id="nome-user">Guilherme Paulino
+                <span id="nome-do-evento"> - Futebol dos cria</span>
+              </h4>
+              <h4 id="nick-user">@Gui</h4>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="meio">
+
+          <div class="post">
+            <div id="" class="comentario">
+              <img src="../images/sistema/tres-pontinhos.png" alt="" class="ponto">
+              <p> Evento muito massa! dei uma caneta no Renatão, mó perna.
+                #Ruimdemais</p>
+            </div>
+            <div class="buttons">
+              <button class="button">Curtir</button>
+              <button class="button">Comentar</button>
+              <button class="button">Compartilhar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="column">
+        <div class="card">
+          <h3 id="eventos-letra">Eventos!</h3>
+          <li><img src="../images/criareventos/img/fut1.png" alt="" id="fut-primeiro">
+            <p id="evento1"></p>
+          </li>
+          <li><img src="../images/criareventos/img/fut2.png" alt="" id="fut-primeiro">
+            <p id="evento2"></p>
+          </li>
+          <li><img src="../images/criareventos/img/fut3.png" alt="" id="fut-primeiro">
+            <p id="evento3"></p>
+          </li>
+          <li><img src="../images/criareventos/img/conserto.png" alt="" id="fut-primeiro">
+            <p id="evento4"></p>
+          </li>
+          <li><img src="../images/criareventos/img/so-alegria.png" alt="" id="fut-primeiro">
+            <p id="evento5"></p>
+          </li>
+        </div>
+      </div>
+
+      <div class="column2">
+        <div class="card">
+          <h3 id="usuarios-letra">Usuários perto de você!</h3>
+          <li><img src="../images/criareventos/img/usuario3.png" alt="" id="fut-primeiro">
+            <p id="nickname1"></p>
+          </li>
+          <span id="usuario1"></span>
+          <li><img src="../images/criareventos/img/usuario2.png" alt="" id="fut-primeiro">
+            <p id="nickname2"></p>
+          </li>
+          <span id="usuario2"></span>
+          <li><img src="../images/criareventos/img/usuario1.png" alt="" id="fut-primeiro">
+            <p id="nickname3"></p>
+          </li>
+          <span id="usuario3"></span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-header">
+          <h2 id="crie-evento">Criar um novo evento</h2>
+          <img src="../images/criareventos/img/Rectangle 295.png" alt="" id="retangulo2">
+          <div class="image-evento-modal">
+            <img src="../images/criareventos/img/Ellipse 148.png" alt="" id="foto">
+            <img src="../images/criareventos/img/Vector.png" alt="" id="foto2">
+          </div>
+        </div>
+        <div class="modal-body">
+          <h2>Nome do evento:</h2>
+          <input type="text" class="input-nome-evento-modal" id="nomeEvento">
+          <h2 id="desc-evento">Descrição do evento:</h2>
+          <textarea id="w3review" name="w3review" rows="4" cols="50" class="descricao-evento-modal"></textarea>
+        </div>
+
+        <div class="scores">
+          <h2 id="numero-pessoas">Número máximo de convidados?</h2>
+          <div class="inputs-sim-nao">
+            <label for="score_1" class="required1">
+              <input type="radio" id="score_1" name="score" required="required" value="2">Sim</label>
+            <label for="score_2" class="required2">
+              <input type="radio" id="score_2" name="score" required="required" value="3">Não</label>
+          </div>
+        </div>
+        <div id="qtd-pessoas">
+          <h2 id="numero-pessoas">Quantas pessoas participarão?</h2>
+          <input type="text" name="" id="input-qtd" class="input-nome-evento-modal">
+        </div>
+
+        <div id="link-convite">
+          <h2 id="numero-pessoas">Link de convite:</h2>
+          <img src="../images/criareventos/img/link.png/" alt="" id="imglink">
+          <div class="link-modal">
+            <p id="link-texto">knowu.com.br/invite/abcd-1234</p>
+            <button id="copy">Copiar</button>
+          </div>
+          <div class="modal-footer">
+            <button class="criar-evento-modal" onclick="criarEvento()">Criar evento</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
+
+<script>
+
+
+function chat() {
+  window.location.href = "chat.html"
+}
+
+function sair() {
+  window.location.href = "http://localhost:3000/login"
+}
+
+function perfil() {
+  window.location.href = "http://localhost:3000/perfil-web"
+}
+
+  var eventosProximos = []
+  var locations = [];
+  var idUsuario;
+
+
+  function buscarId() {
+    var params = new URLSearchParams(window.location.search)
+    idUsuario = params.get('id')
+  }
+
+  function buscarEventosProximos() {
+
+    let params = {
+      latitute: -23.5791213,
+      longitute: -46.6658027
+    }
+    axios.post("http://localhost:8080/evento/eventos-proximos", params).then(function (resultado) {
+      console.log(resultado.data.length);
+      for (let i = 0; i < resultado.data.length; i++) {
+        locations[i] = new Array(resultado.data.length)
+        for (let j = 0; j < locations.length; j++) {
+          locations[i][0] = resultado.data[i][0]
+          locations[i][1] = resultado.data[i][3]
+          locations[i][2] = resultado.data[i][4]
+          if (i <= 4) {
+            document.getElementById(`evento${i + 1}`).innerHTML = resultado.data[i][0];
+          }
+          
+
+        }
+      }
+      // eventosProximos = resultado.data[0]
+    }).catch(e => {
+      console.log(e);
+    })
+
+    return locations
+
+  }
+
+  function buscarUsuariosProximos() {
+
+    let params = {
+      latitute: -23.5791213,
+      longitute: -46.6658027
+    }
+    axios.post("http://localhost:8080/usuarios/atualizarusuarios-proximos", params).then(function (resultadoUsuario) {
+      for (let i = 1; i < 4; i++) {
+        console.log(resultadoUsuario)
+        document.getElementById(`nickname${i}`).innerHTML = resultadoUsuario.data[i][0];
+        document.getElementById(`usuario${i}`).innerHTML =  "@" + resultadoUsuario.data[i][1];
+      }
+      // eventosProximos = resultado.data[0]
+    }).catch(e => {
+      console.log(e);
+    })
+
+    return locations
+
+  }
+
+  setInterval(() => {
+    atualizarUsuariosProximos();
+    atualizarEventosProximos();
+  }, 5000);
+
+  function atualizarUsuariosProximos() {
+
+    let params = {
+      latitute: -23.5791213,
+      longitute: -46.6658027
+    }
+    axios.post("http://localhost:8080/usuarios/atualizarusuarios-proximos", params).then(function (resultadoAtualizacaoUsuario) {
+      for (let i = 1; i < 4; i++) {
+        // alert(resultadoUsuario.data);
+        document.getElementById(`nickname${i}`).innerHTML = resultadoAtualizacaoUsuario.data[i][0];
+        document.getElementById(`usuario${i}`).innerHTML =  "@" + resultadoAtualizacaoUsuario.data[i][1];
+      }
+      console.log("Está funcionando a atualização de usuários")
+    }).catch(e => {
+      console.log(e);
+    })
+
+    return locations
+
+  }
+
+  function atualizarEventosProximos() {
+
+    let params = {
+      latitute: -23.5791213,
+      longitute: -46.6658027
+    }
+    axios.post("http://localhost:8080/evento/atualizareventos-proximos", params).then(function (resultadoAtualizacaoEvento) {
+      console.log(resultadoAtualizacaoEvento.data.length);
+      for (let i = 0; i < resultadoAtualizacaoEvento.data.length; i++) {
+        locations[i] = new Array(resultadoAtualizacaoEvento.data.length)
+        for (let j = 0; j < locations.length; j++) {
+          locations[i][0] = resultadoAtualizacaoEvento.data[i][0]
+          locations[i][1] = resultadoAtualizacaoEvento.data[i][3]
+          locations[i][2] = resultadoAtualizacaoEvento.data[i][4]
+          document.getElementById(`evento${i + 1}`).innerHTML = resultadoAtualizacaoEvento.data[i][0];
+
+        }
+      }
+      console.log("Está funcionando a atualização de eventos")
+    }).catch(e => {
+      console.log(e);
+    })
+
+    return locations
+
+  }
+
+
+  function criarEvento() {
+    var qntdParticipantes = 10;
+    var nomeEvento = document.getElementById("nomeEvento").value;
+    alert(nomeEvento)
+    var dataInicio = '05/11/2021 17:00:00';
+    var descricao = document.getElementById("w3review").value;
+    var dataFim = '05/11/2021 18:00:00';
+    var qntdParticipantes = document.getElementById("input-qtd").value
+    var link = document.getElementById("link-texto").value
+
+    let params = {
+      nome: nomeEvento,
+      descricao: descricao,
+      dataInicio: dataInicio,
+      dataFim: dataFim,
+      qntdParticipantes: qntdParticipantes,
+      link: link,
+      usuario: {
+        idUsuario: idUsuario
+      }
+    }
+
+
+    axios.post("http://localhost:8080/evento/criar/" + idUsuario, params).then(function (resultado) {
+      alert("Evento criado com sucesso!!")
+      // eventosProximos = resultado.data[0]
+    }).catch(e => {
+      alert("Erro ao criar evento")
+    })
+  }
+
+
+
+</script>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  var btnMobile = document.getElementById("myBtn-mobile")
+  var btn = document.getElementById("myBtn");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on the button, open the modal
+  btnMobile.onclick = function () {
+    modal.style.display = "block"
+  }
+  btn.onclick = function () {
+    modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+<script type="text/javascript">
+  var coordenadas = { lat: -23.5791213, lng: -46.6658027 };
+  var zoomLevel = 12;
+  function initialize() {
+    var mapOptions = {
+      center: coordenadas,
+      zoom: 15
+    };
+    var map = new google.maps.Map(document.getElementById("mapa"), mapOptions);
+    locations = buscarEventosProximos()
+
+    setTimeout(() => {
+      for (i = 0; i < locations.length; i++) {
+        marker = new google.maps.Marker({
+          position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+          title: locations[i][0],
+          map: map
+        });
+      }
+    }, 1000);
+
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvroKF-1rTRd9K-L9P3ILzSCjcFLU1LkQ&callback=initialize">
+  </script>
+
+
+
+
+
+
+<!-- <script>
+
+  function inicializar() {
+    var coordenadas = { lat: -22.912869, lng: -43.228963 };
+
+    var mapa = new google.maps.Map(document.getElementById('mapa'), {
+      zoom: 15,
+      center: coordenadas
+    });
+
+    var marker = new google.maps.Marker({
+      position: coordenadas,
+      map: mapa,
+      title: 'Meu marcador'
+    });
+  }
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvroKF-1rTRd9K-L9P3ILzSCjcFLU1LkQ&callback=inicializar">
+</script> -->

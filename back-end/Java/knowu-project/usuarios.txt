@@ -13,3 +13,6 @@ US02: 1 dados registrados
 US00USUARIO29-11-2021 21:27:15v01
 US01   4Andre Santos                                      andre     null          andre.silva@bandtec.com.br              49488852828   31/05/2002Masculino      
 US02: 1 dados registrados
+US00USUARIO30-11-2021 17:48:55v01
+US01   5Guilherme Nascimento                              mentosconcanull          guilherme_nsantos@hotmail.com           49488852828   31/05/2002Masculino      
+US02: 1 dados registrados

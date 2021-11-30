@@ -27,6 +27,7 @@ function UsuarioPostagens() {
     buscarUsuario()
   }, [nome, usuario]);
 
+  
   return (
     <>
       <SidebarNavigation titulo1="Postagens" titulo2="Perfil" titulo3="Conta" />

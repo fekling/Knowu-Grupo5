@@ -15,6 +15,8 @@ function SidebarNavigation(props) {
 
     const showSidebar = () => setSidebar(!sidebar)
 
+
+
     return (
         <>
             <IconContext.Provider value={{ color: '#303031' }}>
@@ -52,9 +54,32 @@ function SidebarNavigation(props) {
                             <img className="imagem-usuario" src={imagemUsuario} />
                         </li>
                         {SidebarNavigationData.map((item, index) => {
+
+
+                            if (item.path == "/home") {
+                                item.path = "evento"
+                            }
+
+                            if (item.path == "/chat") {
+                                item.path = "chat"
+                            }
+
+                            function home() {
+                                if (item.path == "evento") {
+                                    window.location.href = `https://guilherme-nascimentosantos.github.io/knowu.github.io/`
+                                }
+                            }
+
+                            function chat() {
+                                if (item.path == "chat") {
+                                    window.location.href = `https://www.youtube.com/watch?v=5qap5aO4i9A`
+                                }
+                            }
+                            
                             return (
+
                                 <li key={index} className={item.cName}>
-                                    <Link to={item.path}>
+                                    <Link to={item.path} onClick={() => { chat(); home();}}>
                                         {item.icon}
                                         <span className="navsidebar-titulo">{item.title}</span>
                                     </Link>

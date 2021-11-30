@@ -115,10 +115,10 @@ public class UsuarioController {
         return ResponseEntity.of(Optional.of(usuarioRepository.listarNomeAndUsuario(id)));
     }
 
-    @GetMapping("/dados-usuario/{id}")
-    public ResponseEntity exibirDadosUsuario(@PathVariable Integer id) {
-
-    }
+//    @GetMapping("/dados-usuario/{id}")
+//    public ResponseEntity exibirDadosUsuario(@PathVariable Integer id) {
+//
+//    }
 
     @PutMapping("/logoff/{id}")
     public ResponseEntity deslogarUsuario(@PathVariable Integer id) {
