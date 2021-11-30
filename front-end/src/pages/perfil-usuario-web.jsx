@@ -89,7 +89,6 @@ function PerfilUsuario() {
                   {/* Comentario 1 */}
                   <div className="perfil-web-comentarios">
                     <ComentarioPerfilUsuarioWeb nomeuser="Andre Santos" nomeevento="Progama TV Cultura e Ouvir MPB" nickname="@Andrezito" comentario="Só conteudo bom!" />
-                    <ComentarioPerfilUsuarioWeb nomeuser="Andre Santos" nomeevento="Progama TV Cultura e Ouvir MPB" nickname="@Andrezito" comentario="Só conteudo bom!" />
                   </div>
                 </div>
               </div>

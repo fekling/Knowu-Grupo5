@@ -8,19 +8,19 @@ body {
 .bg-color {
   position: absolute;
   z-index: -1;
-  width: 150%;
-  height: 150vh;
+  width: 90%;
+  height: 100vh;
 }
 
 .content-esqueceu-senha {
-  width: 100%;
+  width: 90vw;
 }
 
 .header-esqueceu-sua-senha {
   display: flex;
   align-items: center;
   margin-left: 10%;
-  margin-top: 50px;
+  padding-top: 50px;
 }
 
 .seta-esqueceu-sua-senha {

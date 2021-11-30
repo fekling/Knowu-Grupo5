@@ -6,6 +6,7 @@ import Post from "../components/Post/Post";
 import { useEffect, useState } from "react";
 import api from "../components/Axios";
 import ItemBox from "../components/ItemBox/ItemBox";
+import NewPost from "../components/NewPost/NewPost";
 
 
 function UsuarioPostagens() {
@@ -30,6 +31,11 @@ function UsuarioPostagens() {
     <>
       <SidebarNavigation titulo1="Postagens" titulo2="Perfil" titulo3="Conta" />
       <section className="home-main">
+        <NewPost 
+        key={id}
+        nome={nome}
+        usuario={usuario}
+        />
         <Post
           key={id}
           nome={nome}

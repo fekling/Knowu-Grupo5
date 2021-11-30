@@ -35,7 +35,7 @@ function SidebarNavigation(props) {
                                     <a href="/usuario-conta">{props.titulo3}</a>
                                 </li>
                                 <li>
-                                    <AiIcons.AiOutlineBell className="bel" />
+                                    <AiIcons.AiOutlineBell className="bell" />
                                 </li>
                             </ul>
                         </nav>

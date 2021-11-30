@@ -30,7 +30,7 @@
 
 @media (min-width: 320px) {
   .boxinfos{
-    height: 15%;
+    height: 15vh;
   }
 
   .boxinfos-titulo{
@@ -40,22 +40,22 @@
 
 @media (min-width: 768px) {
   .boxinfos{
-    height: 30%;
+    height: 30vh;
   }
 
 }
 
 @media (min-width: 1024px) {
   .boxinfos{
-    height: 50%;
+    height: 40vh;
   }
 
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   
   .boxinfos{
-    height: 50%;
+    height: 40vh;
   }
 
 }

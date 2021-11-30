@@ -36,9 +36,15 @@
     margin-left: 1%;
     width: 100px;
     height: 35px;
-    border-color: blue;
+    border-color: rgba(33, 56, 203, 1);
     border-radius: 20px;
     background: transparent;
+    cursor: pointer;
+}
+
+.post-btn:hover{
+    background-color: rgba(39, 56, 203, 1);
+    color: #E3E4EE;
 }
 
 @media (min-width: 320px){

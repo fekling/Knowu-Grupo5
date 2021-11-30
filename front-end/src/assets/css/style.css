@@ -3,7 +3,7 @@ body {
     background-color: #E9EAF4;
 }
 
-header {
+.header-index {
     background-color: #E9EAF4;
     padding: 20px 0;
 }
@@ -17,23 +17,23 @@ header {
     justify-content: space-around;
 }
 
-nav {
+.nav-index {
     align-self: center;
 }
 
-nav li {
+.nav-li-index {
     display: inline;
     font-family: 'Poppins', sans-serif;
 }
 
-nav li a {
+.nav-li-index a {
     text-decoration: none;
     color: #000000;
     font-size: 1.5em;
     padding: 15px;
 }
 
-main {
+.main-index {
     max-width: 940px;
     width: 100%;
     margin: 0 auto;
