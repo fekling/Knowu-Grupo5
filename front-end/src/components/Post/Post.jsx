@@ -13,9 +13,9 @@ function Post(props) {
           <img className="post-imagem" src={ImagemUsuario} alt="" />
           <h5 className="post-nome">{props.nome}</h5>
           <h6 className="post-usuario">@{props.usuario}</h6>
-          <textarea className="post-corpo">
+          <div className="post-corpo">
           {props.conteudo}
-          </textarea>
+          </div>
           <div className="post-container-btn">
               <button className="post-btn">Curtir</button>
               <button className="post-btn">Comentar</button>
