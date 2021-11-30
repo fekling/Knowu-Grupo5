@@ -9,14 +9,34 @@ import SidebarNavigation from "../components/SidebarNavigation/SidebarNavigation
 import BoxInfosEvento from "../components/BoxInfosEvento/BoxInfosEvento";
 import BoxInfosUsuario from "../components/BoxInfoUsuario/BoxInfosUsuario";
 import * as AiIcons from 'react-icons/ai';
+import Post from "../components/Post/Post";
+import { useEffect, useState } from "react";
+import NewPost from "../components/NewPost/NewPost";
 
 
 function PerfilUsuario() {
 
+  var params = new URLSearchParams(window.location.search);
+  var id = params.get('id');
+  id = 1;
 
-  
+  const [nome, setNome] = useState("");
+  const [usuario, setUsuario] = useState("");
+  var conteudo = "01/02/2020\n"
+  conteudo += "Só conteudo bom!"
+
+  useEffect(() => {
+    async function buscarUsuario() {
+      const resposta = await Api.get("/usuarios/nome-usuario/" + id)
+      setNome(resposta.data[0].nome)
+      setUsuario(resposta.data[0].usuario)
+    }
+    buscarUsuario()
+  }, [nome, usuario]);
+
+
+
   function handleAvaliar(avaliacao) {
-    const id = 14;
 
 
     if (avaliacao) {
@@ -53,12 +73,13 @@ function PerfilUsuario() {
   return (
     <>
       <div>
-        <SidebarNavigation/>
+        <div className="header-pesquisar-pessoas">
+          <a href="#default" className="pesquisar-pessoas"><input id="input-pessoas" type="text" placeholder="Pesquisar pessoas..." /></a>
+        </div>
+        
         {/* Input para pesquisar pessoas */}
         <div className="container-pesquisar-pessoas">
-          <div className="header-pesquisar-pessoas">
-            <a href="#default" className="pesquisar-pessoas"><input id="input-pessoas" type="text" placeholder="Pesquisar pessoas..." /></a>
-          </div>
+        <SidebarNavigation />
           {/* Informações do usuário */}
 
           <div className="square-perfil-usuario-web">
@@ -67,8 +88,8 @@ function PerfilUsuario() {
               <div className="centered-perfil-usuario-web">
                 <h1 id="usuario-titulo-perfil-usuario-web">André Santos</h1>
                 <h4 id="usuario-titulo-pequeno-web">@Andrezito</h4>
-                <button className="botoes-avaliacao-web" onClick={() => handleAvaliar(true)}><AiIcons.AiFillLike/></button>
-                <button className="botoes-avaliacao-web" onClick={() => handleAvaliar(false)}><AiIcons.AiFillDislike/></button>
+                <button className="botoes-avaliacao-web" onClick={() => handleAvaliar(true)}><AiIcons.AiFillLike /></button>
+                <button className="botoes-avaliacao-web" onClick={() => handleAvaliar(false)}><AiIcons.AiFillDislike /></button>
                 <h5 id="usuario-frase-perfil-usuario-web">Gosto muito de ver meus amigos, sou fã de narutinho e como pão.</h5>
                 <img id="link-info-perfil-usuario-web" src={FotoPerfilUsuario} /><h4 id="link-do-usuario">Github.com/Andre</h4>
                 <span id="fotos-perfil-usuario-web">Fotos</span>
@@ -87,9 +108,26 @@ function PerfilUsuario() {
                     </div>
                   </div>
                   {/* Comentario 1 */}
-                  <div className="perfil-web-comentarios">
-                    <ComentarioPerfilUsuarioWeb nomeuser="Andre Santos" nomeevento="Progama TV Cultura e Ouvir MPB" nickname="@Andrezito" comentario="Só conteudo bom!" />
-                  </div>
+                  <Post
+                    key={id}
+                    nome={nome}
+                    usuario={usuario}
+                    conteudo={conteudo}
+                  />
+                  <br />
+                  <Post
+                    key={id}
+                    nome={nome}
+                    usuario={usuario}
+                    conteudo={conteudo}
+                  />
+                  <br />
+                  <Post
+                    key={id}
+                    nome={nome}
+                    usuario={usuario}
+                    conteudo={conteudo}
+                  />
                 </div>
               </div>
             </div>
@@ -98,8 +136,9 @@ function PerfilUsuario() {
 
           <div className="column-perfil-usuario-web">
 
-            <BoxInfosEvento titulo="Eventos!"/>
-            <BoxInfosUsuario titulo="Usuarios próximos!"/>
+            <BoxInfosEvento titulo="Eventos!" />
+            <br />
+            <BoxInfosUsuario titulo="Usuarios próximos!" />
           </div>
         </div></div>
     </>
