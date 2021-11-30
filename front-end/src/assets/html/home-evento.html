@@ -39,24 +39,24 @@
         </div>
 
         <!-- Chat -->
-        <div class="chat-colorido">
+        <div class="chat-colorido" onclick="chat()">
           <li><img src="../images/criareventos/img/chat.png" alt="" id="chat"></li>
         </div>
 
         <!-- Calendario -->
-        <div class="calendario-colorido">
+        <div class="calendario-colorido" onclick="chat()">
           <li><img src="../images/criareventos/img/calendar.png" alt="" id="calendario"><a
               href="../sistema-eventos.html"></a></li>
         </div>
 
         <!-- Usuario -->
-        <div class="usuario-colorido">
+        <div class="usuario-colorido" onclick="perfil()">
           <li><img src="../images/criareventos/img/user.png" alt="" id="usuario"><a href="./index.html"></a></li>
           </li>
         </div>
 
         <!-- Logout -->
-        <div class="logout-colorido">
+        <div class="logout-colorido" onclick="sair()">
           <li><img src="../images/criareventos/img/logout.png" alt="" id="logout"><a href="./index.html"></a></li>
           </li>
         </div>
@@ -210,6 +210,19 @@
 
 <script>
 
+
+function chat() {
+  window.location.href = "chat.html"
+}
+
+function sair() {
+  window.location.href = "http://localhost:3000/login"
+}
+
+function perfil() {
+  window.location.href = "http://localhost:3000/perfil-web"
+}
+
   var eventosProximos = []
   var locations = [];
   var idUsuario;
@@ -352,7 +365,7 @@
       alert("Evento criado com sucesso!!")
       // eventosProximos = resultado.data[0]
     }).catch(e => {
-      console.log(e);
+      alert("Erro ao criar evento")
     })
   }
 

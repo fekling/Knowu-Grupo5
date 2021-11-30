@@ -10,13 +10,19 @@ import { useHistory } from "react-router-dom";
 function Index() {
   const history = useHistory();
 
+  const voltar = useCallback(
+    async(dados) => {
+      dados.preventDefault();
+      history.push("/login")
+    }
+  )
+
   const [email, setEmail] = useState("");
 
   const handleEnviarCodigo = useCallback(
     async (dados) => {
       dados.preventDefault();
       if (email == "") {
-        alert("Preencha o seu email");
       } else {
         try {
           let params = {
@@ -39,7 +45,7 @@ function Index() {
   return (
     <div className="content-esqueceu-senha">
       <img src={Bg} alt="" className="bg-color" />
-      <div className="header-esqueceu-sua-senha">
+      <div className="header-esqueceu-sua-senha" onClick={voltar}>
         <img src={Seta} alt="" className="seta-esqueceu-sua-senha" />
         <h1 className="text-voltar">Voltar</h1>
       </div>

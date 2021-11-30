@@ -18,10 +18,10 @@
     width: 90%;
     height: 110px;
     margin: 7% 0 0 2%;
-    border-color: blue;
     border-radius: 10px;
     background-color: #E3E4EE;
     padding: 10px 0 0 20px;
+    border: 1px solid blue;
 }
 
 .post-container-btn{

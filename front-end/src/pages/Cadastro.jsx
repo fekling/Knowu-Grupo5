@@ -37,7 +37,7 @@ function Index() {
                         history.push("/login")
                     }
                 } catch (erro) {
-                   alert("teste");
+                   alert("Erro ao cadastrar usuário");
                 }
             }
         }, [usuario, email, senha, nome, cpf, dataNascimento, genero, history])

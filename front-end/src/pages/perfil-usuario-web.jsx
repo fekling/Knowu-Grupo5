@@ -16,6 +16,7 @@ import NewPost from "../components/NewPost/NewPost";
 
 function PerfilUsuario() {
 
+
   var params = new URLSearchParams(window.location.search);
   var id = params.get('id');
   id = 1;
