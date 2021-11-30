@@ -3,11 +3,7 @@ import ItemBox from "../ItemBox/ItemBox";
 import { useEffect, useState } from "react";
 import api from "../Axios";
 import "./BoxInfosUsuario.css";
-import imagemUsuario1 from '../../assets/images/criareventos/img/usuario1.png';
-import imagemUsuario2 from '../../assets/images/criareventos/img/usuario2.png';
-import imagemUsuario3 from '../../assets/images/criareventos/img/usuario3.png';
-import imagemEvento4 from '../../assets/images/criareventos/img/conserto.png';
-import imagemEvento5 from '../../assets/images/criareventos/img/so-alegria.png';
+import imagemUsuario1 from '../../assets/images/sistema/imgDefault.png';
 
 function BoxInfosUsuario(props) {
 
@@ -53,8 +49,8 @@ function BoxInfosUsuario(props) {
             </p>
           </li>
         </ul>
-        <ItemBox image={imagemUsuario3} nome={nome1} usuario={usuario1} />
-        <ItemBox image={imagemUsuario2} nome={nome2} usuario={usuario2} />
+        <ItemBox image={imagemUsuario1} nome={nome1} usuario={usuario1} />
+        <ItemBox image={imagemUsuario1} nome={nome2} usuario={usuario2} />
         <ItemBox image={imagemUsuario1} nome={nome3} usuario={usuario3} />
         <ItemBox image={imagemUsuario1} nome={nome4} usuario={usuario4} />
       </aside>

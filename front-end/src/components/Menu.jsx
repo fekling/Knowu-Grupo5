@@ -4,7 +4,7 @@ import "../assets/css/cadastro-style.css"
 function Menu(){
     return(
         <>
-        <header>
+        <header className="cadastro-header">
 
             <div class="logoCadastro">
                 <img class="img" src={logo} alt="logo" />

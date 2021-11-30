@@ -34,6 +34,7 @@ body{
     margin-left: 300px;
 }
 
+
 .navbar{
     background-color: #E9EAF4;
     max-width: 100vw;
@@ -43,7 +44,7 @@ body{
     align-items: center;
 }
 
-.bel{
+.bell{
     font-size: 1.5rem;
 }
 
@@ -87,6 +88,10 @@ body{
     padding: 0 16px;
     border-radius: 4px;
     font-size: 2rem;
+}
+
+.navsidebar-text:last-child{
+    margin-top: 50%;
 }
 
 .navsidebar-menu-items{
