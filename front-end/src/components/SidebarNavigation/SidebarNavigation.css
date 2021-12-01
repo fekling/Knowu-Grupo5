@@ -39,6 +39,7 @@ body{
     height: 80px;
     display: flex;
     align-items: center;
+    z-index: 9999;
 }
 
 .bell{
@@ -66,6 +67,7 @@ body{
 .navsidebar-menu.active{
     left: 0;
     transition: 350ms;
+    z-index: 9999;
 }
 
 .navsidebar-text{

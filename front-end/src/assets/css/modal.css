@@ -28,10 +28,10 @@ h2 {
 /* The Close Button */
 .close {
   color: #aaa;
-  float: right;
+  position: absolute;
   font-size: 28px;
   font-weight: bold;
-  left: -5%;
+  left: 520px;
 }
 
 .close:hover,

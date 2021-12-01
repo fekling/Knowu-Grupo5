@@ -83,7 +83,7 @@ function SidebarNavigation(props) {
                                 }
                             }
 
-                            function chat() {
+                            function sistema() {
                                 if (item.path == "sistema") {
                                     window.location.href = `https://fekling.github.io/Knowu-Grupo5/front-end/src/assets/html/sistema-eventos.html`
                                 }
@@ -92,7 +92,7 @@ function SidebarNavigation(props) {
                             return (
 
                                 <li key={index} className={item.cName}>
-                                    <Link to={item.path} onClick={() => { chat(); home();}}>
+                                    <Link to={item.path} onClick={() => { chat(); home(); sistema();}}>
                                         {item.icon}
                                         <span className="navsidebar-titulo">{item.title}</span>
                                     </Link>
