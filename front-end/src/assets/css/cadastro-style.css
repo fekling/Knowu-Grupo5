@@ -1,7 +1,15 @@
+input::placeholder{
+  color: #000;
+}
+
 * {
   padding: 0;
   margin: 0;
   font-family: "Poppins", sans-serif;
+}
+
+body{
+  overflow-x: hidden;
 }
 
 #menu-cadastro {

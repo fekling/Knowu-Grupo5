@@ -80,7 +80,7 @@ function PerfilUsuario() {
         
         {/* Input para pesquisar pessoas */}
         <div className="container-pesquisar-pessoas">
-        <SidebarNavigation titulo1="Postagens" titulo2="Perfil" titulo3="Conta" />
+        <SidebarNavigation />
           {/* Informações do usuário */}
 
           <div className="square-perfil-usuario-web">
