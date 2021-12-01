@@ -39,12 +39,10 @@
                 <img src="../images/sistema/chat.png" alt="">
               </div>
             </a>
-            <a href="">
-              <div class="icon-menu evento">
+              <div class="icon-menu evento" onclick="sistemaEvento()">
                 <div class="barra"></div>
                 <img src="../images/sistema/evento.png" alt="" class="evento-icon">
               </div>
-            </a>
               <div class="icon-menu" onclick="perfil()">
                 <img src="../images/sistema/perfil.png" alt="">
               </div>
@@ -349,6 +347,10 @@
   function sair() {
     window.location.href = "http://localhost:3000/login"
   }
+
+  function sistemaEvento() {
+  window.location.href = "sistema-eventos.html"
+}
 
   function perfil() {
     window.location.href = "http://localhost:3000/perfil-web"

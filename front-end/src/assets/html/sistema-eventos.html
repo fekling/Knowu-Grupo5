@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,100;1,300&display=swap"
         rel="stylesheet">
-    
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/reset.css">
@@ -26,17 +26,17 @@
                     <div class="header-sidebar">
                         <img src="../images/sistema/logo-sistema.svg" alt="" class="logo-desktop">
                         <div class="img">
-                             <img src="../images/sistema/foto-perfil.png" alt="" class="img-perfil">
+                            <img src="../images/sistema/foto-perfil.png" alt="" class="img-perfil">
                         </div>
                     </div>
 
                     <div class="content-sidebar">
-                        <a href="">
-                            <div class="icon-menu">
+                        <a onclick="evento()">
+                            <div class="icon-menu" onclick="evento()">
                                 <img src="../images/sistema/home.png" alt="">
                             </div>
-                            </a>
-                            <a href="">
+                        </a>
+                        <a onclick="chat()">
                             <div class="icon-menu">
                                 <img src="../images/sistema/chat.png" alt="">
                             </div>
@@ -47,18 +47,18 @@
                                 <img src="../images/sistema/evento.png" alt="" class="evento-icon">
                             </div>
                         </a>
-                        <a href="">
+                        <a onclick="perfil()">
                             <div class="icon-menu">
                                 <img src="../images/sistema/perfil.png" alt="">
                             </div>
                         </a>
                     </div>
 
-                    <a href="">
-                    <div class="footer-sidebar">
-                        <img src="../images/sistema/sair.svg" alt="" class="sair-sistema">
-                    </div>
-                     </a>
+                    <a onclick="sair()">
+                        <div class="footer-sidebar">
+                            <img src="../images/sistema/sair.svg" alt="" class="sair-sistema">
+                        </div>
+                    </a>
 
                 </div>
 
@@ -174,34 +174,35 @@
                     </div>
 
                     <div class="posts">
-                    <div class="header-post-evento">
-                        <img src="../images/sistema/foto-gui.svg" alt="" class="foto-perfil-usuario-evento">
-                        <div class="info-post">
-                            <h1 class="nome-usuario-evento">Guilherme Paulino</h1>
-                            <h2>@GuiPau</h2>
+                        <div class="header-post-evento">
+                            <img src="../images/sistema/foto-gui.svg" alt="" class="foto-perfil-usuario-evento">
+                            <div class="info-post">
+                                <h1 class="nome-usuario-evento">Guilherme Paulino</h1>
+                                <h2>@GuiPau</h2>
+                            </div>
+                        </div>
+
+                        <div class="postagens-evento-desktop">
+                            <div class="header-postagem">
+                                <h2 class="infos-postagens">1 dia - público</h2>
+                                <a href="">
+                                    <img src="../images/sistema/tres-pontinhos.png" alt="" class="pontinhos">
+                                </a>
+                            </div>
+
+                            <div class="mensagem-post">
+                                <h1 class="mensagem-postada">Evento muito massa! dei uma caneta no Renatão, mó perna
+                                    <span class="hashtag">#Ruimdemais</span></h1>
+                            </div>
+
+                            <div class="btn-interacao-usuario">
+                                <button class="btn-interacao">Curtir</button>
+                                <button class="btn-interacao">Comentar</button>
+                                <button class="btn-interacao">Compartilhar</button>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="postagens-evento-desktop">
-                        <div class="header-postagem">
-                            <h2 class="infos-postagens">1 dia - público</h2>
-                            <a href="">
-                                <img src="../images/sistema/tres-pontinhos.png" alt="" class="pontinhos">
-                            </a>
-                        </div>
-
-                        <div class="mensagem-post">
-                            <h1 class="mensagem-postada">Evento muito massa! dei uma caneta no Renatão, mó perna <span class="hashtag">#Ruimdemais</span></h1>
-                        </div>
-
-                        <div class="btn-interacao-usuario">
-                           <button class="btn-interacao">Curtir</button>
-                           <button class="btn-interacao">Comentar</button>
-                           <button class="btn-interacao">Compartilhar</button>
-                        </div>
-                    </div>
-                </div>
-                  
                 </div>
 
 
@@ -229,49 +230,49 @@
     <div id="myModal" class="modal">
 
         <div class="modal-content">
-          <span class="close">&times;</span>
-          <div class="modal-header">
-            <h2 id="crie-evento">Criar um novo evento</h2>
-            <img src="../images/criareventos/img/Rectangle 295.png" alt="" id="retangulo2">
-            <div class="image-evento-modal">
-              <img src="../images/criareventos/img/Ellipse 148.png" alt="" id="foto">
-              <img src="../images/criareventos/img/Vector.png" alt="" id="foto2">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <h2 id="crie-evento">Criar um novo evento</h2>
+                <img src="../images/criareventos/img/Rectangle 295.png" alt="" id="retangulo2">
+                <div class="image-evento-modal">
+                    <img src="../images/criareventos/img/Ellipse 148.png" alt="" id="foto">
+                    <img src="../images/criareventos/img/Vector.png" alt="" id="foto2">
+                </div>
             </div>
-          </div>
             <div class="modal-body">
-              <h2>Nome do evento:</h2>
-              <input type="text" class="input-nome-evento-modal" id="nomeEvento">
-              <h2 id="desc-evento">Descrição do evento:</h2>
-              <textarea id="w3review" name="w3review" rows="4" cols="50" class="descricao-evento-modal"></textarea>
+                <h2>Nome do evento:</h2>
+                <input type="text" class="input-nome-evento-modal" id="nomeEvento">
+                <h2 id="desc-evento">Descrição do evento:</h2>
+                <textarea id="w3review" name="w3review" rows="4" cols="50" class="descricao-evento-modal"></textarea>
             </div>
-  
+
             <div class="scores">
-              <h2 id="numero-pessoas">Número máximo de convidados?</h2>
-              <div class="inputs-sim-nao">
-                <label for="score_1" class="required1">
-                  <input type="radio" id="score_1" name="score" required="required" value="2">Sim</label>
-                <label for="score_2" class="required2">
-                  <input type="radio" id="score_2" name="score" required="required" value="3">Não</label>
-              </div>
+                <h2 id="numero-pessoas">Número máximo de convidados?</h2>
+                <div class="inputs-sim-nao">
+                    <label for="score_1" class="required1">
+                        <input type="radio" id="score_1" name="score" required="required" value="2">Sim</label>
+                    <label for="score_2" class="required2">
+                        <input type="radio" id="score_2" name="score" required="required" value="3">Não</label>
+                </div>
             </div>
             <div id="qtd-pessoas">
-              <h2 id="numero-pessoas">Quantas pessoas participarão?</h2>
-              <input type="text" name="" id="input-qtd" class="input-nome-evento-modal">
+                <h2 id="numero-pessoas">Quantas pessoas participarão?</h2>
+                <input type="text" name="" id="input-qtd" class="input-nome-evento-modal">
             </div>
-  
+
             <div id="link-convite">
-              <h2 id="numero-pessoas">Link de convite:</h2>
-              <img src="../images/criareventos/img/link.png/" alt="" id="imglink">
-              <div class="link-modal">
-                <p id="link-texto">knowu.com.br/invite/abcd-1234</p>
-                <button id="copy">Copiar</button>
-              </div>
-              <div class="modal-footer">
-                <button class="criar-evento-modal" onclick="criarEvento()">Criar evento</button>
-              </div>
+                <h2 id="numero-pessoas">Link de convite:</h2>
+                <img src="../images/criareventos/img/link.png/" alt="" id="imglink">
+                <div class="link-modal">
+                    <p id="link-texto">knowu.com.br/invite/abcd-1234</p>
+                    <button id="copy">Copiar</button>
+                </div>
+                <div class="modal-footer">
+                    <button class="criar-evento-modal" onclick="criarEvento()">Criar evento</button>
+                </div>
             </div>
         </div>
-      </div>
+    </div>
     </div>
 
     <!-- Mobile  -->
@@ -282,7 +283,7 @@
                 <img src="../images/sistema/logo-sistema.svg" alt="" class="logo-mobile">
             </div>
             <div class="esquerda">
-                    <h1>Menu</h1>
+                <h1>Menu</h1>
             </div>
         </div>
 
@@ -292,184 +293,217 @@
             </div>
 
             <div class="eventos-mobile">
-             <a href="">   <div class="evento-mobile">
-                    <div>
-                        <img src="../images/sistema/perfil-image.png" alt="" class="logo-evento">
+                <a href="">
+                    <div class="evento-mobile">
+                        <div>
+                            <img src="../images/sistema/perfil-image.png" alt="" class="logo-evento">
+                        </div>
+                        <div class="direita-evento-mobile">
+                            <h1 class="titulo-evento">Oboé as terças</h1>
+                            <h2>#music</h2>
+                        </div>
                     </div>
-                    <div class="direita-evento-mobile">
-                        <h1 class="titulo-evento">Oboé as terças</h1>
-                        <h2>#music</h2>
+                </a>
+                <a href="">
+                    <div class="evento-mobile">
+                        <div>
+                            <img src="../images/sistema/perfil-image-1.png" alt="" class="logo-evento">
+                        </div>
+                        <div class="direita-evento-mobile">
+                            <h1 class="titulo-evento">Festival de SP</h1>
+                            <h2>#music</h2>
+                        </div>
                     </div>
-                </div></a>
-                <a href="">    <div class="evento-mobile">
-                    <div>
-                        <img src="../images/sistema/perfil-image-1.png" alt="" class="logo-evento">
+                </a>
+                <a href="">
+                    <div class="evento-mobile">
+                        <div>
+                            <img src="../images/sistema/perfil-image-2.png" alt="" class="logo-evento">
+                        </div>
+                        <div class="direita-evento-mobile">
+                            <h1 class="titulo-evento">Futebol dos cria</h1>
+                            <h2>Dia monstro familia</h2>
+                        </div>
                     </div>
-                    <div class="direita-evento-mobile">
-                        <h1 class="titulo-evento">Festival de SP</h1>
-                        <h2>#music</h2>
+                </a>
+                <a href="">
+                    <div class="evento-mobile">
+                        <div class="barra"></div>
+                        <div>
+                            <img src="../images/sistema/perfil-image-3.png" alt="" class="logo-evento espacamento">
+                        </div>
+                        <div class="direita-evento-mobile">
+                            <h1 class="titulo-evento">Futebolzinho</h1>
+                            <h2>#esporte</h2>
+                        </div>
                     </div>
-                </div></a>
-              <a href=""><div class="evento-mobile">
-                    <div>
-                        <img src="../images/sistema/perfil-image-2.png" alt="" class="logo-evento">
+                </a>
+                <a href="">
+                    <div class="evento-mobile">
+                        <div>
+                            <img src="../images/sistema/perfil-image-4.png" alt="" class="logo-evento">
+                        </div>
+                        <div class="direita-evento-mobile">
+                            <h1 class="titulo-evento">Conserto de SP</h1>
+                            <h2>#music</h2>
+                        </div>
                     </div>
-                    <div class="direita-evento-mobile">
-                        <h1 class="titulo-evento">Futebol dos cria</h1>
-                        <h2>Dia monstro familia</h2>
-                    </div>
-                </div></a>
-               <a href=""> <div class="evento-mobile">
-                    <div class="barra"></div>
-                    <div>
-                        <img src="../images/sistema/perfil-image-3.png" alt="" class="logo-evento espacamento">
-                    </div>
-                    <div class="direita-evento-mobile">
-                        <h1 class="titulo-evento">Futebolzinho</h1>
-                        <h2>#esporte</h2>
-                    </div>
-                </div> </a>
-               <a href=""><div class="evento-mobile">
-                    <div>
-                        <img src="../images/sistema/perfil-image-4.png" alt="" class="logo-evento">
-                    </div>
-                    <div class="direita-evento-mobile">
-                        <h1 class="titulo-evento">Conserto de SP</h1>
-                        <h2>#music</h2>
-                    </div>
-                </div> </a> 
+                </a>
             </div>
         </div>
     </div>
 
 </body>
+
 </html>
-  
-  <script>
+
+<script>
+
+
+    function chat() {
+        window.location.href = "chat.html"
+    }
+
+    function sair() {
+        window.location.href = "http://localhost:3000/login"
+    }
+
+    function sistemaEvento() {
+        window.location.href = "sistema-eventos.html"
+    }
+
+    function perfil() {
+        window.location.href = "http://localhost:3000/perfil-web"
+    }
+
+    function evento() {
+        window.location.href = `../../../../index.html`
+    }
+
     // Get the modal
     var modal = document.getElementById("myModal");
-  
+
     // Get the button that opens the modal
     var btnMobile = document.getElementById("myBtn-mobile")
     var btn = document.getElementById("myBtn-cria-evento");
-  
+
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
-  
+
     // When the user clicks on the button, open the modal
     // btnMobile.onclick = function () {
     //   modal.style.display = "block"
     // }
     btn.onclick = function () {
-      modal.style.display = "block";
+        modal.style.display = "block";
     }
-  
+
     // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
-      modal.style.display = "none";
+        modal.style.display = "none";
     }
-  
+
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
     }
-  </script>
+</script>
 
 <script>
 
     var eventosProximos = []
     var locations = [];
     var idUsuario;
-  
-  
+
+
     function buscarId() {
-      var params = new URLSearchParams(window.location.search)
-      idUsuario = params.get('id')
+        var params = new URLSearchParams(window.location.search)
+        idUsuario = params.get('id')
     }
-  
+
     function buscarEventosProximos() {
-  
-      let params = {
-        latitute: -23.5791213,
-        longitute: -46.6658027
-      }
-      axios.post("http://localhost:8080/evento/eventos-proximos", params).then(function (resultado) {
-        console.log(resultado.data.length);
-        for (let i = 0; i < resultado.data.length; i++) {
-          locations[i] = new Array(resultado.data.length)
-          for (let j = 0; j < locations.length; j++) {
-            locations[i][0] = resultado.data[i][0]
-            locations[i][1] = resultado.data[i][3]
-            locations[i][2] = resultado.data[i][4]
-            document.getElementById(`evento${i + 1}`).innerHTML = resultado.data[i][0];
-  
-          }
+
+        let params = {
+            latitute: -23.5791213,
+            longitute: -46.6658027
         }
-        // eventosProximos = resultado.data[0]
-      }).catch(e => {
-        console.log(e);
-      })
-  
-      return locations
-  
+        axios.post("http://localhost:8080/evento/eventos-proximos", params).then(function (resultado) {
+            console.log(resultado.data.length);
+            for (let i = 0; i < resultado.data.length; i++) {
+                locations[i] = new Array(resultado.data.length)
+                for (let j = 0; j < locations.length; j++) {
+                    locations[i][0] = resultado.data[i][0]
+                    locations[i][1] = resultado.data[i][3]
+                    locations[i][2] = resultado.data[i][4]
+                    document.getElementById(`evento${i + 1}`).innerHTML = resultado.data[i][0];
+
+                }
+            }
+            // eventosProximos = resultado.data[0]
+        }).catch(e => {
+            console.log(e);
+        })
+
+        return locations
+
     }
-  
+
     function buscarUsuariosProximos() {
-  
-      let params = {
-        latitute: -23.5791213,
-        longitute: -46.6658027
-      }
-      axios.post("http://localhost:8080/usuarios/usuarios-proximos", params).then(function (resultadoUsuario) {
-        console.log(resultadoUsuario.data[4][0]);
-        for (let i = 1; i < 4; i++) {
-          // alert(resultadoUsuario.data);
-          document.getElementById(`nickname${i}`).innerHTML = resultadoUsuario.data[i][0];
-          document.getElementById(`usuario${i}`).innerHTML = resultadoUsuario.data[i][1];
+
+        let params = {
+            latitute: -23.5791213,
+            longitute: -46.6658027
         }
-        // eventosProximos = resultado.data[0]
-      }).catch(e => {
-        console.log(e);
-      })
-  
-      return locations
-  
+        axios.post("http://localhost:8080/usuarios/usuarios-proximos", params).then(function (resultadoUsuario) {
+            console.log(resultadoUsuario.data[4][0]);
+            for (let i = 1; i < 4; i++) {
+                // alert(resultadoUsuario.data);
+                document.getElementById(`nickname${i}`).innerHTML = resultadoUsuario.data[i][0];
+                document.getElementById(`usuario${i}`).innerHTML = resultadoUsuario.data[i][1];
+            }
+            // eventosProximos = resultado.data[0]
+        }).catch(e => {
+            console.log(e);
+        })
+
+        return locations
+
     }
-  
-  
+
+
     function criarEvento() {
-      var qntdParticipantes = 10;
-      var nomeEvento = document.getElementById("nomeEvento").value;
-      alert(nomeEvento)
-      var dataInicio = '05/11/2021 17:00:00';
-      var descricao = document.getElementById("w3review").value;
-      var dataFim = '05/11/2021 18:00:00';
-      var qntdParticipantes = document.getElementById("input-qtd").value
-      var link = document.getElementById("link-texto").value
-  
-      let params = {
-        nome: nomeEvento,
-        descricao: descricao,
-        dataInicio: dataInicio,
-        dataFim: dataFim,
-        qntdParticipantes: qntdParticipantes,
-        link: link,
-        usuario: {
-          idUsuario: idUsuario
+        var qntdParticipantes = 10;
+        var nomeEvento = document.getElementById("nomeEvento").value;
+        alert(nomeEvento)
+        var dataInicio = '05/11/2021 17:00:00';
+        var descricao = document.getElementById("w3review").value;
+        var dataFim = '05/11/2021 18:00:00';
+        var qntdParticipantes = document.getElementById("input-qtd").value
+        var link = document.getElementById("link-texto").value
+
+        let params = {
+            nome: nomeEvento,
+            descricao: descricao,
+            dataInicio: dataInicio,
+            dataFim: dataFim,
+            qntdParticipantes: qntdParticipantes,
+            link: link,
+            usuario: {
+                idUsuario: idUsuario
+            }
         }
-      }
-  
-  
-      axios.post("http://localhost:8080/evento/criar/" + idUsuario, params).then(function (resultado) {
-        alert("Evento criado com sucesso!!")
-        // eventosProximos = resultado.data[0]
-      }).catch(e => {
-        console.log(e);
-      })
+
+
+        axios.post("http://localhost:8080/evento/criar/" + idUsuario, params).then(function (resultado) {
+            alert("Evento criado com sucesso!!")
+            // eventosProximos = resultado.data[0]
+        }).catch(e => {
+            console.log(e);
+        })
     }
-  
-  
-  
-  </script>
+
+
+
+</script>

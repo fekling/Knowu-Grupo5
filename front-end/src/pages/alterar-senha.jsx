@@ -12,6 +12,13 @@ function Index() {
   const [senha, setSenha] = useState();
   const [confSenha, setConfSenha] = useState();
 
+  const voltar = useCallback(
+    async(dados) => {
+      dados.preventDefault();
+      history.push("/recuperar-senha")
+    }
+  )
+
   const handleTrocarSenha = useCallback(
     async (dados) => {
       dados.preventDefault();
@@ -41,7 +48,7 @@ function Index() {
   return (
     <div className="content-esqueceu-senha">
       <img src={bg} alt="" className="bg-color" />
-      <div className="header-esqueceu-sua-senha">
+      <div className="header-esqueceu-sua-senha" onClick={voltar}>
         <img src={seta} alt="" className="seta-esqueceu-sua-senha" />
         <h1 className="text-voltar">Voltar</h1>
       </div>

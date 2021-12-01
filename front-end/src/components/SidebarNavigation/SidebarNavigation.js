@@ -16,6 +16,9 @@ function SidebarNavigation(props) {
     const showSidebar = () => setSidebar(!sidebar)
 
 
+    var params = new URLSearchParams(window.location.search);
+    var id = params.get('id');
+    id = 1;
 
     return (
         <>
@@ -64,15 +67,25 @@ function SidebarNavigation(props) {
                                 item.path = "chat"
                             }
 
+                            if (item.path == "/evento") {
+                                item.path = "sistema"
+                            }
+
                             function home() {
                                 if (item.path == "evento") {
-                                    window.location.href = `https://guilherme-nascimentosantos.github.io/knowu.github.io/`
+                                    window.location.href = `https://fekling.github.io/Knowu-Grupo5/?id=${id}`
                                 }
                             }
 
                             function chat() {
                                 if (item.path == "chat") {
-                                    window.location.href = `https://www.youtube.com/watch?v=5qap5aO4i9A`
+                                    window.location.href = `https://fekling.github.io/Knowu-Grupo5/front-end/src/assets/html/chat.html`
+                                }
+                            }
+
+                            function chat() {
+                                if (item.path == "sistema") {
+                                    window.location.href = `https://fekling.github.io/Knowu-Grupo5/front-end/src/assets/html/sistema-eventos.html`
                                 }
                             }
                             

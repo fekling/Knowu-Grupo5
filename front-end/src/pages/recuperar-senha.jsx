@@ -13,6 +13,14 @@ function Index() {
 
   const [codigoRecuperaSenha, setCodigoRecuperaSenha] = useState("")
 
+
+  const voltar = useCallback(
+    async(dados) => {
+      dados.preventDefault();
+      history.push("/esqueceu-senha")
+    }
+  )
+
   const handleValidarCodigo = useCallback(
     async (dados) => {
       dados.preventDefault()
@@ -43,7 +51,7 @@ function Index() {
   return (
     <div className="content-esqueceu-senha">
       <img src={Bg} alt="" className="bg-color" />
-      <div className="header-esqueceu-sua-senha">
+      <div className="header-esqueceu-sua-senha" onClick={voltar}>
           <img src={Seta} alt="" className="seta-esqueceu-sua-senha" />
           <h1 className="text-voltar">Voltar</h1>
         </div>

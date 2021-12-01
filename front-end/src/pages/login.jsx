@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import "../assets/css/login-react.css";
 import Logo from "../assets/images/logo.png";
 import Apple from "../assets/images/apple.png";
@@ -7,7 +7,8 @@ import Google from "../assets/images/Google.png";
 import Localizacao from "../assets/images/localizacao.png";
 import Bg from "../assets/images/bg-color.png";
 import Api from '../components/Axios';
-import { useHistory } from "react-router-dom"
+import { useHistory } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 
 
@@ -17,6 +18,27 @@ function Index() {
     const [password, setPassword] = useState("");
     const [erroAutentication, setErrorAutenticatin] = useState(false);
     const history = useHistory();
+
+    const home = useCallback(
+        async(dados) => {
+          dados.preventDefault();
+          window.location = `https://fekling.github.io/Knowu-Grupo5/front-end/src/assets/html/index.html`;
+        }
+      )
+
+      const sobre_nos = useCallback(
+        async(dados2) => {
+          dados2.preventDefault();
+          window.location = `https://fekling.github.io/Knowu-Grupo5/front-end/src/assets/html/index.html#sobre_nos`;
+        }
+      )
+      
+      const contato = useCallback(
+        async(dados2) => {
+          dados2.preventDefault();
+          window.location = `https://fekling.github.io/Knowu-Grupo5/front-end/src/assets/html/index.html#contato`;
+        }
+      )
 
     
     return (
@@ -31,11 +53,14 @@ function Index() {
             <div className="header-desktop">
                 <img src={Logo} alt="" className="logo-desktop" />
                 <ul>
-                    <a href=""> <li className="lista-login">Home</li></a>
-                    <a href=""> <li className="lista-login">Sobre nós</li></a>
-                    <a href=""> <li className="lista-login">Contato</li></a>
+                    <a onClick={home}> <li className="lista-login">Home</li></a>
+                    <a onClick={sobre_nos}> <li className="lista-login">Sobre nós</li></a>
+                    <a onClick={contato}> <li className="lista-login">Contato</li></a>
                 </ul>
+                <Link to={"/cadastro"}>
                 <button className="cadastre">Cadastre-se</button>
+                </Link>
+                
             </div>
 
             <div className="mobile">
@@ -69,7 +94,9 @@ function Index() {
                             <img src={Facebook} alt="" className="facebook-logo" />
                         </div>
                     </div>
+                    <Link to={"/esqueceu-senha"}>
                     <h2><u>Esqueceu sua senha</u></h2>
+                    </Link>
                 </div>
             </div>
         </div>
@@ -87,7 +114,7 @@ function Index() {
             console.log(data);  
             var id = JSON.stringify(data);
             // history.push('/home-evento')
-            window.location = `https://guilherme-nascimentosantos.github.io/knowu.github.io/?id=${id}`;
+            window.location = `https://fekling.github.io/Knowu-Grupo5/?id=${id}`;
 
         } catch (err) {
             setErrorAutenticatin(true);
