@@ -561,6 +561,7 @@ span{
     height: 0;
     padding-bottom: 53.9%;
     position: relative;
+    z-index: -9999;
 }
 
 .header-pesquisar-pessoas {

@@ -23,7 +23,7 @@ function PerfilUsuario() {
 
   const [nome, setNome] = useState("");
   const [usuario, setUsuario] = useState("");
-  var conteudo = "01/02/2020\n"
+  var conteudo = "01/02/2020"
   conteudo += "Só conteudo bom!"
 
   useEffect(() => {
@@ -80,7 +80,7 @@ function PerfilUsuario() {
         
         {/* Input para pesquisar pessoas */}
         <div className="container-pesquisar-pessoas">
-        <SidebarNavigation />
+        <SidebarNavigation titulo1="Postagens" titulo2="Perfil" titulo3="Conta" />
           {/* Informações do usuário */}
 
           <div className="square-perfil-usuario-web">
