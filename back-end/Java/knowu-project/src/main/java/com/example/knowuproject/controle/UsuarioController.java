@@ -112,6 +112,7 @@ public class UsuarioController {
 
     @GetMapping("/nome-usuario/{id}")
     public ResponseEntity exibirNomeUsuario(@PathVariable Integer id) {
+        System.out.println(usuarioRepository.listarNomeAndUsuario(id));
         return ResponseEntity.of(Optional.of(usuarioRepository.listarNomeAndUsuario(id)));
     }
 

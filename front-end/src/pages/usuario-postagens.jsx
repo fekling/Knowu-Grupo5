@@ -41,14 +41,17 @@ function UsuarioPostagens() {
           key={id}
           nome={nome}
           usuario={usuario}
+          conteudo='Muito bacana o evento, #futebol'
         />
         <Post key={id}
           nome={nome}
-          usuario={usuario} />
+          usuario={usuario}
+          conteudo='Evento bacana!'
+          />
       </section>
       <div className="container-home-aside">
         <BoxInfosEvento titulo="Eventos!" />
-        <BoxInfosUsuario titulo="Usuários perto de você!" />
+        <BoxInfosUsuario titulo="Já foram em um evento de sertanejo? Estou pensando em ir!" />
       </div>
     </>
   );

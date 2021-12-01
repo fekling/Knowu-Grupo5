@@ -81,7 +81,7 @@
           <div class="body">
             <div class="message">
               <img src="front-end/src/assets/images/criareventos/img/Ellipse 60.png" alt="" id="bolinha">
-              <img src="front-end/src/assets/images/criareventos/img/usuario3.png" alt="" id="foto-comentarios">
+              <img src="front-end/src/assets/images/sistema/imgDefault.png" alt="" id="foto-comentarios">
 
             </div>
             <div class="info-usuario">
@@ -137,15 +137,15 @@
       <div class="column2">
         <div class="card">
           <h3 id="usuarios-letra">Usuários perto de você!</h3>
-          <li><img src="front-end/src/assets/images/criareventos/img/usuario3.png" alt="" id="fut-primeiro">
+          <li><img src="front-end/src/assets/images/sistema/imgDefault.png" alt="" id="fut-primeiro">
             <p id="nickname1"></p>
           </li>
           <span id="usuario1"></span>
-          <li><img src="front-end/src/assets/images/criareventos/img/usuario2.png" alt="" id="fut-primeiro">
+          <li><img src="front-end/src/assets/images/sistema/imgDefault.png" alt="" id="fut-primeiro">
             <p id="nickname2"></p>
           </li>
           <span id="usuario2"></span>
-          <li><img src="front-end/src/assets/images/criareventos/img/usuario1.png" alt="" id="fut-primeiro">
+          <li><img src="front-end/src/assets/images/sistema/imgDefault.png" alt="" id="fut-primeiro">
             <p id="nickname3"></p>
           </li>
           <span id="usuario3"></span>
@@ -164,7 +164,6 @@
           <img src="front-end/src/assets/images/criareventos/img/Rectangle 295.png" alt="" id="retangulo2">
           <div class="image-evento-modal">
             <img src="front-end/src/assets/images/criareventos/img/Ellipse 148.png" alt="" id="foto">
-            <img src="front-end/src/assets/images/criareventos/img/Vector.png" alt="" id="foto2">
           </div>
         </div>
         <div class="modal-body">
@@ -231,6 +230,21 @@ function perfil() {
   var locations = [];
   var idUsuario;
 
+  
+  const iconBase = "http://maps.google.com/mapfiles/kml/pushpin/";
+  const iconBase2 = "http://maps.google.com/mapfiles/"
+  const icons = {
+    parking: {
+      name: "Parking",
+      icon: iconBase2 + "dir_0.png",
+    },
+    library: {
+      name: "Library",
+      icon: iconBase + "blue-pushpin.png",
+    }
+  };
+  
+
 
   function buscarId() {
     var params = new URLSearchParams(window.location.search)
@@ -251,6 +265,7 @@ function perfil() {
           locations[i][0] = resultado.data[i][0]
           locations[i][1] = resultado.data[i][3]
           locations[i][2] = resultado.data[i][4]
+
           if (i <= 4) {
             document.getElementById(`evento${i + 1}`).innerHTML = resultado.data[i][0];
           }
@@ -410,6 +425,9 @@ function perfil() {
 </script>
 
 <script type="text/javascript">
+
+
+
   var coordenadas = { lat: -23.5791213, lng: -46.6658027 };
   var zoomLevel = 12;
   function initialize() {
@@ -421,10 +439,18 @@ function perfil() {
     locations = buscarEventosProximos()
 
     setTimeout(() => {
+
+        marker = new google.maps.Marker({
+          position: coordenadas,
+          title: "Sua localização",
+          icon: icons.parking.icon,
+          map: map
+        });
       for (i = 0; i < locations.length; i++) {
         marker = new google.maps.Marker({
           position: new google.maps.LatLng(locations[i][1], locations[i][2]),
           title: locations[i][0],
+          icon: icons.library.icon,
           map: map
         });
       }
