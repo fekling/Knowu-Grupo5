@@ -1,18 +1,9 @@
 US00USUARIO25-11-2021 18:29:50v01
 US01   1Renato Paulino                                    RenOP     1199999-9999  renato.paulino@sptech.com.br            410.427.638-3611/05/1992Masculino      
 US02: 1 dados registrados
-US00USUARIO29-11-2021 19:39:55v01
-US01   1Guilherme Nascimento dos Santos                   guilherme null          guilherme_nsantos@hotmail.com           49488852828   31/05/2002Masculino      
+US00USUARIO01-12-2021 19:16:01v01
+US01   6Teste Santos                                      santos    null          guilherme_nsantos@hotmail.com           49488852828   31/05/2002Masculino      
 US02: 1 dados registrados
-US00USUARIO29-11-2021 21:26:12v01
-US01   2Felipe Mallasen                                   mallasen  null          felipe.mallasen@bandtec.com.br          49488852828   31/05/2002Masculino      
-US02: 1 dados registrados
-US00USUARIO29-11-2021 21:26:44v01
-US01   3Felipe Kling                                      kling     null          felipe.kling@bandtec.com.br             49488852828   31/05/2002Masculino      
-US02: 1 dados registrados
-US00USUARIO29-11-2021 21:27:15v01
-US01   4Andre Santos                                      andre     null          andre.silva@bandtec.com.br              49488852828   31/05/2002Masculino      
-US02: 1 dados registrados
-US00USUARIO30-11-2021 17:48:55v01
-US01   5Guilherme Nascimento                              mentosconcanull          guilherme_nsantos@hotmail.com           49488852828   31/05/2002Masculino      
+US00USUARIO28-12-2021 14:35:29v01
+US01   7Pedro Nascimento Silva                            pedrinho  null          pedro_nsantos@hotmail.com               49488852828   31/05/2002Masculino      
 US02: 1 dados registrados
