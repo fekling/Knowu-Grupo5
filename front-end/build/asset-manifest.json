@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.34390f73.chunk.css",
+    "main.js": "/static/js/main.19cd944f.chunk.js",
+    "main.js.map": "/static/js/main.19cd944f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.60ef40cc.js",
+    "runtime-main.js.map": "/static/js/runtime-main.60ef40cc.js.map",
+    "static/js/2.80ea7f85.chunk.js": "/static/js/2.80ea7f85.chunk.js",
+    "static/js/2.80ea7f85.chunk.js.map": "/static/js/2.80ea7f85.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.34390f73.chunk.css.map": "/static/css/main.34390f73.chunk.css.map",
+    "static/js/2.80ea7f85.chunk.js.LICENSE.txt": "/static/js/2.80ea7f85.chunk.js.LICENSE.txt",
+    "static/media/Logo-U.fbc73a2b.png": "/static/media/Logo-U.fbc73a2b.png",
+    "static/media/Perfil-Dylan.a7812984.png": "/static/media/Perfil-Dylan.a7812984.png",
+    "static/media/andre.80b5fea8.svg": "/static/media/andre.80b5fea8.svg",
+    "static/media/bg-color.68e24356.png": "/static/media/bg-color.68e24356.png",
+    "static/media/bloqueio.1352f747.svg": "/static/media/bloqueio.1352f747.svg",
+    "static/media/deslike.adbd8a2c.svg": "/static/media/deslike.adbd8a2c.svg",
+    "static/media/foto-usuario-2.801108b6.svg": "/static/media/foto-usuario-2.801108b6.svg",
+    "static/media/foto-usuario.c5665771.svg": "/static/media/foto-usuario.c5665771.svg",
+    "static/media/fotoEvento1.30e1f6cf.png": "/static/media/fotoEvento1.30e1f6cf.png",
+    "static/media/imgDefault.8c9d2717.png": "/static/media/imgDefault.8c9d2717.png",
+    "static/media/like.a945955b.svg": "/static/media/like.a945955b.svg",
+    "static/media/localizacao.0340b5e9.png": "/static/media/localizacao.0340b5e9.png",
+    "static/media/logo.56a5c2fd.png": "/static/media/logo.56a5c2fd.png",
+    "static/media/midia1.75a2ee3a.png": "/static/media/midia1.75a2ee3a.png",
+    "static/media/midia2.496f7106.png": "/static/media/midia2.496f7106.png",
+    "static/media/midia3.8f955f37.png": "/static/media/midia3.8f955f37.png",
+    "static/media/sino.0fd1c40d.png": "/static/media/sino.0fd1c40d.png",
+    "static/media/wifi.09f31ad9.png": "/static/media/wifi.09f31ad9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.60ef40cc.js",
+    "static/js/2.80ea7f85.chunk.js",
+    "static/css/main.34390f73.chunk.css",
+    "static/js/main.19cd944f.chunk.js"
+  ]
+}
