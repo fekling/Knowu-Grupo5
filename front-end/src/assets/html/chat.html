@@ -345,7 +345,7 @@
   }
 
   function sair() {
-    window.location.href = "http://localhost:3000/login"
+    window.location.href = "http://knowu.hopto.org:3000/login"
   }
 
   function sistemaEvento() {
@@ -353,7 +353,7 @@
 }
 
   function perfil() {
-    window.location.href = "http://localhost:3000/perfil-web"
+    window.location.href = "http://knowu.hopto.org:3000/perfil-web"
   }
 
   function evento() {
@@ -385,7 +385,7 @@
       latitute: -23.5791213,
       longitute: -46.6658027
     }
-    axios.post("http://localhost:8080/evento/eventos-proximos", params).then(function (resultado) {
+    axios.post("http://34.228.172.224:8080/evento/eventos-proximos", params).then(function (resultado) {
       console.log(resultado.data.length);
       for (let i = 0; i < resultado.data.length; i++) {
         locations[i] = new Array(resultado.data.length)
@@ -412,7 +412,7 @@
       latitute: -23.5791213,
       longitute: -46.6658027
     }
-    axios.post("http://localhost:8080/usuarios/usuarios-proximos", params).then(function (resultadoUsuario) {
+    axios.post("http://34.228.172.224:8080/usuarios/usuarios-proximos", params).then(function (resultadoUsuario) {
       console.log(resultadoUsuario.data[4][0]);
       for (let i = 1; i < 4; i++) {
         // alert(resultadoUsuario.data);

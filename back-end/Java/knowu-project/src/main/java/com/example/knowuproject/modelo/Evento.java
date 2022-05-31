@@ -20,6 +20,8 @@ public class Evento {
     @OneToOne
     private Localidade localidade;
 
+    private Integer qntdParticipantes;
+
     /*
     public Evento(Integer idEvento, String nome, String descricao, DateTimeFormat dataInicio, DateTimeFormat dataFim) {
         this.idEvento = idEvento;
@@ -86,6 +88,14 @@ public class Evento {
 
     public void setLocalidade(Localidade localidade) {
         this.localidade = localidade;
+    }
+
+    public Integer getQntdParticipantes() {
+        return qntdParticipantes;
+    }
+
+    public void setQntdParticipantes(Integer qntdParticipantes) {
+        this.qntdParticipantes = qntdParticipantes;
     }
 
     public void buscarLocalizacao() {

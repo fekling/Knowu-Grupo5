@@ -19,6 +19,8 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 
     public Usuario findByCodigoRecuperaSenha(Integer codigo);
 
+    @Query("SELECT COUNT(u) FROM Usuario u WHERE u.evento.idEvento = ?1")
+    Integer countByEvento(Integer idEvento);
 
     // Querys para tests
     @Query("select new com.example.knowuproject.requisicao.UsuarioLoginSimples (u.usuario, u.senha) from Usuario u")

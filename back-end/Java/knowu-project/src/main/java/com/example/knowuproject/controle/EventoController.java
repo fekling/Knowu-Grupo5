@@ -3,6 +3,7 @@ package com.example.knowuproject.controle;
 import com.example.knowuproject.modelo.*;
 import com.example.knowuproject.repositorio.EventoRepository;
 import com.example.knowuproject.repositorio.LocalidadeRepository;
+import com.example.knowuproject.repositorio.PostagemRepository;
 import com.example.knowuproject.repositorio.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +27,9 @@ public class EventoController {
     UsuarioRepository usuarioRepository;
 
     @Autowired
+    PostagemRepository postagemRepository;
+
+    @Autowired
     LocalidadeRepository localidadeRepository;
 
     @PostMapping("/criar/{id}")
@@ -38,9 +42,49 @@ public class EventoController {
         return ResponseEntity.status(201).build();
     }
 
+    @PostMapping("/criar-mobile/{id}")
+    public ResponseEntity criarEventoMobile(@PathVariable Integer id, @RequestBody Evento evento) {
+
+        evento.setUsuario(usuarioRepository.findById(id));
+        localidadeRepository.save(evento.getLocalidade());
+        eventoRepository.save(evento);
+        return ResponseEntity.status(201).build();
+    }
+
+    @PostMapping("/verifica-usuario/{idEvento}/{idUsuario}")
+    public ResponseEntity verificaUsuario(@PathVariable Integer idEvento, @PathVariable Integer idUsuario) {
+
+        Usuario usuario = eventoRepository.findByUsuario(idEvento, idUsuario);
+        if (usuario != null) {
+            return ResponseEntity.status(200).build();
+        } else {
+            return ResponseEntity.status(404).build();
+        }
+
+    }
+
+    @PostMapping("/quantidade-usuario/{idEvento}")
+    public ResponseEntity countUsuarios(@PathVariable Integer idEvento) {
+
+        return ResponseEntity.status(200).body(usuarioRepository.countByEvento(idEvento));
+
+    }
+
+    @PostMapping("/quantidade-postagens/{idEvento}")
+    public ResponseEntity countPostagens(@PathVariable Integer idEvento) {
+
+        return ResponseEntity.status(200).body(postagemRepository.countByEvento(idEvento));
+
+    }
+
     @GetMapping("/todos")
     public ResponseEntity buscarEvento() {
         return ResponseEntity.status(200).body(eventoRepository.findAll());
+    }
+
+    @GetMapping("/todos/{id}")
+    public ResponseEntity buscarEvento(@PathVariable Integer id) {
+        return ResponseEntity.status(200).body(eventoRepository.findById(id));
     }
 
     @PatchMapping("/atualizarDadosEvento/{id}")

@@ -67,6 +67,9 @@ public class Usuario {
     @OneToOne
     private Localidade localidade;
 
+    @OneToOne
+    private Evento evento;
+
     @JsonIgnore // será igonrado no JSON
     @Column(length = 20_000_000) //20MB
     private byte[] foto;
@@ -241,6 +244,14 @@ public class Usuario {
     public String getAutenticadoEm() {
 
         return autenticadoEm;
+    }
+
+    public Evento getEvento() {
+        return evento;
+    }
+
+    public void setEvento(Evento evento) {
+        this.evento = evento;
     }
 
     public void setAutenticado(Boolean autenticado) {
